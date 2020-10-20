@@ -54,15 +54,7 @@
     "url": "https://sungikchoi.com"
   },
   "keywords": [
-    "gatsby",
-    "gatsby-blog",
-    "gatsby-starter",
-    "gatsby-starter-apple",
-    "blog",
-    "react",
-    "starter",
-    "static-site-generator",
-    "starter-template"
+    "gatsby"
   ],
   "repository": {
     "type": "git",
