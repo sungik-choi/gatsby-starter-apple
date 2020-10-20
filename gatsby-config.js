@@ -25,7 +25,11 @@ module.exports = {
         name: 'Github',
       },
     ],
-    plugins: ['gatsby-plugin-robots-txt', `gatsby-plugin-sitemap`],
+    plugins: [
+      'gatsby-plugin-robots-txt',
+      `gatsby-plugin-sitemap`,
+      `gatsby-plugin-feed`,
+    ],
   },
   plugins: [
     {
