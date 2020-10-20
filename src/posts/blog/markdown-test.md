@@ -1,9 +1,9 @@
 ---
-title: "Markdown"
+title: "Markdown Test"
 category: "Markdown"
-date: "2020-01-01 12:00:00 +09:00"
+date: "2019-12-01 12:00:00 +09:00"
 desc: "Markdown Syntax"
-thumbnail: "./images/markdown/thumbnail.png"
+thumbnail: "./images/markdown-test/thumbnail.png"
 alt: "markdown logo"
 ---
 

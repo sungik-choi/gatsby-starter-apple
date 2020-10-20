@@ -10,7 +10,7 @@ alt: "code block graphic"
 ## Using Plugin
 
 This starter kit uses the code highlight plugin [gatsby-remark-vscode](https://github.com/andrewbranch/gatsby-remark-vscode).
-Please refer to the link for more detailed instructions. It's a great plugin 👍.
+Please refer to the link for more detailed instructions. It's a great plugin. 👍
 
 ## React JSX with line highlighting
 
