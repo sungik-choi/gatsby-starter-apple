@@ -62,43 +62,6 @@ const Container = styled(Markdown).attrs({
       font-size: 1.25rem;
     }
   }
-
-  #project {
-    h3 + h3 {
-      margin-top: var(--sizing-lg);
-    }
-  }
-
-  #skill ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0;
-    list-style: none;
-    li {
-      margin-right: 6px;
-      padding: var(--sizing-sm) var(--sizing-base);
-      background-color: var(--color-category-button);
-      border-radius: var(--border-radius-base);
-      font-weight: 500;
-    }
-
-    li:last-child {
-      margin-right: 0;
-    }
-  }
-
-  #education {
-    h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h3 + p {
-      margin-bottom: 0;
-      font-size: 0.875rem;
-    }
-  }
 `;
 
 export default About;
