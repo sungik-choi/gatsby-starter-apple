@@ -101,7 +101,9 @@ module.exports = {
 │   │   └── blogPost.js // Blog post template
 │   └── utils
 ├── .gitignore
+├── .eslintrc.js
 ├── .prettierrc
+├── gatsby-meta-config.js // Gatsby meta data config
 ├── gatsby-config.js // Gatsby config
 ├── gatsby-node.js // Gatsby node config
 ├── gatsby-ssr.js
