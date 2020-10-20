@@ -64,5 +64,6 @@
   "bugs": {
     "url": "https://github.com/sungik-choi/gatsby-starter-apple/issues",
     "email": "sungik.dev@gmail.com"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
