@@ -27,11 +27,10 @@ const MenuIconButton = styled.button`
   display: none;
 
   @media (max-width: ${({ theme }) => theme.device.sm}) {
+    position: relative;
+    margin-left: auto;
     display: block;
     cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
     width: var(--nav-height);
     height: var(--nav-height);
     border: none;
