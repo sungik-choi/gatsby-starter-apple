@@ -1,10 +1,10 @@
 ---
 title: "Markdown"
 category: "Markdown"
-date: "2020-02-01 12:00:00 +09:00"
+date: "2020-01-01 12:00:00 +09:00"
 desc: "Markdown Syntax"
-thumbnail: "./images/getting-started/thumbnail.png"
-alt: "getting started text img"
+thumbnail: "./images/markdown/thumbnail.png"
+alt: "markdown logo"
 ---
 
 ## Overview

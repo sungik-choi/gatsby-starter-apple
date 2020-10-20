@@ -1,9 +1,10 @@
 ---
 title: "Code Highlight"
 category: "Code"
-date: "2020-03-01 12:00:00 +09:00"
+date: "2020-02-01 12:00:00 +09:00"
 desc: "Test Markdown Code Highlight"
-thumbnail: "./images/getting-started/thumbnail.png"
+thumbnail: "./images/code-block/thumbnail.png"
+alt: "code block graphic"
 ---
 
 ## Using Plugin
