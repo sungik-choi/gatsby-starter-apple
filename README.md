@@ -18,7 +18,7 @@
 - Apple style responsive design
 - Prefect dynamic theme (Comment + Code highlight)
 - Beautiful mobile menu animation
-- Code highlighting with [gatsby-vscode-remark](https://github.com/andrewbranch/gatsby-remark-vscode)
+- Code highlighting with [gatsby-remark-vscode](https://github.com/andrewbranch/gatsby-remark-vscode)
 - [Utterances](https://utteranc.es/) Comment
 - Categories support
 - Infinite Scroll with Intersection Observer
