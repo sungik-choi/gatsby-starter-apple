@@ -14,6 +14,7 @@
 
 ## ✨ Features
 
+- Lighthouse 100 + PWA
 - styled-components
 - Apple style responsive design
 - Prefect dynamic theme (Comment + Code highlight)
