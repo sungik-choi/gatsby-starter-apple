@@ -81,13 +81,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: meta.name,
-        short_name: meta.name,
+        name: meta.title,
+        short_name: meta.title,
+        description: meta.description,
+        lang: meta.lang,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,
         icon: meta.icon,
+        icon_options: {
+          purpose: `any maskable`,
+        },
       },
     },
     `gatsby-plugin-sharp`,
