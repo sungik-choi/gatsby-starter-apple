@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const meta = require("./gatsby-meta-config")
 
 module.exports = {
@@ -28,13 +29,13 @@ module.exports = {
     ],
     plugins: [
       "gatsby-plugin-robots-txt",
-      `gatsby-plugin-sitemap`,
-      `gatsby-plugin-feed`,
+      "gatsby-plugin-sitemap",
+      "gatsby-plugin-feed",
     ],
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-alias-imports`,
+      resolve: "gatsby-plugin-alias-imports",
       options: {
         alias: {
           Src: "src",
@@ -55,32 +56,32 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `src`,
+        name: "src",
         path: `${__dirname}/src`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: `src/styles/typography`,
+        pathToConfigModule: "src/styles/typography",
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          `gatsby-remark-copy-linked-files`,
+          "gatsby-remark-copy-linked-files",
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
               linkImagesToOriginal: false,
             },
@@ -89,27 +90,28 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: meta.title,
         short_name: meta.title,
         description: meta.description,
         lang: meta.lang,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#ffffff`,
-        display: `standalone`,
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#ffffff",
+        display: "standalone",
         icon: meta.favicon,
         icon_options: {
-          purpose: `any maskable`,
+          purpose: "any maskable",
         },
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-typescript",
   ],
 }

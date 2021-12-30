@@ -1,10 +1,10 @@
-import React from "react"
+import React, { useMemo } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import type { IGatsbyImageData } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-import type { Query, ImageSharpFluid } from "Types/GraphQL"
-import type { DeepNonNullable } from "Types/Utils"
+import type { Query } from "Types/GraphQL"
 import type Post from "Types/Post"
 
 interface CenteredImgProps extends Pick<Post, "alt"> {
@@ -20,25 +20,24 @@ const CenteredImg: React.FC<CenteredImgProps> = ({ src, alt }) => {
         edges {
           node {
             id
-            fluid {
-              ...GatsbyImageSharpFluid
-              originalName
-            }
+            gatsbyImageData(aspectRatio: 1.77, placeholder: BLURRED)
           }
         }
       }
     }
   `)
 
-  const image = data.allImageSharp.edges.find(edge => edge.node.id === src)
-  const fluid = image?.node.fluid as DeepNonNullable<ImageSharpFluid>
-
-  if (!alt) alt = DEFAULT_ALT
+  const image = useMemo(() => {
+    const imageSharp = data.allImageSharp.edges.find(
+      edge => edge.node.id === src
+    )
+    return imageSharp?.node.gatsbyImageData as IGatsbyImageData
+  }, [src, data.allImageSharp.edges])
 
   return (
     <ThumbnailWrapper>
       <InnerWrapper>
-        <Img alt={alt} fluid={{ ...fluid, aspectRatio: 16 / 9 }} />
+        <GatsbyImage image={image} alt={alt ?? DEFAULT_ALT} />
       </InnerWrapper>
     </ThumbnailWrapper>
   )

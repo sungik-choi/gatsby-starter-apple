@@ -20,7 +20,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ data }) => {
   const { frontmatter, html } = markdownRemark!
   const { title, desc, thumbnail, date, category } = frontmatter!
 
-  const ogImagePath = thumbnail && thumbnail?.childImageSharp?.fixed?.src
+  const ogImagePath = thumbnail && thumbnail?.childImageSharp?.gatsbyImageData?.src
 
   return (
     <Layout>
@@ -133,25 +133,22 @@ const Title = styled.h1`
   }
 `
 
-export const query = graphql`
-  query ($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        desc
-        thumbnail {
-          childImageSharp {
-            fixed {
-              src
-            }
-          }
+export const query = graphql`query ($slug: String!) {
+  markdownRemark(fields: {slug: {eq: $slug}}) {
+    html
+    frontmatter {
+      title
+      desc
+      thumbnail {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, layout: FIXED)
         }
-        date(formatString: "YYYY-MM-DD")
-        category
       }
+      date(formatString: "YYYY-MM-DD")
+      category
     }
   }
+}
 `
 
 export default BlogPost
