@@ -1,11 +1,26 @@
 {
   "name": "gatsby-starter-apple",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Gatsby blog starter kit with beautiful and responsive design",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "gatsby": "^4.4.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1",
+    "semantic-release": "^18.0.1"
   },
   "repository": {
     "type": "git",
@@ -19,8 +34,5 @@
   "bugs": {
     "url": "https://github.com/sungik-choi/gatsby-starter-apple/issues"
   },
-  "homepage": "https://github.com/sungik-choi/gatsby-starter-apple#readme",
-  "devDependencies": {
-    "semantic-release": "^18.0.1"
-  }
+  "homepage": "https://github.com/sungik-choi/gatsby-starter-apple#readme"
 }
