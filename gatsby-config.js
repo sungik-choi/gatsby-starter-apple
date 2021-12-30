@@ -78,6 +78,19 @@ module.exports = {
       options: {
         plugins: [
           "gatsby-remark-copy-linked-files",
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: "gatsby-remark-vscode",
+            options: {
+              theme: {
+                default: "Github Light Theme",
+                parentSelector: {
+                  "body[data-theme=dark]": "Dark Github",
+                },
+              },
+              extensions: ["vscode-theme-github-light", "dark-theme-github"],
+            },
+          },
           {
             resolve: "gatsby-remark-images",
             options: {
