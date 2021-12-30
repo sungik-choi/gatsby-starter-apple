@@ -9,8 +9,7 @@ import GlobalStyle from 'styles/globalStyle';
 
 const Layout = ({ children }) => {
   const [theme, themeToggler] = useTheme();
-  const site = useSiteMetadata();
-  const { title, author } = site.siteMetadata;
+  const { title, author } = useSiteMetadata();
   const copyrightStr = `Copyright © ${author}. Built with `;
   const repoName = 'gatsby-starter-apple';
   const repoSrc = 'https://github.com/sungik-choi/gatsby-starter-apple';

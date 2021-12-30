@@ -5,17 +5,17 @@ import defaultOpenGraphImage from '../images/og-default.png';
 
 const SEO = ({ description = '', meta = [], image = null, title }) => {
   const site = useSiteMetadata();
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || site.description;
   const ogImageUrl =
-    site.siteMetadata.siteUrl + (image || defaultOpenGraphImage);
+    site.siteUrl + (image || defaultOpenGraphImage);
 
   return (
     <Helmet
       htmlAttributes={{
-        lang: site.siteMetadata.lang,
+        lang: site.lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${site.title}`}
       meta={[
         {
           name: 'description',
@@ -39,7 +39,7 @@ const SEO = ({ description = '', meta = [], image = null, title }) => {
         },
         {
           name: 'twitter:creator',
-          content: site.siteMetadata.author,
+          content: site.author,
         },
         {
           name: 'twitter:title',

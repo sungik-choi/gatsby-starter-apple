@@ -50,7 +50,7 @@ const Home = ({ pageContext, data }) => {
   }, [currentCategory, postData]);
 
   const site = useSiteMetadata();
-  const postTitle = currentCategory || site.siteMetadata.postTitle;
+  const postTitle = currentCategory || site.postTitle;
 
   return (
     <Layout>

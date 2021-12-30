@@ -1,7 +1,37 @@
+/* eslint-disable no-undef */
 const meta = require('./gatsby-meta-config')
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: meta.title,
+    description: meta.description,
+    author: meta.author,
+    siteUrl: meta.siteUrl,
+    lang: meta.lang,
+    utterances: {
+      repo: meta.utterances,
+    },
+    postTitle: 'All',
+    menuLinks: [
+      {
+        link: '/',
+        name: 'Home',
+      },
+      {
+        link: '/about/',
+        name: 'About',
+      },
+      {
+        link: meta.links.github,
+        name: 'Github',
+      },
+    ],
+    plugins: [
+      'gatsby-plugin-robots-txt',
+      `gatsby-plugin-sitemap`,
+      `gatsby-plugin-feed`,
+    ],
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

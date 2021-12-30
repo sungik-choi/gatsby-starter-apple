@@ -10,7 +10,7 @@ const DARK_THEME = 'github-dark';
 
 const Comment = () => {
   const site = useSiteMetadata();
-  const { repo } = site.siteMetadata.utterances;
+  const { repo } = site.utterances;
   const theme = useContext(ThemeContext);
   const containerRef = useRef(null);
   const isUtterancesCreated = useRef(false);
