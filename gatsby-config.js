@@ -34,6 +34,31 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "Src": "src",
+          "Components": "src/components",
+          "Constants": "src/constants",
+          "Hooks": "src/hooks",
+          "Images": "src/images",
+          "Layouts": "src/layouts",
+          "Pages": "src/pages",
+          "Posts": "src/posts",
+          "Stores": "src/stores",
+          "Styles": "src/styles",
+          "Templates": "src/templates",
+          "Utils": "src/utils",
+          "GraphQlTypes": "src/graphqlTypes.ts",
+        },
+        extensions: [
+          "js",
+          "ts",
+          "tsx",
+        ],
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
@@ -87,7 +112,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
-    `gatsby-alias-imports`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-typescript',

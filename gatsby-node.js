@@ -1,25 +1,25 @@
 /* eslint-disable no-undef */
-const path = require(`path`);
-const _ = require('lodash');
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require(`path`)
+const _ = require("lodash")
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
+  const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `posts` });
+    const slug = createFilePath({ node, getNode, basePath: `posts` })
     createNodeField({
       node,
       name: `slug`,
       value: slug,
-    });
+    })
   }
-};
+}
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
-  const mainTemplate = path.resolve(`./src/pages/index.js`);
-  const blogPostTemplate = path.resolve(`./src/templates/blogPost.js`);
+  const mainTemplate = path.resolve(`./src/pages/index.tsx`)
+  const blogPostTemplate = path.resolve(`./src/templates/blogPost.tsx`)
 
   const result = await graphql(`
     {
@@ -43,9 +43,9 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `);
+  `)
 
-  const posts = result.data.postsRemark.edges;
+  const posts = result.data.postsRemark.edges
 
   posts.forEach(({ node }) => {
     createPage({
@@ -54,18 +54,18 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: node.fields.slug,
       },
-    });
-  });
+    })
+  })
 
-  const categories = result.data.categoriesGroup.group;
+  const categories = result.data.categoriesGroup.group
 
-  categories.forEach((category) => {
+  categories.forEach(category => {
     createPage({
       path: `/category/${_.kebabCase(category.fieldValue)}/`,
       component: mainTemplate,
       context: {
         category: category.fieldValue,
       },
-    });
-  });
-};
+    })
+  })
+}
