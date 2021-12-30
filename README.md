@@ -10,7 +10,7 @@
 
 ## 🍎 Demo
 
-👉 **View [Demo Page](https://gatsby-starter-apple.netlify.app/)**
+👉 **View [Demo Page](https://apple.gatsbyjs.io/)**
 
 ## ✨ Features
 
