@@ -16,14 +16,14 @@ Please refer to the link for more detailed instructions. It's a great plugin. ðŸ
 
 ```jsx
 var ProfileLink = React.createClass({
-  render: function() {
+  render: function () {
     return (
-      <a href={'https://www.facebook.com/' + this.props.username}>
+      <a href={"https://www.facebook.com/" + this.props.username}>
         {this.props.username}
       </a>
-    );
-  }
-});
+    )
+  },
+})
 ```
 
 ## Javascript
@@ -74,18 +74,22 @@ export  $initHighlight;
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Hello world</title>
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="index.css" />
-</head>
-<body>
-  <div id="app"></div>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
-  <script src="vendor/prism.js"></script>
-  <script src="examples.bundle.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello world</title>
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <script src="vendor/prism.js"></script>
+    <script src="examples.bundle.js"></script>
+  </body>
 </html>
 ```
 
@@ -97,7 +101,7 @@ code {
   color: #5c6e74;
   font-size: 13px;
   text-shadow: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -120,13 +124,13 @@ code::selection {
 }
 pre[class*="language-"] {
   padding: 1em;
-  margin: .5em 0;
+  margin: 0.5em 0;
   overflow: auto;
   background: #f8f5ec;
 }
 :not(pre) > code {
-  padding: .1em .3em;
-  border-radius: .3em;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
   color: #db4c69;
   background: #f9f2f4;
 }

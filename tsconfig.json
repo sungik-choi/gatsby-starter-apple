@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "baseUrl": ".",
+    "paths": {
+      "Src/*": ["src"],
+      "Components/*": ["src/components/*"],
+      "Constants/*": ["src/constants/*"],
+      "Hooks/*": ["src/hooks/*"],
+      "Images/*": ["src/images/*"],
+      "Layouts/*": ["src/layouts/*"],
+      "Pages/*": ["src/pages/*"],
+      "Posts/*": ["src/posts/*"],
+      "Stores/*": ["src/stores/*"],
+      "Styles/*": ["src/styles/*"],
+      "Templates/*": ["src/templates/*"],
+      "Types/*": ["src/types/*"],
+      "Utils/*": ["src/utils/*"]
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

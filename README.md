@@ -62,57 +62,17 @@ Open **`gatsby-meta-config.js`** and fix meta data of your blog.
 
 ```js
 module.exports = {
-  title: 'Dev Ed', // Your website title
+  title: "Dev Ed", // Your website title
   description: `Ed's Blog`, // Your website description
-  author: 'Ed', // Maybe your name
-  siteUrl: 'https://gatsby-starter-apple.netlify.app', // Your website URL
-  lang: 'en', // Language
-  utterances: 'sungik-choi/gatsby-starter-apple-comment', // Github repository to store comments
+  author: "Ed", // Maybe your name
+  siteUrl: "https://gatsby-starter-apple.netlify.app", // Your website URL
+  lang: "en", // Language
+  utterances: "sungik-choi/gatsby-starter-apple-comment", // Github repository to store comments
   links: {
-    github: 'https://github.com/sungik-choi/gatsby-starter-apple', // Your github repository
+    github: "https://github.com/sungik-choi/gatsby-starter-apple", // Your github repository
   },
-  icon: 'src/images/icon.png', //  Favicon Path
-};
-```
-
-## 🤔 What's Inside
-
-```js
-.
-├── node_modules
-├── src
-│   ├── build
-│   ├── components // React components
-│   ├── constants
-│   ├── hooks
-│   ├── images
-│   ├── layout
-│   ├── pages
-│   │   ├── index.js // Index page
-│   │   ├── about.js // About page
-│   │   └── 404.js // 404 page
-│   └── posts
-│   │   ├── blog
-│   │   │   ├── images // Blog post images
-│   │   │   ├── getting-started.md // Blog post markdown
-│   │   │   └── ...
-│   │   └── about.md // About page markdown
-│   ├── store
-│   ├── styles // Reusable styled components, animations
-│   ├── templates
-│   │   └── blogPost.js // Blog post template
-│   └── utils
-├── .gitignore
-├── .eslintrc.js
-├── .prettierrc
-├── gatsby-meta-config.js // Gatsby meta data config
-├── gatsby-config.js // Gatsby config
-├── gatsby-node.js // Gatsby node config
-├── gatsby-ssr.js
-├── LICENSE
-├── package-lock.json
-├── package.json
-└── README.md
+  icon: "src/images/icon.png", //  Favicon Path
+}
 ```
 
 ## 💫 Deploy

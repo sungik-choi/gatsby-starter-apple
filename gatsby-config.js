@@ -1,4 +1,4 @@
-const meta = require('./gatsby-meta-config');
+const meta = require("./gatsby-meta-config")
 
 module.exports = {
   siteMetadata: {
@@ -10,67 +10,89 @@ module.exports = {
     utterances: {
       repo: meta.utterances,
     },
-    postTitle: 'All',
+    postTitle: "All",
     menuLinks: [
       {
-        link: '/',
-        name: 'Home',
+        link: "/",
+        name: "Home",
       },
       {
-        link: '/about/',
-        name: 'About',
+        link: "/about/",
+        name: "About",
       },
       {
         link: meta.links.github,
-        name: 'Github',
+        name: "Github",
       },
     ],
     plugins: [
-      'gatsby-plugin-robots-txt',
-      `gatsby-plugin-sitemap`,
-      `gatsby-plugin-feed`,
+      "gatsby-plugin-robots-txt",
+      "gatsby-plugin-sitemap",
+      "gatsby-plugin-feed",
     ],
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-alias-imports",
       options: {
-        name: `src`,
+        alias: {
+          Src: "src",
+          Components: "src/components",
+          Constants: "src/constants",
+          Hooks: "src/hooks",
+          Images: "src/images",
+          Layouts: "src/layouts",
+          Pages: "src/pages",
+          Posts: "src/posts",
+          Stores: "src/stores",
+          Styles: "src/styles",
+          Templates: "src/templates",
+          Types: "src/types",
+          Utils: "src/utils",
+        },
+        extensions: ["js", "ts", "tsx"],
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
         path: `${__dirname}/src`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: `src/styles/typography`,
+        pathToConfigModule: "src/styles/typography",
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          "gatsby-remark-copy-linked-files",
           `gatsby-remark-copy-linked-files`,
           {
-            resolve: `gatsby-remark-vscode`,
+            resolve: "gatsby-remark-vscode",
             options: {
               theme: {
-                default: 'Github Light Theme',
+                default: "Github Light Theme",
                 parentSelector: {
-                  'body[data-theme=dark]': 'Dark Github',
+                  "body[data-theme=dark]": "Dark Github",
                 },
               },
-              extensions: ['vscode-theme-github-light', 'dark-theme-github'],
+              extensions: ["vscode-theme-github-light", "dark-theme-github"],
             },
           },
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
               linkImagesToOriginal: false,
             },
@@ -79,27 +101,28 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: meta.title,
         short_name: meta.title,
         description: meta.description,
         lang: meta.lang,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#ffffff`,
-        display: `standalone`,
-        icon: meta.icon,
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#ffffff",
+        display: "standalone",
+        icon: meta.favicon,
         icon_options: {
-          purpose: `any maskable`,
+          purpose: "any maskable",
         },
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-alias-imports`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-typescript",
   ],
-};
+}
