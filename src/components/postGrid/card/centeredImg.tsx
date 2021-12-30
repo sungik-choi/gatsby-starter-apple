@@ -1,8 +1,8 @@
 import React, { useMemo } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import type { IGatsbyImageData } from "gatsby-plugin-image"
 import { GatsbyImage } from "gatsby-plugin-image"
+import type { IGatsbyImageData } from "gatsby-plugin-image"
 
 import type { Query } from "Types/GraphQL"
 import type Post from "Types/Post"
@@ -20,7 +20,11 @@ const CenteredImg: React.FC<CenteredImgProps> = ({ src, alt }) => {
         edges {
           node {
             id
-            gatsbyImageData(aspectRatio: 1.77, placeholder: BLURRED)
+            gatsbyImageData(
+              layout: CONSTRAINED
+              aspectRatio: 1.77
+              placeholder: BLURRED
+            )
           }
         }
       }
@@ -37,7 +41,7 @@ const CenteredImg: React.FC<CenteredImgProps> = ({ src, alt }) => {
   return (
     <ThumbnailWrapper>
       <InnerWrapper>
-        <GatsbyImage image={image} alt={alt ?? DEFAULT_ALT} />
+        <GatsbyImage image={image} loading="eager" alt={alt ?? DEFAULT_ALT} />
       </InnerWrapper>
     </ThumbnailWrapper>
   )
@@ -64,4 +68,4 @@ const InnerWrapper = styled.div`
   overflow: hidden;
 `
 
-export default CenteredImg
+export default React.memo(CenteredImg)

@@ -87,4 +87,4 @@ const Desc = styled.p`
   text-overflow: ellipsis;
 `
 
-export default Card
+export default React.memo(Card)
