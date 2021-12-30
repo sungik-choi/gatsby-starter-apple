@@ -1,4 +1,5 @@
-const meta = require('./gatsby-meta-config');
+/* eslint-disable no-undef */
+const meta = require('../gatsby-meta-config');
 
 module.exports = {
   siteMetadata: {
