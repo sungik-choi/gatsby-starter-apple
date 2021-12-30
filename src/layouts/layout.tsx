@@ -7,7 +7,9 @@ import useSiteMetadata from "Hooks/useSiteMetadata"
 import NavBar from "Components/navBar/navBar"
 import styledTheme from "Styles/styledTheme"
 import GlobalStyle from "Styles/globalStyle"
-import { name, homepage } from "../../package.json"
+import packageJSON from "../../package.json"
+
+const { name, homepage } = packageJSON
 
 const Layout: React.FC = ({ children }) => {
   const { theme, themeToggler } = useTheme()
