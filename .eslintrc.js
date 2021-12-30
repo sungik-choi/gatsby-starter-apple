@@ -32,7 +32,12 @@ module.exports = {
     },
   },
   // NOTE: cf. https://stackoverflow.com/questions/63118405/how-to-fix-eslintrc-the-file-does-not-match-your-project-config
-  ignorePatterns: [".eslintrc.js", "**/build/*", "src/types/GraphQL.ts"],
+  ignorePatterns: [
+    ".eslintrc.js",
+    "**/build/*",
+    "src/types/GraphQL.ts",
+    "*.js",
+  ],
   rules: {
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-unsafe-assignment": 0,

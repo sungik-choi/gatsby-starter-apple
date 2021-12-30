@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const React = require("react")
 
 exports.onRenderBody = ({ setPreBodyComponents }) => {
