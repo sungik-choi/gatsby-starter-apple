@@ -1,22 +1,41 @@
 import React from "react"
+import { isNil } from "lodash"
 import { Link } from "gatsby"
 
-const LinkList = ({ links, setToggle }) => {
-  const generateLink = (link, name) => {
-    const expression =
-      /(https?:\/\/)?[\w\-~]+(\.[\w\-~]+)+(\/[\w\-~@:%]*)*(#[\w-]*)?(\?[^\s]*)?/gi
-    const isExternalLink = expression.test(link)
-    if (link === "/") {
+import type { SiteSiteMetadataMenuLinks } from "Types/GraphQL"
+import type { UseSiteMetaDataReturnType } from "Hooks/useSiteMetadata"
+import type { UseMenuReturnType } from "./useMenu"
+
+const ROOT = "/"
+const EXTENRAL_LINK_EXP =
+  /(https?:\/\/)?[\w\-~]+(\.[\w\-~]+)+(\/[\w\-~@:%]*)*(#[\w-]*)?(\?[^\s]*)?/gi
+
+interface LinkListProps extends Pick<UseMenuReturnType, "setToggle"> {
+  links: UseSiteMetaDataReturnType["menuLinks"]
+}
+
+const LinkList: React.FC<LinkListProps> = ({ links, setToggle }) => {
+  const generateLink = (props: SiteSiteMetadataMenuLinks | null) => {
+    if (isNil(props)) {
+      return
+    }
+
+    const { link, name } = props
+    const safeLink = isNil(link) ? "" : link
+    const isExternalLink = EXTENRAL_LINK_EXP.test(safeLink)
+    if (safeLink === ROOT) {
       return (
-        <li key={name} onClick={() => setToggle(false)}>
-          <Link to={link}>{name}</Link>
+        <li key={name}>
+          <Link to={safeLink} onClick={() => setToggle(false)}>
+            {name}
+          </Link>
         </li>
       )
     }
     if (isExternalLink) {
       return (
         <li key={name}>
-          <a target="__blank" rel="noreferrer" href={link}>
+          <a target="__blank" rel="noreferrer" href={safeLink}>
             {name}
           </a>
         </li>
@@ -24,12 +43,12 @@ const LinkList = ({ links, setToggle }) => {
     }
     return (
       <li key={name}>
-        <Link to={link}>{name}</Link>
+        <Link to={safeLink}>{name}</Link>
       </li>
     )
   }
 
-  return <>{links.map(({ link, name }) => generateLink(link, name))}</>
+  return <>{links?.map(generateLink)}</>
 }
 
 export default LinkList

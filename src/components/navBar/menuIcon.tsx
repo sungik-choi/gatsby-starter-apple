@@ -1,9 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
-const MenuIcon = ({ onClickHandler, toggle }) => {
+import type { UseMenuReturnType } from "./useMenu"
+
+const MenuIcon: React.FC<Omit<UseMenuReturnType, "setToggle">> = ({
+  toggle,
+  handleClick,
+}) => {
   return (
-    <MenuIconButton onClick={onClickHandler} toggle={toggle} aria-label="Menu">
+    <MenuIconButton onClick={handleClick} toggle={toggle} aria-label="Menu">
       <MenuIconBreadTop>
         <div />
       </MenuIconBreadTop>
@@ -22,7 +27,7 @@ const MenuIconBreadBottom = styled.div`
   bottom: 22px;
 `
 
-const MenuIconButton = styled.button`
+const MenuIconButton = styled.button<Pick<UseMenuReturnType, "toggle">>`
   z-index: 9999;
   display: none;
 

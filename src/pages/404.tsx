@@ -4,8 +4,9 @@ import styled from "styled-components"
 import Layout from "Layouts/layout"
 import SEO from "Components/seo"
 import GlowParticle from "Utils/glowParticle"
+import type { RGB } from "Utils/glowParticle"
 
-const COLORS = [
+const COLORS: RGB[] = [
   { r: 255, g: 149, b: 0 }, // orange
   { r: 255, g: 45, b: 85 }, // pink
   { r: 175, g: 82, b: 222 }, // purple
@@ -14,14 +15,14 @@ const COLORS = [
 ]
 
 const NotFound = () => {
-  const canvasRef = useRef(null)
-  const [particles, setParticles] = useState([])
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const [particles, setParticles] = useState<GlowParticle[]>([])
   const isCreated = useRef(false)
-  const requestRef = useRef(null)
+  const requestRef = useRef<number>()
 
   useLayoutEffect(() => {
     const canvasObj = canvasRef.current
-    const ctx = canvasObj.getContext("2d")
+    const ctx = canvasObj?.getContext("2d")
     let stageWidth = document.body.clientWidth
     let stageHeight = document.body.clientHeight
     const pixelRatio = window.devicePixelRatio > 1 ? 2 : 1
@@ -49,10 +50,10 @@ const NotFound = () => {
     }
 
     const render = () => {
-      ctx.clearRect(0, 0, stageWidth, stageHeight)
+      ctx?.clearRect(0, 0, stageWidth, stageHeight)
       for (let i = 0; i < totalParticles; i++) {
         const item = particles[i]
-        if (!item) return
+        if (!item || !ctx) return
         item.animate(ctx, stageWidth, stageHeight)
       }
       requestRef.current = requestAnimationFrame(render)
@@ -61,9 +62,10 @@ const NotFound = () => {
     const resize = () => {
       stageWidth = document.body.clientWidth
       stageHeight = document.body.clientHeight
-
+      if (!canvasObj) return
       canvasObj.width = stageWidth * pixelRatio
       canvasObj.height = stageHeight * pixelRatio
+      if (!ctx) return
       ctx.scale(pixelRatio, pixelRatio)
       ctx.globalCompositeOperation = "saturation"
       ctx.clearRect(0, 0, stageWidth, stageHeight)
@@ -82,6 +84,7 @@ const NotFound = () => {
 
     return () => {
       window.removeEventListener("resize", resize)
+      if (!requestRef.current) return
       window.cancelAnimationFrame(requestRef.current)
     }
   })

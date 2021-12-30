@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import typography from "./typography"
+import type typography from "./typography"
 
 const Markdown = styled.article<{ rhythm: typeof typography["rhythm"] }>`
   h1,

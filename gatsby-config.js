@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const meta = require('./gatsby-meta-config')
+const meta = require("./gatsby-meta-config")
 
 module.exports = {
   siteMetadata: {
@@ -11,23 +11,23 @@ module.exports = {
     utterances: {
       repo: meta.utterances,
     },
-    postTitle: 'All',
+    postTitle: "All",
     menuLinks: [
       {
-        link: '/',
-        name: 'Home',
+        link: "/",
+        name: "Home",
       },
       {
-        link: '/about/',
-        name: 'About',
+        link: "/about/",
+        name: "About",
       },
       {
         link: meta.links.github,
-        name: 'Github',
+        name: "Github",
       },
     ],
     plugins: [
-      'gatsby-plugin-robots-txt',
+      "gatsby-plugin-robots-txt",
       `gatsby-plugin-sitemap`,
       `gatsby-plugin-feed`,
     ],
@@ -37,26 +37,22 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          "Src": "src",
-          "Components": "src/components",
-          "Constants": "src/constants",
-          "Hooks": "src/hooks",
-          "Images": "src/images",
-          "Layouts": "src/layouts",
-          "Pages": "src/pages",
-          "Posts": "src/posts",
-          "Stores": "src/stores",
-          "Styles": "src/styles",
-          "Templates": "src/templates",
-          "Utils": "src/utils",
-          "GraphQlTypes": "src/graphqlTypes.ts",
+          Src: "src",
+          Components: "src/components",
+          Constants: "src/constants",
+          Hooks: "src/hooks",
+          Images: "src/images",
+          Layouts: "src/layouts",
+          Pages: "src/pages",
+          Posts: "src/posts",
+          Stores: "src/stores",
+          Styles: "src/styles",
+          Templates: "src/templates",
+          Types: "src/types",
+          Utils: "src/utils",
         },
-        extensions: [
-          "js",
-          "ts",
-          "tsx",
-        ],
-      }
+        extensions: ["js", "ts", "tsx"],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -114,6 +110,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-typescript',
+    "gatsby-plugin-typescript",
   ],
 }

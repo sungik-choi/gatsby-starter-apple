@@ -22,7 +22,7 @@ alt: "apple and shaking hands"  // [optional] thumbnail image alt
 ---
 ```
 
-- *NOTE* :  Properties other than alt must be required.
+- _NOTE_ : Properties other than alt must be required.
 
 ## Edit About Page
 
@@ -41,10 +41,10 @@ An example is shown below.
 ```js
 const About = () => {
   /* ... */
-};
+}
 
 const Container = styled(Markdown).attrs({
-  as: 'main',
+  as: "main",
 })`
   width: var(--post-width);
   margin: 0 auto;
@@ -79,9 +79,9 @@ const Container = styled(Markdown).attrs({
   #title {
     font-size: 60px;
   }
-`;
+`
 
-export default About;
+export default About
 ```
 
 ## Other Customization

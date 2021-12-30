@@ -17,16 +17,17 @@
 
 /** @type {MetaConfig} */
 const metaConfig = {
-  title: 'Dev Ed',
+  title: "Dev Ed",
   description: `Ed's Blog`,
-  author: 'Ed',
-  siteUrl: 'https://gatsby-starter-apple.netlify.app',
-  lang: 'en',
-  utterances: 'sungik-choi/gatsby-starter-apple-comment',
+  author: "Ed",
+  siteUrl: "https://gatsby-starter-apple.netlify.app",
+  lang: "en",
+  utterances: "sungik-choi/gatsby-starter-apple-comment",
   links: {
-    github: 'https://github.com/sungik-choi/gatsby-starter-apple',
+    github: "https://github.com/sungik-choi/gatsby-starter-apple",
   },
-  favicon: 'src/images/icon.png',
+  favicon: "src/images/icon.png",
 }
 
+// eslint-disable-next-line no-undef
 module.exports = metaConfig

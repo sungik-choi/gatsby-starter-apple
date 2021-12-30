@@ -10,7 +10,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint '**/*.{ts,tsx}'",
     "semantic-release": "semantic-release",
     "generate": "graphql-codegen --config codegen.yml"
   },
@@ -50,14 +50,18 @@
     "@types/react-helmet": "^6.1.5",
     "@types/styled-components": "^5.1.19",
     "@types/typography": "^0.16.4",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
     "disable-scroll": "^0.6.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-typescript": "^4.4.0",
     "graphql": "^15.8.0",
     "install": "^0.13.0",
     "lodash": "^4.17.21",
     "prettier": "^2.4.1",
-    "semantic-release": "^18.0.1"
+    "semantic-release": "^18.0.1",
+    "typescript": "^4.5.4"
   },
   "repository": {
     "type": "git",

@@ -1,38 +1,36 @@
 import React, { useState, useLayoutEffect } from "react"
+import type { PageProps } from "gatsby"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
+import type { Query, MarkdownRemarkFrontmatter } from "Types/GraphQL"
+import type Post from "Types/Post"
+import useSiteMetadata from "Hooks/useSiteMetadata"
 import Layout from "Layouts/layout"
 import SEO from "Components/seo"
-import PostGrid from "Components/postGrid/postGrid"
-import CategoryFilter from "Components/categoryFilter"
-import useSiteMetadata from "Hooks/useSiteMetadata"
+import PostGrid from "Components/postGrid"
+import CategoryFilter from "Components/catetgoryFilter"
 
-const Home = ({ pageContext, data }) => {
-  const [posts, setPosts] = useState([])
+const Home = ({
+  pageContext,
+  data,
+}: PageProps<Query, MarkdownRemarkFrontmatter>) => {
+  const [posts, setPosts] = useState<Post[]>([])
   const currentCategory = pageContext.category
   const postData = data.allMarkdownRemark.edges
 
   useLayoutEffect(() => {
     const filteredPostData = currentCategory
       ? postData.filter(
-          ({ node }) => node.frontmatter.category === currentCategory
+          ({ node }) => node?.frontmatter?.category === currentCategory
         )
       : postData
 
     filteredPostData.forEach(({ node }) => {
-      const {
-        id,
-        fields: { slug },
-        frontmatter: {
-          title,
-          desc,
-          date,
-          category,
-          thumbnail: { childImageSharp },
-          alt,
-        },
-      } = node
+      const { id } = node
+      const { slug } = node?.fields!
+      const { title, desc, date, category, thumbnail, alt } = node?.frontmatter!
+      const { childImageSharp } = thumbnail!
 
       setPosts(prevPost => [
         ...prevPost,
@@ -43,7 +41,7 @@ const Home = ({ pageContext, data }) => {
           desc,
           date,
           category,
-          thumbnail: childImageSharp.id,
+          thumbnail: childImageSharp?.id,
           alt,
         },
       ])

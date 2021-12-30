@@ -1,11 +1,24 @@
 import React from "react"
 import styled from "styled-components"
 
+import type Post from "Types/Post"
 import Category from "Styles/category"
 import DateTime from "Styles/dateTime"
 import CenteredImg from "./centeredImg"
 
-const Card = ({ thumbnail, alt, category, title, desc, date }) => {
+type CardProps = Pick<
+  Post,
+  "thumbnail" | "alt" | "category" | "title" | "desc" | "date"
+>
+
+const Card: React.FC<CardProps> = ({
+  thumbnail,
+  alt,
+  category,
+  title,
+  desc,
+  date,
+}) => {
   return (
     <Wrapper>
       <CenteredImg src={thumbnail} alt={alt} />

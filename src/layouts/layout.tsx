@@ -1,18 +1,18 @@
 import React from "react"
 import styled, { ThemeProvider } from "styled-components"
-import NavBar from "Components/navBar/navBar"
+
 import ThemeContext from "Stores/themeContext"
 import useTheme from "Hooks/useTheme"
 import useSiteMetadata from "Hooks/useSiteMetadata"
-import styledTheme from "Styles/theme"
+import NavBar from "Components/navBar/navBar"
+import styledTheme from "Styles/styledTheme"
 import GlobalStyle from "Styles/globalStyle"
+import { name, homepage } from "../../package.json"
 
-const Layout = ({ children }) => {
-  const [theme, themeToggler] = useTheme()
+const Layout: React.FC = ({ children }) => {
+  const { theme, themeToggler } = useTheme()
   const { title, author } = useSiteMetadata()
   const copyrightStr = `Copyright © ${author}. Built with `
-  const repoName = "gatsby-starter-apple"
-  const repoSrc = "https://github.com/sungik-choi/gatsby-starter-apple"
 
   return (
     <ThemeProvider theme={styledTheme}>
@@ -25,8 +25,8 @@ const Layout = ({ children }) => {
         <Footer role="contentinfo">
           <Copyright aria-label="Copyright">
             {copyrightStr}
-            <RepoLink href={repoSrc} target="__blank">
-              {repoName}
+            <RepoLink href={homepage} target="__blank">
+              {name}
             </RepoLink>
           </Copyright>
         </Footer>

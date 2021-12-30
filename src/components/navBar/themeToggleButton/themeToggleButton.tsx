@@ -1,12 +1,19 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
 
+import type { UseThemeReturnType } from "Hooks/useTheme"
 import ThemeContext from "Stores/themeContext"
 import Background from "Styles/background"
-import { DARK } from "Constants/colorScheme"
+import { DARK } from "Constants/theme"
 import ThemeIcon from "./themeIcon"
 
-const ThemeToggleButton = ({ themeToggler }) => {
+interface ThemeToggleButtonProps {
+  themeToggler: UseThemeReturnType["themeToggler"]
+}
+
+const ThemeToggleButton: React.FC<ThemeToggleButtonProps> = ({
+  themeToggler,
+}) => {
   const theme = useContext(ThemeContext)
   const LABEL_TEXT = theme === DARK ? "Light theme" : "Dark theme"
 

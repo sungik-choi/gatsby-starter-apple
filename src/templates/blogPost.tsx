@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
+import type { Query } from "Types/GraphQL"
 import Layout from "Layouts/layout"
 import SEO from "Components/seo"
 import Comment from "Components/comment"
@@ -10,19 +11,20 @@ import Category from "Styles/category"
 import DateTime from "Styles/dateTime"
 import Markdown from "Styles/markdown"
 
-const BlogPost = ({ data }) => {
-  const {
-    markdownRemark: {
-      frontmatter: { title, desc, thumbnail, date, category },
-      html,
-    },
-  } = data
+interface BlogPostProps {
+  data: Query
+}
 
-  const ogImagePath = thumbnail && thumbnail.childImageSharp.fixed.src
+const BlogPost: React.FC<BlogPostProps> = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark!
+  const { title, desc, thumbnail, date, category } = frontmatter!
+
+  const ogImagePath = thumbnail && thumbnail?.childImageSharp?.fixed?.src
 
   return (
     <Layout>
-      <SEO title={title} description={desc} image={ogImagePath} />
+      <SEO title={title} desc={desc} image={ogImagePath!} />
       <main>
         <article>
           <OuterWrapper>
@@ -38,7 +40,7 @@ const BlogPost = ({ data }) => {
                 </header>
                 <Divider />
                 <Markdown
-                  dangerouslySetInnerHTML={{ __html: html }}
+                  dangerouslySetInnerHTML={{ __html: html ?? "" }}
                   rhythm={rhythm}
                 />
               </div>

@@ -5,6 +5,6 @@ const styledTheme = {
     md: "1023px",
     lg: "1441px",
   },
-}
+} as const
 
 export default styledTheme

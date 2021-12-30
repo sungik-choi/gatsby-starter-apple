@@ -2,13 +2,17 @@ import React, { useRef } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import type Post from "Types/Post"
 import Card from "./card"
+import useInfiniteScroll from "./useInfiniteScroll"
+import { ThumbnailWrapper } from "./card/centeredImg"
 
-import useInfiniteScroll from "Hooks/useInfiniteScroll"
-import { ThumbnailWrapper } from "./centeredImg"
+interface PostGridProps {
+  posts: Post[]
+}
 
-const PostGrid = ({ posts }) => {
-  const scrollEdgeRef = useRef(null)
+const PostGrid: React.FC<PostGridProps> = ({ posts }) => {
+  const scrollEdgeRef = useRef<HTMLDivElement>(null)
   const currentList = useInfiniteScroll({
     posts,
     scrollEdgeRef,
@@ -23,7 +27,7 @@ const PostGrid = ({ posts }) => {
         const ariaLabel = `${title} - ${category} - Posted on ${date}`
         return (
           <List key={id} role="listitem">
-            <Link to={slug} aria-label={ariaLabel}>
+            <Link to={slug ?? ""} aria-label={ariaLabel}>
               <Card
                 thumbnail={thumbnail}
                 alt={alt}

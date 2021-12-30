@@ -3,8 +3,18 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const CenteredImg = ({ src, alt }) => {
-  const data = useStaticQuery(graphql`
+import type { Query, ImageSharpFluid } from "Types/GraphQL"
+import type { DeepNonNullable } from "Types/Utils"
+import type Post from "Types/Post"
+
+interface CenteredImgProps extends Pick<Post, "alt"> {
+  src: Post["thumbnail"]
+}
+
+const DEFAULT_ALT = "Thumbnail Image"
+
+const CenteredImg: React.FC<CenteredImgProps> = ({ src, alt }) => {
+  const data = useStaticQuery<Query>(graphql`
     query {
       allImageSharp {
         edges {
@@ -21,13 +31,14 @@ const CenteredImg = ({ src, alt }) => {
   `)
 
   const image = data.allImageSharp.edges.find(edge => edge.node.id === src)
+  const fluid = image?.node.fluid as DeepNonNullable<ImageSharpFluid>
 
-  if (!alt) alt = "Thumbnail Image"
+  if (!alt) alt = DEFAULT_ALT
 
   return (
     <ThumbnailWrapper>
       <InnerWrapper>
-        <Img alt={alt} fluid={{ ...image.node.fluid, aspectRatio: 16 / 9 }} />
+        <Img alt={alt} fluid={{ ...fluid, aspectRatio: 16 / 9 }} />
       </InnerWrapper>
     </ThumbnailWrapper>
   )

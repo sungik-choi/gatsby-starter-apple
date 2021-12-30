@@ -1,7 +1,7 @@
-import { useStaticQuery, graphql } from 'gatsby';
-import type { SiteSiteMetadata } from '../graphqlTypes'
+import { useStaticQuery, graphql } from "gatsby"
+import type { SiteSiteMetadata } from "Types/GraphQL"
 
-interface SiteMetaData { 
+interface SiteMetaData {
   site: {
     siteMetadata: SiteSiteMetadata
   }
@@ -30,8 +30,10 @@ const useSiteMetadata = () => {
         }
       }
     `
-  );
-  return site.siteMetadata;
-};
+  )
+  return site.siteMetadata
+}
 
-export default useSiteMetadata;
+export type UseSiteMetaDataReturnType = ReturnType<typeof useSiteMetadata>
+
+export default useSiteMetadata

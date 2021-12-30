@@ -2,26 +2,33 @@ import React, { useRef, useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
 import { Link } from "gatsby"
 
+import type { UseThemeReturnType } from "Hooks/useTheme"
 import useSiteMetadata from "Hooks/useSiteMetadata"
-import useMenu from "Hooks/useMenu"
 import Background from "Styles/background"
 import {
   listAnimationCSS,
   navBackgroundAnimationCSS,
   curtainAnimationCSS,
 } from "Styles/navBarAnimation"
+import type { UseMenuReturnType } from "./useMenu"
+import useMenu from "./useMenu"
 import LinkList from "./linkList"
-import ThemeToggleButton from "./themeToggleButton/themeToggleButton"
+import ThemeToggleButton from "./themeToggleButton"
 import MenuIcon from "./menuIcon"
 
-const NavBar = ({ title, themeToggler }) => {
+interface NavBarProps {
+  title?: string | null
+  themeToggler: UseThemeReturnType["themeToggler"]
+}
+
+const NavBar: React.FC<NavBarProps> = ({ title, themeToggler }) => {
   const { menuLinks } = useSiteMetadata()
   const { device } = useContext(ThemeContext)
-  const navRef = useRef(null)
-  const curtainRef = useRef(null)
-  const listRef = useRef(null)
+  const navRef = useRef<HTMLElement>(null)
+  const curtainRef = useRef<HTMLDivElement>(null)
+  const listRef = useRef<HTMLUListElement>(null)
 
-  const [toggle, setToggle, onClickHandler] = useMenu({
+  const { toggle, setToggle, handleClick } = useMenu({
     navRef,
     curtainRef,
     listRef,
@@ -38,7 +45,7 @@ const NavBar = ({ title, themeToggler }) => {
         <LinkWrap>
           <Curtain ref={curtainRef} toggle={toggle} />
           <LinkContent>
-            <MenuIcon onClickHandler={onClickHandler} toggle={toggle} />
+            <MenuIcon toggle={toggle} handleClick={handleClick} />
             <LinkUl ref={listRef} toggle={toggle}>
               <LinkList links={menuLinks} setToggle={setToggle} />
               <li>
@@ -51,6 +58,8 @@ const NavBar = ({ title, themeToggler }) => {
     </Nav>
   )
 }
+
+type Toggleable = Pick<UseMenuReturnType, "toggle">
 
 const Nav = styled.nav`
   min-width: var(--min-width);
@@ -105,7 +114,7 @@ const Title = styled.h1`
   }
 `
 
-const LinkUl = styled.ul`
+const LinkUl = styled.ul<Toggleable>`
   display: flex;
 
   a {
@@ -163,7 +172,7 @@ const LinkUl = styled.ul`
   }
 `
 
-const NavBackground = styled(Background)`
+const NavBackground = styled(Background)<Toggleable>`
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     &::after {
       ${({ toggle }) => navBackgroundAnimationCSS(toggle)};
@@ -179,7 +188,7 @@ const NavBackground = styled(Background)`
   }
 `
 
-const Curtain = styled.div`
+const Curtain = styled.div<Toggleable>`
   display: none;
 
   @media (max-width: ${({ theme }) => theme.device.sm}) {

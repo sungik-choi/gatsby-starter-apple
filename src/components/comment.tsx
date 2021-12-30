@@ -2,23 +2,25 @@ import React, { useRef, useContext, useEffect } from "react"
 
 import ThemeContext from "Stores/themeContext"
 import useSiteMetadata from "Hooks/useSiteMetadata"
-import { DARK } from "Constants/colorScheme"
+import { DARK } from "Constants/theme"
 
 const src = "https://utteranc.es"
 const utterancesSelector = "iframe.utterances-frame"
 const LIGHT_THEME = "github-light"
 const DARK_THEME = "github-dark"
 
+type ThemeMode = typeof LIGHT_THEME | typeof DARK_THEME
+
 const Comment = () => {
   const site = useSiteMetadata()
-  const { repo } = site.utterances
+  const { repo } = site.utterances ?? { repo: undefined }
   const theme = useContext(ThemeContext)
-  const containerRef = useRef(null)
+  const containerRef = useRef<HTMLDivElement>(null)
   const isUtterancesCreated = useRef(false)
 
   useEffect(() => {
     if (!repo) return
-    let themeMode = null
+    let themeMode: ThemeMode
 
     if (!isUtterancesCreated.current) {
       themeMode =
@@ -39,11 +41,13 @@ const Comment = () => {
       Object.entries(attributes).forEach(([key, value]) => {
         comment.setAttribute(key, value)
       })
-      containerRef.current.appendChild(comment)
+      containerRef.current?.appendChild(comment)
       isUtterancesCreated.current = true
     }
 
-    const utterancesEl = containerRef.current.querySelector(utterancesSelector)
+    const utterancesEl = containerRef.current?.querySelector(
+      utterancesSelector
+    ) as HTMLIFrameElement
 
     const postThemeMessage = () => {
       if (!utterancesEl) return
@@ -51,12 +55,10 @@ const Comment = () => {
         type: "set-theme",
         theme: themeMode,
       }
-      utterancesEl.contentWindow.postMessage(message, src)
+      utterancesEl?.contentWindow?.postMessage(message, src)
     }
 
-    isUtterancesCreated.current
-      ? postThemeMessage(utterancesEl)
-      : createUtterancesEl()
+    isUtterancesCreated.current ? postThemeMessage() : createUtterancesEl()
   }, [repo, theme])
 
   return <div ref={containerRef} />

@@ -1,9 +1,18 @@
 import { useState, useCallback, useEffect } from "react"
 
-import { LIGHT, DARK } from "Constants/colorScheme"
+import { LIGHT, DARK } from "Constants/theme"
+
+/** @see gatsby-ssr.js */
+declare global {
+  interface Window {
+    __theme: string
+    __setPreferredTheme: (theme: string) => void
+    __onThemeChange: (theme: string) => void
+  }
+}
 
 const useTheme = () => {
-  const [theme, setTheme] = useState(null)
+  const [theme, setTheme] = useState<string | null>(null)
 
   const themeToggler = useCallback(() => {
     const nextTheme = theme === LIGHT ? DARK : LIGHT
@@ -21,7 +30,12 @@ const useTheme = () => {
     }
   }, [])
 
-  return [theme, themeToggler]
+  return {
+    theme,
+    themeToggler,
+  } as const
 }
+
+export type UseThemeReturnType = ReturnType<typeof useTheme>
 
 export default useTheme

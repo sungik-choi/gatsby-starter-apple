@@ -20,9 +20,10 @@
       "Stores/*": ["src/stores/*"],
       "Styles/*": ["src/styles/*"],
       "Templates/*": ["src/templates/*"],
-      "Utils/*": ["src/utils/*"],
-      "GraphQlTypes": ["src/graphqlTypes.ts"]
+      "Types/*": ["src/types/*"],
+      "Utils/*": ["src/utils/*"]
     },
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true

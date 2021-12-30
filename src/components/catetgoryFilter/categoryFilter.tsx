@@ -1,16 +1,24 @@
 import React, { useRef } from "react"
 import { Link } from "gatsby"
+import type { GatsbyLinkProps } from "gatsby"
 import styled from "styled-components"
 import kebabCase from "lodash/kebabCase"
 
-import useScrollCenter from "Hooks/useScrollCenter"
+import type { MarkdownRemarkGroupConnection } from "Types/GraphQL"
+import useScrollCenter from "./useScrollCenter"
 
 const ACTIVE = "active"
 
-const CategoryFilter = ({ categoryList }) => {
-  const categoryRef = useRef(null)
+interface CategoryFilterProps {
+  categoryList: MarkdownRemarkGroupConnection[]
+}
+
+type LinkPropsGetter = GatsbyLinkProps<unknown>["getProps"]
+
+const CategoryFilter: React.FC<CategoryFilterProps> = ({ categoryList }) => {
+  const categoryRef = useRef<HTMLUListElement>(null)
   const ALL_CATEGORY_NAME = "All"
-  const isActive = ({ isCurrent }) =>
+  const isActive: LinkPropsGetter = ({ isCurrent }) =>
     isCurrent ? { id: ACTIVE, tabIndex: -1 } : {}
 
   useScrollCenter({ ref: categoryRef, targetId: ACTIVE })
@@ -31,7 +39,7 @@ const CategoryFilter = ({ categoryList }) => {
               <li key={fieldValue}>
                 <CategoryButton
                   getProps={isActive}
-                  to={`/category/${kebabCase(fieldValue)}/`}
+                  to={`/category/${kebabCase(fieldValue!)}/`}
                 >
                   {fieldValue}
                 </CategoryButton>

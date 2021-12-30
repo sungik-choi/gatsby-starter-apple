@@ -1,8 +1,9 @@
-const React = require('react');
+/* eslint-disable no-undef */
+const React = require("react")
 
 exports.onRenderBody = ({ setPreBodyComponents }) => {
   setPreBodyComponents([
-    React.createElement('script', {
+    React.createElement("script", {
       dangerouslySetInnerHTML: {
         __html: `
           (() => {    
@@ -41,5 +42,5 @@ exports.onRenderBody = ({ setPreBodyComponents }) => {
         `,
       },
     }),
-  ]);
-};
+  ])
+}
