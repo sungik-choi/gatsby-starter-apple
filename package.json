@@ -58,6 +58,7 @@
     "@types/typography": "^0.16.4",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
+    "cz-conventional-changelog": "^3.3.0",
     "disable-scroll": "^0.6.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
@@ -81,5 +82,10 @@
   "bugs": {
     "url": "https://github.com/sungik-choi/gatsby-starter-apple/issues"
   },
-  "homepage": "https://github.com/sungik-choi/gatsby-starter-apple#readme"
+  "homepage": "https://github.com/sungik-choi/gatsby-starter-apple#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
