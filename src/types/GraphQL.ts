@@ -640,7 +640,86 @@ export enum FileFieldsEnum {
   ChildImageSharpResizeSrc = 'childImageSharp___resize___src',
   ChildImageSharpResizeTracedSvg = 'childImageSharp___resize___tracedSVG',
   ChildImageSharpResizeWidth = 'childImageSharp___resize___width',
+  ChildMarkdownRemarkChildGrvscCodeBlockAdditionalThemes = 'childMarkdownRemark___childGrvscCodeBlock___additionalThemes',
+  ChildMarkdownRemarkChildGrvscCodeBlockAdditionalThemesConditions = 'childMarkdownRemark___childGrvscCodeBlock___additionalThemes___conditions',
+  ChildMarkdownRemarkChildGrvscCodeBlockAdditionalThemesIdentifier = 'childMarkdownRemark___childGrvscCodeBlock___additionalThemes___identifier',
+  ChildMarkdownRemarkChildGrvscCodeBlockAdditionalThemesPath = 'childMarkdownRemark___childGrvscCodeBlock___additionalThemes___path',
+  ChildMarkdownRemarkChildGrvscCodeBlockChildren = 'childMarkdownRemark___childGrvscCodeBlock___children',
+  ChildMarkdownRemarkChildGrvscCodeBlockChildrenChildren = 'childMarkdownRemark___childGrvscCodeBlock___children___children',
+  ChildMarkdownRemarkChildGrvscCodeBlockChildrenId = 'childMarkdownRemark___childGrvscCodeBlock___children___id',
+  ChildMarkdownRemarkChildGrvscCodeBlockCodeClassName = 'childMarkdownRemark___childGrvscCodeBlock___codeClassName',
+  ChildMarkdownRemarkChildGrvscCodeBlockDefaultThemeConditions = 'childMarkdownRemark___childGrvscCodeBlock___defaultTheme___conditions',
+  ChildMarkdownRemarkChildGrvscCodeBlockDefaultThemeIdentifier = 'childMarkdownRemark___childGrvscCodeBlock___defaultTheme___identifier',
+  ChildMarkdownRemarkChildGrvscCodeBlockDefaultThemePath = 'childMarkdownRemark___childGrvscCodeBlock___defaultTheme___path',
+  ChildMarkdownRemarkChildGrvscCodeBlockHtml = 'childMarkdownRemark___childGrvscCodeBlock___html',
+  ChildMarkdownRemarkChildGrvscCodeBlockId = 'childMarkdownRemark___childGrvscCodeBlock___id',
+  ChildMarkdownRemarkChildGrvscCodeBlockIndex = 'childMarkdownRemark___childGrvscCodeBlock___index',
+  ChildMarkdownRemarkChildGrvscCodeBlockInternalContent = 'childMarkdownRemark___childGrvscCodeBlock___internal___content',
+  ChildMarkdownRemarkChildGrvscCodeBlockInternalContentDigest = 'childMarkdownRemark___childGrvscCodeBlock___internal___contentDigest',
+  ChildMarkdownRemarkChildGrvscCodeBlockInternalDescription = 'childMarkdownRemark___childGrvscCodeBlock___internal___description',
+  ChildMarkdownRemarkChildGrvscCodeBlockInternalFieldOwners = 'childMarkdownRemark___childGrvscCodeBlock___internal___fieldOwners',
+  ChildMarkdownRemarkChildGrvscCodeBlockInternalIgnoreType = 'childMarkdownRemark___childGrvscCodeBlock___internal___ignoreType',
+  ChildMarkdownRemarkChildGrvscCodeBlockInternalMediaType = 'childMarkdownRemark___childGrvscCodeBlock___internal___mediaType',
+  ChildMarkdownRemarkChildGrvscCodeBlockInternalOwner = 'childMarkdownRemark___childGrvscCodeBlock___internal___owner',
+  ChildMarkdownRemarkChildGrvscCodeBlockInternalType = 'childMarkdownRemark___childGrvscCodeBlock___internal___type',
+  ChildMarkdownRemarkChildGrvscCodeBlockLanguage = 'childMarkdownRemark___childGrvscCodeBlock___language',
+  ChildMarkdownRemarkChildGrvscCodeBlockMeta = 'childMarkdownRemark___childGrvscCodeBlock___meta',
+  ChildMarkdownRemarkChildGrvscCodeBlockParentChildren = 'childMarkdownRemark___childGrvscCodeBlock___parent___children',
+  ChildMarkdownRemarkChildGrvscCodeBlockParentId = 'childMarkdownRemark___childGrvscCodeBlock___parent___id',
+  ChildMarkdownRemarkChildGrvscCodeBlockPreClassName = 'childMarkdownRemark___childGrvscCodeBlock___preClassName',
+  ChildMarkdownRemarkChildGrvscCodeBlockText = 'childMarkdownRemark___childGrvscCodeBlock___text',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLines = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesAttrs = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___attrs',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesClassName = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___className',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesData = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___data',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesDiff = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___diff',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesGutterCells = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___gutterCells',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesHtml = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___html',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesIsHighlighted = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___isHighlighted',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesLineNumber = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___lineNumber',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesText = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___text',
+  ChildMarkdownRemarkChildGrvscCodeBlockTokenizedLinesTokens = 'childMarkdownRemark___childGrvscCodeBlock___tokenizedLines___tokens',
   ChildMarkdownRemarkChildren = 'childMarkdownRemark___children',
+  ChildMarkdownRemarkChildrenGrvscCodeBlock = 'childMarkdownRemark___childrenGrvscCodeBlock',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockAdditionalThemes = 'childMarkdownRemark___childrenGrvscCodeBlock___additionalThemes',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockAdditionalThemesConditions = 'childMarkdownRemark___childrenGrvscCodeBlock___additionalThemes___conditions',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockAdditionalThemesIdentifier = 'childMarkdownRemark___childrenGrvscCodeBlock___additionalThemes___identifier',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockAdditionalThemesPath = 'childMarkdownRemark___childrenGrvscCodeBlock___additionalThemes___path',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockChildren = 'childMarkdownRemark___childrenGrvscCodeBlock___children',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockChildrenChildren = 'childMarkdownRemark___childrenGrvscCodeBlock___children___children',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockChildrenId = 'childMarkdownRemark___childrenGrvscCodeBlock___children___id',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockCodeClassName = 'childMarkdownRemark___childrenGrvscCodeBlock___codeClassName',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockDefaultThemeConditions = 'childMarkdownRemark___childrenGrvscCodeBlock___defaultTheme___conditions',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockDefaultThemeIdentifier = 'childMarkdownRemark___childrenGrvscCodeBlock___defaultTheme___identifier',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockDefaultThemePath = 'childMarkdownRemark___childrenGrvscCodeBlock___defaultTheme___path',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockHtml = 'childMarkdownRemark___childrenGrvscCodeBlock___html',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockId = 'childMarkdownRemark___childrenGrvscCodeBlock___id',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockIndex = 'childMarkdownRemark___childrenGrvscCodeBlock___index',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockInternalContent = 'childMarkdownRemark___childrenGrvscCodeBlock___internal___content',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockInternalContentDigest = 'childMarkdownRemark___childrenGrvscCodeBlock___internal___contentDigest',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockInternalDescription = 'childMarkdownRemark___childrenGrvscCodeBlock___internal___description',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockInternalFieldOwners = 'childMarkdownRemark___childrenGrvscCodeBlock___internal___fieldOwners',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockInternalIgnoreType = 'childMarkdownRemark___childrenGrvscCodeBlock___internal___ignoreType',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockInternalMediaType = 'childMarkdownRemark___childrenGrvscCodeBlock___internal___mediaType',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockInternalOwner = 'childMarkdownRemark___childrenGrvscCodeBlock___internal___owner',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockInternalType = 'childMarkdownRemark___childrenGrvscCodeBlock___internal___type',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockLanguage = 'childMarkdownRemark___childrenGrvscCodeBlock___language',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockMeta = 'childMarkdownRemark___childrenGrvscCodeBlock___meta',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockParentChildren = 'childMarkdownRemark___childrenGrvscCodeBlock___parent___children',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockParentId = 'childMarkdownRemark___childrenGrvscCodeBlock___parent___id',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockPreClassName = 'childMarkdownRemark___childrenGrvscCodeBlock___preClassName',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockText = 'childMarkdownRemark___childrenGrvscCodeBlock___text',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLines = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesAttrs = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___attrs',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesClassName = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___className',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesData = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___data',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesDiff = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___diff',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesGutterCells = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___gutterCells',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesHtml = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___html',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesIsHighlighted = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___isHighlighted',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesLineNumber = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___lineNumber',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesText = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___text',
+  ChildMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesTokens = 'childMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___tokens',
   ChildMarkdownRemarkChildrenChildren = 'childMarkdownRemark___children___children',
   ChildMarkdownRemarkChildrenChildrenChildren = 'childMarkdownRemark___children___children___children',
   ChildMarkdownRemarkChildrenChildrenId = 'childMarkdownRemark___children___children___id',
@@ -810,7 +889,86 @@ export enum FileFieldsEnum {
   ChildrenImageSharpResizeTracedSvg = 'childrenImageSharp___resize___tracedSVG',
   ChildrenImageSharpResizeWidth = 'childrenImageSharp___resize___width',
   ChildrenMarkdownRemark = 'childrenMarkdownRemark',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockAdditionalThemes = 'childrenMarkdownRemark___childGrvscCodeBlock___additionalThemes',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockAdditionalThemesConditions = 'childrenMarkdownRemark___childGrvscCodeBlock___additionalThemes___conditions',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockAdditionalThemesIdentifier = 'childrenMarkdownRemark___childGrvscCodeBlock___additionalThemes___identifier',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockAdditionalThemesPath = 'childrenMarkdownRemark___childGrvscCodeBlock___additionalThemes___path',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockChildren = 'childrenMarkdownRemark___childGrvscCodeBlock___children',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockChildrenChildren = 'childrenMarkdownRemark___childGrvscCodeBlock___children___children',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockChildrenId = 'childrenMarkdownRemark___childGrvscCodeBlock___children___id',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockCodeClassName = 'childrenMarkdownRemark___childGrvscCodeBlock___codeClassName',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockDefaultThemeConditions = 'childrenMarkdownRemark___childGrvscCodeBlock___defaultTheme___conditions',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockDefaultThemeIdentifier = 'childrenMarkdownRemark___childGrvscCodeBlock___defaultTheme___identifier',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockDefaultThemePath = 'childrenMarkdownRemark___childGrvscCodeBlock___defaultTheme___path',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockHtml = 'childrenMarkdownRemark___childGrvscCodeBlock___html',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockId = 'childrenMarkdownRemark___childGrvscCodeBlock___id',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockIndex = 'childrenMarkdownRemark___childGrvscCodeBlock___index',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockInternalContent = 'childrenMarkdownRemark___childGrvscCodeBlock___internal___content',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockInternalContentDigest = 'childrenMarkdownRemark___childGrvscCodeBlock___internal___contentDigest',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockInternalDescription = 'childrenMarkdownRemark___childGrvscCodeBlock___internal___description',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockInternalFieldOwners = 'childrenMarkdownRemark___childGrvscCodeBlock___internal___fieldOwners',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockInternalIgnoreType = 'childrenMarkdownRemark___childGrvscCodeBlock___internal___ignoreType',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockInternalMediaType = 'childrenMarkdownRemark___childGrvscCodeBlock___internal___mediaType',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockInternalOwner = 'childrenMarkdownRemark___childGrvscCodeBlock___internal___owner',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockInternalType = 'childrenMarkdownRemark___childGrvscCodeBlock___internal___type',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockLanguage = 'childrenMarkdownRemark___childGrvscCodeBlock___language',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockMeta = 'childrenMarkdownRemark___childGrvscCodeBlock___meta',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockParentChildren = 'childrenMarkdownRemark___childGrvscCodeBlock___parent___children',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockParentId = 'childrenMarkdownRemark___childGrvscCodeBlock___parent___id',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockPreClassName = 'childrenMarkdownRemark___childGrvscCodeBlock___preClassName',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockText = 'childrenMarkdownRemark___childGrvscCodeBlock___text',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLines = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesAttrs = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___attrs',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesClassName = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___className',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesData = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___data',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesDiff = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___diff',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesGutterCells = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___gutterCells',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesHtml = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___html',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesIsHighlighted = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___isHighlighted',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesLineNumber = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___lineNumber',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesText = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___text',
+  ChildrenMarkdownRemarkChildGrvscCodeBlockTokenizedLinesTokens = 'childrenMarkdownRemark___childGrvscCodeBlock___tokenizedLines___tokens',
   ChildrenMarkdownRemarkChildren = 'childrenMarkdownRemark___children',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlock = 'childrenMarkdownRemark___childrenGrvscCodeBlock',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockAdditionalThemes = 'childrenMarkdownRemark___childrenGrvscCodeBlock___additionalThemes',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockAdditionalThemesConditions = 'childrenMarkdownRemark___childrenGrvscCodeBlock___additionalThemes___conditions',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockAdditionalThemesIdentifier = 'childrenMarkdownRemark___childrenGrvscCodeBlock___additionalThemes___identifier',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockAdditionalThemesPath = 'childrenMarkdownRemark___childrenGrvscCodeBlock___additionalThemes___path',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockChildren = 'childrenMarkdownRemark___childrenGrvscCodeBlock___children',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockChildrenChildren = 'childrenMarkdownRemark___childrenGrvscCodeBlock___children___children',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockChildrenId = 'childrenMarkdownRemark___childrenGrvscCodeBlock___children___id',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockCodeClassName = 'childrenMarkdownRemark___childrenGrvscCodeBlock___codeClassName',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockDefaultThemeConditions = 'childrenMarkdownRemark___childrenGrvscCodeBlock___defaultTheme___conditions',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockDefaultThemeIdentifier = 'childrenMarkdownRemark___childrenGrvscCodeBlock___defaultTheme___identifier',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockDefaultThemePath = 'childrenMarkdownRemark___childrenGrvscCodeBlock___defaultTheme___path',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockHtml = 'childrenMarkdownRemark___childrenGrvscCodeBlock___html',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockId = 'childrenMarkdownRemark___childrenGrvscCodeBlock___id',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockIndex = 'childrenMarkdownRemark___childrenGrvscCodeBlock___index',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockInternalContent = 'childrenMarkdownRemark___childrenGrvscCodeBlock___internal___content',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockInternalContentDigest = 'childrenMarkdownRemark___childrenGrvscCodeBlock___internal___contentDigest',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockInternalDescription = 'childrenMarkdownRemark___childrenGrvscCodeBlock___internal___description',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockInternalFieldOwners = 'childrenMarkdownRemark___childrenGrvscCodeBlock___internal___fieldOwners',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockInternalIgnoreType = 'childrenMarkdownRemark___childrenGrvscCodeBlock___internal___ignoreType',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockInternalMediaType = 'childrenMarkdownRemark___childrenGrvscCodeBlock___internal___mediaType',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockInternalOwner = 'childrenMarkdownRemark___childrenGrvscCodeBlock___internal___owner',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockInternalType = 'childrenMarkdownRemark___childrenGrvscCodeBlock___internal___type',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockLanguage = 'childrenMarkdownRemark___childrenGrvscCodeBlock___language',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockMeta = 'childrenMarkdownRemark___childrenGrvscCodeBlock___meta',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockParentChildren = 'childrenMarkdownRemark___childrenGrvscCodeBlock___parent___children',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockParentId = 'childrenMarkdownRemark___childrenGrvscCodeBlock___parent___id',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockPreClassName = 'childrenMarkdownRemark___childrenGrvscCodeBlock___preClassName',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockText = 'childrenMarkdownRemark___childrenGrvscCodeBlock___text',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLines = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesAttrs = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___attrs',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesClassName = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___className',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesData = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___data',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesDiff = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___diff',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesGutterCells = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___gutterCells',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesHtml = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___html',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesIsHighlighted = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___isHighlighted',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesLineNumber = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___lineNumber',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesText = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___text',
+  ChildrenMarkdownRemarkChildrenGrvscCodeBlockTokenizedLinesTokens = 'childrenMarkdownRemark___childrenGrvscCodeBlock___tokenizedLines___tokens',
   ChildrenMarkdownRemarkChildrenChildren = 'childrenMarkdownRemark___children___children',
   ChildrenMarkdownRemarkChildrenChildrenChildren = 'childrenMarkdownRemark___children___children___children',
   ChildrenMarkdownRemarkChildrenChildrenId = 'childrenMarkdownRemark___children___children___id',
@@ -1118,6 +1276,893 @@ export type FloatQueryOperatorInput = {
   lte?: InputMaybe<Scalars['Float']>;
   ne?: InputMaybe<Scalars['Float']>;
   nin?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
+};
+
+export type GrvscCodeBlock = Node & {
+  __typename?: 'GRVSCCodeBlock';
+  additionalThemes: Array<GrvscTheme>;
+  children: Array<Node>;
+  codeClassName: Scalars['String'];
+  defaultTheme: GrvscTheme;
+  html: Scalars['String'];
+  id: Scalars['ID'];
+  index: Scalars['Int'];
+  internal: Internal;
+  language?: Maybe<Scalars['String']>;
+  meta?: Maybe<Scalars['JSON']>;
+  parent?: Maybe<Node>;
+  preClassName: Scalars['String'];
+  text: Scalars['String'];
+  tokenizedLines?: Maybe<Array<GrvscTokenizedLine>>;
+};
+
+export type GrvscCodeBlockConnection = {
+  __typename?: 'GRVSCCodeBlockConnection';
+  distinct: Array<Scalars['String']>;
+  edges: Array<GrvscCodeBlockEdge>;
+  group: Array<GrvscCodeBlockGroupConnection>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  nodes: Array<GrvscCodeBlock>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars['Float']>;
+  totalCount: Scalars['Int'];
+};
+
+
+export type GrvscCodeBlockConnectionDistinctArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+};
+
+
+export type GrvscCodeBlockConnectionGroupArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+  limit?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GrvscCodeBlockConnectionMaxArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+};
+
+
+export type GrvscCodeBlockConnectionMinArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+};
+
+
+export type GrvscCodeBlockConnectionSumArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+};
+
+export type GrvscCodeBlockEdge = {
+  __typename?: 'GRVSCCodeBlockEdge';
+  next?: Maybe<GrvscCodeBlock>;
+  node: GrvscCodeBlock;
+  previous?: Maybe<GrvscCodeBlock>;
+};
+
+export enum GrvscCodeBlockFieldsEnum {
+  AdditionalThemes = 'additionalThemes',
+  AdditionalThemesConditions = 'additionalThemes___conditions',
+  AdditionalThemesConditionsCondition = 'additionalThemes___conditions___condition',
+  AdditionalThemesConditionsValue = 'additionalThemes___conditions___value',
+  AdditionalThemesIdentifier = 'additionalThemes___identifier',
+  AdditionalThemesPath = 'additionalThemes___path',
+  Children = 'children',
+  ChildrenChildren = 'children___children',
+  ChildrenChildrenChildren = 'children___children___children',
+  ChildrenChildrenChildrenChildren = 'children___children___children___children',
+  ChildrenChildrenChildrenId = 'children___children___children___id',
+  ChildrenChildrenId = 'children___children___id',
+  ChildrenChildrenInternalContent = 'children___children___internal___content',
+  ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalDescription = 'children___children___internal___description',
+  ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
+  ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
+  ChildrenChildrenInternalMediaType = 'children___children___internal___mediaType',
+  ChildrenChildrenInternalOwner = 'children___children___internal___owner',
+  ChildrenChildrenInternalType = 'children___children___internal___type',
+  ChildrenChildrenParentChildren = 'children___children___parent___children',
+  ChildrenChildrenParentId = 'children___children___parent___id',
+  ChildrenId = 'children___id',
+  ChildrenInternalContent = 'children___internal___content',
+  ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalDescription = 'children___internal___description',
+  ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
+  ChildrenInternalIgnoreType = 'children___internal___ignoreType',
+  ChildrenInternalMediaType = 'children___internal___mediaType',
+  ChildrenInternalOwner = 'children___internal___owner',
+  ChildrenInternalType = 'children___internal___type',
+  ChildrenParentChildren = 'children___parent___children',
+  ChildrenParentChildrenChildren = 'children___parent___children___children',
+  ChildrenParentChildrenId = 'children___parent___children___id',
+  ChildrenParentId = 'children___parent___id',
+  ChildrenParentInternalContent = 'children___parent___internal___content',
+  ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalDescription = 'children___parent___internal___description',
+  ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
+  ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
+  ChildrenParentInternalMediaType = 'children___parent___internal___mediaType',
+  ChildrenParentInternalOwner = 'children___parent___internal___owner',
+  ChildrenParentInternalType = 'children___parent___internal___type',
+  ChildrenParentParentChildren = 'children___parent___parent___children',
+  ChildrenParentParentId = 'children___parent___parent___id',
+  CodeClassName = 'codeClassName',
+  DefaultThemeConditions = 'defaultTheme___conditions',
+  DefaultThemeConditionsCondition = 'defaultTheme___conditions___condition',
+  DefaultThemeConditionsValue = 'defaultTheme___conditions___value',
+  DefaultThemeIdentifier = 'defaultTheme___identifier',
+  DefaultThemePath = 'defaultTheme___path',
+  Html = 'html',
+  Id = 'id',
+  Index = 'index',
+  InternalContent = 'internal___content',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalFieldOwners = 'internal___fieldOwners',
+  InternalIgnoreType = 'internal___ignoreType',
+  InternalMediaType = 'internal___mediaType',
+  InternalOwner = 'internal___owner',
+  InternalType = 'internal___type',
+  Language = 'language',
+  Meta = 'meta',
+  ParentChildren = 'parent___children',
+  ParentChildrenChildren = 'parent___children___children',
+  ParentChildrenChildrenChildren = 'parent___children___children___children',
+  ParentChildrenChildrenId = 'parent___children___children___id',
+  ParentChildrenId = 'parent___children___id',
+  ParentChildrenInternalContent = 'parent___children___internal___content',
+  ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalDescription = 'parent___children___internal___description',
+  ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
+  ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
+  ParentChildrenInternalMediaType = 'parent___children___internal___mediaType',
+  ParentChildrenInternalOwner = 'parent___children___internal___owner',
+  ParentChildrenInternalType = 'parent___children___internal___type',
+  ParentChildrenParentChildren = 'parent___children___parent___children',
+  ParentChildrenParentId = 'parent___children___parent___id',
+  ParentId = 'parent___id',
+  ParentInternalContent = 'parent___internal___content',
+  ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalDescription = 'parent___internal___description',
+  ParentInternalFieldOwners = 'parent___internal___fieldOwners',
+  ParentInternalIgnoreType = 'parent___internal___ignoreType',
+  ParentInternalMediaType = 'parent___internal___mediaType',
+  ParentInternalOwner = 'parent___internal___owner',
+  ParentInternalType = 'parent___internal___type',
+  ParentParentChildren = 'parent___parent___children',
+  ParentParentChildrenChildren = 'parent___parent___children___children',
+  ParentParentChildrenId = 'parent___parent___children___id',
+  ParentParentId = 'parent___parent___id',
+  ParentParentInternalContent = 'parent___parent___internal___content',
+  ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalDescription = 'parent___parent___internal___description',
+  ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
+  ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
+  ParentParentInternalMediaType = 'parent___parent___internal___mediaType',
+  ParentParentInternalOwner = 'parent___parent___internal___owner',
+  ParentParentInternalType = 'parent___parent___internal___type',
+  ParentParentParentChildren = 'parent___parent___parent___children',
+  ParentParentParentId = 'parent___parent___parent___id',
+  PreClassName = 'preClassName',
+  Text = 'text',
+  TokenizedLines = 'tokenizedLines',
+  TokenizedLinesAttrs = 'tokenizedLines___attrs',
+  TokenizedLinesClassName = 'tokenizedLines___className',
+  TokenizedLinesData = 'tokenizedLines___data',
+  TokenizedLinesDiff = 'tokenizedLines___diff',
+  TokenizedLinesGutterCells = 'tokenizedLines___gutterCells',
+  TokenizedLinesGutterCellsClassName = 'tokenizedLines___gutterCells___className',
+  TokenizedLinesGutterCellsText = 'tokenizedLines___gutterCells___text',
+  TokenizedLinesHtml = 'tokenizedLines___html',
+  TokenizedLinesIsHighlighted = 'tokenizedLines___isHighlighted',
+  TokenizedLinesLineNumber = 'tokenizedLines___lineNumber',
+  TokenizedLinesText = 'tokenizedLines___text',
+  TokenizedLinesTokens = 'tokenizedLines___tokens',
+  TokenizedLinesTokensAdditionalThemeTokenData = 'tokenizedLines___tokens___additionalThemeTokenData',
+  TokenizedLinesTokensAdditionalThemeTokenDataBold = 'tokenizedLines___tokens___additionalThemeTokenData___bold',
+  TokenizedLinesTokensAdditionalThemeTokenDataClassName = 'tokenizedLines___tokens___additionalThemeTokenData___className',
+  TokenizedLinesTokensAdditionalThemeTokenDataColor = 'tokenizedLines___tokens___additionalThemeTokenData___color',
+  TokenizedLinesTokensAdditionalThemeTokenDataItalic = 'tokenizedLines___tokens___additionalThemeTokenData___italic',
+  TokenizedLinesTokensAdditionalThemeTokenDataMeta = 'tokenizedLines___tokens___additionalThemeTokenData___meta',
+  TokenizedLinesTokensAdditionalThemeTokenDataThemeIdentifier = 'tokenizedLines___tokens___additionalThemeTokenData___themeIdentifier',
+  TokenizedLinesTokensAdditionalThemeTokenDataUnderline = 'tokenizedLines___tokens___additionalThemeTokenData___underline',
+  TokenizedLinesTokensClassName = 'tokenizedLines___tokens___className',
+  TokenizedLinesTokensDefaultThemeTokenDataBold = 'tokenizedLines___tokens___defaultThemeTokenData___bold',
+  TokenizedLinesTokensDefaultThemeTokenDataClassName = 'tokenizedLines___tokens___defaultThemeTokenData___className',
+  TokenizedLinesTokensDefaultThemeTokenDataColor = 'tokenizedLines___tokens___defaultThemeTokenData___color',
+  TokenizedLinesTokensDefaultThemeTokenDataItalic = 'tokenizedLines___tokens___defaultThemeTokenData___italic',
+  TokenizedLinesTokensDefaultThemeTokenDataMeta = 'tokenizedLines___tokens___defaultThemeTokenData___meta',
+  TokenizedLinesTokensDefaultThemeTokenDataThemeIdentifier = 'tokenizedLines___tokens___defaultThemeTokenData___themeIdentifier',
+  TokenizedLinesTokensDefaultThemeTokenDataUnderline = 'tokenizedLines___tokens___defaultThemeTokenData___underline',
+  TokenizedLinesTokensEndIndex = 'tokenizedLines___tokens___endIndex',
+  TokenizedLinesTokensHtml = 'tokenizedLines___tokens___html',
+  TokenizedLinesTokensScopes = 'tokenizedLines___tokens___scopes',
+  TokenizedLinesTokensStartIndex = 'tokenizedLines___tokens___startIndex',
+  TokenizedLinesTokensText = 'tokenizedLines___tokens___text'
+}
+
+export type GrvscCodeBlockFilterInput = {
+  additionalThemes?: InputMaybe<GrvscThemeFilterListInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  codeClassName?: InputMaybe<StringQueryOperatorInput>;
+  defaultTheme?: InputMaybe<GrvscThemeFilterInput>;
+  html?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  index?: InputMaybe<IntQueryOperatorInput>;
+  internal?: InputMaybe<InternalFilterInput>;
+  language?: InputMaybe<StringQueryOperatorInput>;
+  meta?: InputMaybe<JsonQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  preClassName?: InputMaybe<StringQueryOperatorInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+  tokenizedLines?: InputMaybe<GrvscTokenizedLineFilterListInput>;
+};
+
+export type GrvscCodeBlockFilterListInput = {
+  elemMatch?: InputMaybe<GrvscCodeBlockFilterInput>;
+};
+
+export type GrvscCodeBlockGroupConnection = {
+  __typename?: 'GRVSCCodeBlockGroupConnection';
+  distinct: Array<Scalars['String']>;
+  edges: Array<GrvscCodeBlockEdge>;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+  group: Array<GrvscCodeBlockGroupConnection>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  nodes: Array<GrvscCodeBlock>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars['Float']>;
+  totalCount: Scalars['Int'];
+};
+
+
+export type GrvscCodeBlockGroupConnectionDistinctArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+};
+
+
+export type GrvscCodeBlockGroupConnectionGroupArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+  limit?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GrvscCodeBlockGroupConnectionMaxArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+};
+
+
+export type GrvscCodeBlockGroupConnectionMinArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+};
+
+
+export type GrvscCodeBlockGroupConnectionSumArgs = {
+  field: GrvscCodeBlockFieldsEnum;
+};
+
+export type GrvscCodeBlockSortInput = {
+  fields?: InputMaybe<Array<InputMaybe<GrvscCodeBlockFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
+};
+
+export type GrvscCodeSpan = Node & {
+  __typename?: 'GRVSCCodeSpan';
+  additionalThemes: Array<GrvscTheme>;
+  children: Array<Node>;
+  className?: Maybe<Scalars['String']>;
+  defaultTheme: GrvscTheme;
+  html: Scalars['String'];
+  id: Scalars['ID'];
+  index: Scalars['Int'];
+  internal: Internal;
+  language?: Maybe<Scalars['String']>;
+  parent?: Maybe<Node>;
+  text: Scalars['String'];
+  tokens: Array<GrvscToken>;
+};
+
+export type GrvscCodeSpanConnection = {
+  __typename?: 'GRVSCCodeSpanConnection';
+  distinct: Array<Scalars['String']>;
+  edges: Array<GrvscCodeSpanEdge>;
+  group: Array<GrvscCodeSpanGroupConnection>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  nodes: Array<GrvscCodeSpan>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars['Float']>;
+  totalCount: Scalars['Int'];
+};
+
+
+export type GrvscCodeSpanConnectionDistinctArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+};
+
+
+export type GrvscCodeSpanConnectionGroupArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+  limit?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GrvscCodeSpanConnectionMaxArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+};
+
+
+export type GrvscCodeSpanConnectionMinArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+};
+
+
+export type GrvscCodeSpanConnectionSumArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+};
+
+export type GrvscCodeSpanEdge = {
+  __typename?: 'GRVSCCodeSpanEdge';
+  next?: Maybe<GrvscCodeSpan>;
+  node: GrvscCodeSpan;
+  previous?: Maybe<GrvscCodeSpan>;
+};
+
+export enum GrvscCodeSpanFieldsEnum {
+  AdditionalThemes = 'additionalThemes',
+  AdditionalThemesConditions = 'additionalThemes___conditions',
+  AdditionalThemesConditionsCondition = 'additionalThemes___conditions___condition',
+  AdditionalThemesConditionsValue = 'additionalThemes___conditions___value',
+  AdditionalThemesIdentifier = 'additionalThemes___identifier',
+  AdditionalThemesPath = 'additionalThemes___path',
+  Children = 'children',
+  ChildrenChildren = 'children___children',
+  ChildrenChildrenChildren = 'children___children___children',
+  ChildrenChildrenChildrenChildren = 'children___children___children___children',
+  ChildrenChildrenChildrenId = 'children___children___children___id',
+  ChildrenChildrenId = 'children___children___id',
+  ChildrenChildrenInternalContent = 'children___children___internal___content',
+  ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalDescription = 'children___children___internal___description',
+  ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
+  ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
+  ChildrenChildrenInternalMediaType = 'children___children___internal___mediaType',
+  ChildrenChildrenInternalOwner = 'children___children___internal___owner',
+  ChildrenChildrenInternalType = 'children___children___internal___type',
+  ChildrenChildrenParentChildren = 'children___children___parent___children',
+  ChildrenChildrenParentId = 'children___children___parent___id',
+  ChildrenId = 'children___id',
+  ChildrenInternalContent = 'children___internal___content',
+  ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalDescription = 'children___internal___description',
+  ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
+  ChildrenInternalIgnoreType = 'children___internal___ignoreType',
+  ChildrenInternalMediaType = 'children___internal___mediaType',
+  ChildrenInternalOwner = 'children___internal___owner',
+  ChildrenInternalType = 'children___internal___type',
+  ChildrenParentChildren = 'children___parent___children',
+  ChildrenParentChildrenChildren = 'children___parent___children___children',
+  ChildrenParentChildrenId = 'children___parent___children___id',
+  ChildrenParentId = 'children___parent___id',
+  ChildrenParentInternalContent = 'children___parent___internal___content',
+  ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalDescription = 'children___parent___internal___description',
+  ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
+  ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
+  ChildrenParentInternalMediaType = 'children___parent___internal___mediaType',
+  ChildrenParentInternalOwner = 'children___parent___internal___owner',
+  ChildrenParentInternalType = 'children___parent___internal___type',
+  ChildrenParentParentChildren = 'children___parent___parent___children',
+  ChildrenParentParentId = 'children___parent___parent___id',
+  ClassName = 'className',
+  DefaultThemeConditions = 'defaultTheme___conditions',
+  DefaultThemeConditionsCondition = 'defaultTheme___conditions___condition',
+  DefaultThemeConditionsValue = 'defaultTheme___conditions___value',
+  DefaultThemeIdentifier = 'defaultTheme___identifier',
+  DefaultThemePath = 'defaultTheme___path',
+  Html = 'html',
+  Id = 'id',
+  Index = 'index',
+  InternalContent = 'internal___content',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalFieldOwners = 'internal___fieldOwners',
+  InternalIgnoreType = 'internal___ignoreType',
+  InternalMediaType = 'internal___mediaType',
+  InternalOwner = 'internal___owner',
+  InternalType = 'internal___type',
+  Language = 'language',
+  ParentChildren = 'parent___children',
+  ParentChildrenChildren = 'parent___children___children',
+  ParentChildrenChildrenChildren = 'parent___children___children___children',
+  ParentChildrenChildrenId = 'parent___children___children___id',
+  ParentChildrenId = 'parent___children___id',
+  ParentChildrenInternalContent = 'parent___children___internal___content',
+  ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalDescription = 'parent___children___internal___description',
+  ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
+  ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
+  ParentChildrenInternalMediaType = 'parent___children___internal___mediaType',
+  ParentChildrenInternalOwner = 'parent___children___internal___owner',
+  ParentChildrenInternalType = 'parent___children___internal___type',
+  ParentChildrenParentChildren = 'parent___children___parent___children',
+  ParentChildrenParentId = 'parent___children___parent___id',
+  ParentId = 'parent___id',
+  ParentInternalContent = 'parent___internal___content',
+  ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalDescription = 'parent___internal___description',
+  ParentInternalFieldOwners = 'parent___internal___fieldOwners',
+  ParentInternalIgnoreType = 'parent___internal___ignoreType',
+  ParentInternalMediaType = 'parent___internal___mediaType',
+  ParentInternalOwner = 'parent___internal___owner',
+  ParentInternalType = 'parent___internal___type',
+  ParentParentChildren = 'parent___parent___children',
+  ParentParentChildrenChildren = 'parent___parent___children___children',
+  ParentParentChildrenId = 'parent___parent___children___id',
+  ParentParentId = 'parent___parent___id',
+  ParentParentInternalContent = 'parent___parent___internal___content',
+  ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalDescription = 'parent___parent___internal___description',
+  ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
+  ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
+  ParentParentInternalMediaType = 'parent___parent___internal___mediaType',
+  ParentParentInternalOwner = 'parent___parent___internal___owner',
+  ParentParentInternalType = 'parent___parent___internal___type',
+  ParentParentParentChildren = 'parent___parent___parent___children',
+  ParentParentParentId = 'parent___parent___parent___id',
+  Text = 'text',
+  Tokens = 'tokens',
+  TokensAdditionalThemeTokenData = 'tokens___additionalThemeTokenData',
+  TokensAdditionalThemeTokenDataBold = 'tokens___additionalThemeTokenData___bold',
+  TokensAdditionalThemeTokenDataClassName = 'tokens___additionalThemeTokenData___className',
+  TokensAdditionalThemeTokenDataColor = 'tokens___additionalThemeTokenData___color',
+  TokensAdditionalThemeTokenDataItalic = 'tokens___additionalThemeTokenData___italic',
+  TokensAdditionalThemeTokenDataMeta = 'tokens___additionalThemeTokenData___meta',
+  TokensAdditionalThemeTokenDataThemeIdentifier = 'tokens___additionalThemeTokenData___themeIdentifier',
+  TokensAdditionalThemeTokenDataUnderline = 'tokens___additionalThemeTokenData___underline',
+  TokensClassName = 'tokens___className',
+  TokensDefaultThemeTokenDataBold = 'tokens___defaultThemeTokenData___bold',
+  TokensDefaultThemeTokenDataClassName = 'tokens___defaultThemeTokenData___className',
+  TokensDefaultThemeTokenDataColor = 'tokens___defaultThemeTokenData___color',
+  TokensDefaultThemeTokenDataItalic = 'tokens___defaultThemeTokenData___italic',
+  TokensDefaultThemeTokenDataMeta = 'tokens___defaultThemeTokenData___meta',
+  TokensDefaultThemeTokenDataThemeIdentifier = 'tokens___defaultThemeTokenData___themeIdentifier',
+  TokensDefaultThemeTokenDataUnderline = 'tokens___defaultThemeTokenData___underline',
+  TokensEndIndex = 'tokens___endIndex',
+  TokensHtml = 'tokens___html',
+  TokensScopes = 'tokens___scopes',
+  TokensStartIndex = 'tokens___startIndex',
+  TokensText = 'tokens___text'
+}
+
+export type GrvscCodeSpanFilterInput = {
+  additionalThemes?: InputMaybe<GrvscThemeFilterListInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  className?: InputMaybe<StringQueryOperatorInput>;
+  defaultTheme?: InputMaybe<GrvscThemeFilterInput>;
+  html?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  index?: InputMaybe<IntQueryOperatorInput>;
+  internal?: InputMaybe<InternalFilterInput>;
+  language?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+  tokens?: InputMaybe<GrvscTokenFilterListInput>;
+};
+
+export type GrvscCodeSpanGroupConnection = {
+  __typename?: 'GRVSCCodeSpanGroupConnection';
+  distinct: Array<Scalars['String']>;
+  edges: Array<GrvscCodeSpanEdge>;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+  group: Array<GrvscCodeSpanGroupConnection>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  nodes: Array<GrvscCodeSpan>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars['Float']>;
+  totalCount: Scalars['Int'];
+};
+
+
+export type GrvscCodeSpanGroupConnectionDistinctArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+};
+
+
+export type GrvscCodeSpanGroupConnectionGroupArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+  limit?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GrvscCodeSpanGroupConnectionMaxArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+};
+
+
+export type GrvscCodeSpanGroupConnectionMinArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+};
+
+
+export type GrvscCodeSpanGroupConnectionSumArgs = {
+  field: GrvscCodeSpanFieldsEnum;
+};
+
+export type GrvscCodeSpanSortInput = {
+  fields?: InputMaybe<Array<InputMaybe<GrvscCodeSpanFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
+};
+
+export enum GrvscDiff {
+  Add = 'ADD',
+  Del = 'DEL'
+}
+
+export type GrvscDiffQueryOperatorInput = {
+  eq?: InputMaybe<GrvscDiff>;
+  in?: InputMaybe<Array<InputMaybe<GrvscDiff>>>;
+  ne?: InputMaybe<GrvscDiff>;
+  nin?: InputMaybe<Array<InputMaybe<GrvscDiff>>>;
+};
+
+export type GrvscGutterCell = {
+  __typename?: 'GRVSCGutterCell';
+  className?: Maybe<Scalars['String']>;
+  text?: Maybe<Scalars['String']>;
+};
+
+export type GrvscGutterCellFilterInput = {
+  className?: InputMaybe<StringQueryOperatorInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type GrvscGutterCellFilterListInput = {
+  elemMatch?: InputMaybe<GrvscGutterCellFilterInput>;
+};
+
+export type GrvscStylesheet = Node & {
+  __typename?: 'GRVSCStylesheet';
+  children: Array<Node>;
+  css: Scalars['String'];
+  id: Scalars['ID'];
+  internal: Internal;
+  parent?: Maybe<Node>;
+};
+
+export type GrvscStylesheetConnection = {
+  __typename?: 'GRVSCStylesheetConnection';
+  distinct: Array<Scalars['String']>;
+  edges: Array<GrvscStylesheetEdge>;
+  group: Array<GrvscStylesheetGroupConnection>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  nodes: Array<GrvscStylesheet>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars['Float']>;
+  totalCount: Scalars['Int'];
+};
+
+
+export type GrvscStylesheetConnectionDistinctArgs = {
+  field: GrvscStylesheetFieldsEnum;
+};
+
+
+export type GrvscStylesheetConnectionGroupArgs = {
+  field: GrvscStylesheetFieldsEnum;
+  limit?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GrvscStylesheetConnectionMaxArgs = {
+  field: GrvscStylesheetFieldsEnum;
+};
+
+
+export type GrvscStylesheetConnectionMinArgs = {
+  field: GrvscStylesheetFieldsEnum;
+};
+
+
+export type GrvscStylesheetConnectionSumArgs = {
+  field: GrvscStylesheetFieldsEnum;
+};
+
+export type GrvscStylesheetEdge = {
+  __typename?: 'GRVSCStylesheetEdge';
+  next?: Maybe<GrvscStylesheet>;
+  node: GrvscStylesheet;
+  previous?: Maybe<GrvscStylesheet>;
+};
+
+export enum GrvscStylesheetFieldsEnum {
+  Children = 'children',
+  ChildrenChildren = 'children___children',
+  ChildrenChildrenChildren = 'children___children___children',
+  ChildrenChildrenChildrenChildren = 'children___children___children___children',
+  ChildrenChildrenChildrenId = 'children___children___children___id',
+  ChildrenChildrenId = 'children___children___id',
+  ChildrenChildrenInternalContent = 'children___children___internal___content',
+  ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalDescription = 'children___children___internal___description',
+  ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
+  ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
+  ChildrenChildrenInternalMediaType = 'children___children___internal___mediaType',
+  ChildrenChildrenInternalOwner = 'children___children___internal___owner',
+  ChildrenChildrenInternalType = 'children___children___internal___type',
+  ChildrenChildrenParentChildren = 'children___children___parent___children',
+  ChildrenChildrenParentId = 'children___children___parent___id',
+  ChildrenId = 'children___id',
+  ChildrenInternalContent = 'children___internal___content',
+  ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalDescription = 'children___internal___description',
+  ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
+  ChildrenInternalIgnoreType = 'children___internal___ignoreType',
+  ChildrenInternalMediaType = 'children___internal___mediaType',
+  ChildrenInternalOwner = 'children___internal___owner',
+  ChildrenInternalType = 'children___internal___type',
+  ChildrenParentChildren = 'children___parent___children',
+  ChildrenParentChildrenChildren = 'children___parent___children___children',
+  ChildrenParentChildrenId = 'children___parent___children___id',
+  ChildrenParentId = 'children___parent___id',
+  ChildrenParentInternalContent = 'children___parent___internal___content',
+  ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalDescription = 'children___parent___internal___description',
+  ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
+  ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
+  ChildrenParentInternalMediaType = 'children___parent___internal___mediaType',
+  ChildrenParentInternalOwner = 'children___parent___internal___owner',
+  ChildrenParentInternalType = 'children___parent___internal___type',
+  ChildrenParentParentChildren = 'children___parent___parent___children',
+  ChildrenParentParentId = 'children___parent___parent___id',
+  Css = 'css',
+  Id = 'id',
+  InternalContent = 'internal___content',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalFieldOwners = 'internal___fieldOwners',
+  InternalIgnoreType = 'internal___ignoreType',
+  InternalMediaType = 'internal___mediaType',
+  InternalOwner = 'internal___owner',
+  InternalType = 'internal___type',
+  ParentChildren = 'parent___children',
+  ParentChildrenChildren = 'parent___children___children',
+  ParentChildrenChildrenChildren = 'parent___children___children___children',
+  ParentChildrenChildrenId = 'parent___children___children___id',
+  ParentChildrenId = 'parent___children___id',
+  ParentChildrenInternalContent = 'parent___children___internal___content',
+  ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalDescription = 'parent___children___internal___description',
+  ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
+  ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
+  ParentChildrenInternalMediaType = 'parent___children___internal___mediaType',
+  ParentChildrenInternalOwner = 'parent___children___internal___owner',
+  ParentChildrenInternalType = 'parent___children___internal___type',
+  ParentChildrenParentChildren = 'parent___children___parent___children',
+  ParentChildrenParentId = 'parent___children___parent___id',
+  ParentId = 'parent___id',
+  ParentInternalContent = 'parent___internal___content',
+  ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalDescription = 'parent___internal___description',
+  ParentInternalFieldOwners = 'parent___internal___fieldOwners',
+  ParentInternalIgnoreType = 'parent___internal___ignoreType',
+  ParentInternalMediaType = 'parent___internal___mediaType',
+  ParentInternalOwner = 'parent___internal___owner',
+  ParentInternalType = 'parent___internal___type',
+  ParentParentChildren = 'parent___parent___children',
+  ParentParentChildrenChildren = 'parent___parent___children___children',
+  ParentParentChildrenId = 'parent___parent___children___id',
+  ParentParentId = 'parent___parent___id',
+  ParentParentInternalContent = 'parent___parent___internal___content',
+  ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalDescription = 'parent___parent___internal___description',
+  ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
+  ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
+  ParentParentInternalMediaType = 'parent___parent___internal___mediaType',
+  ParentParentInternalOwner = 'parent___parent___internal___owner',
+  ParentParentInternalType = 'parent___parent___internal___type',
+  ParentParentParentChildren = 'parent___parent___parent___children',
+  ParentParentParentId = 'parent___parent___parent___id'
+}
+
+export type GrvscStylesheetFilterInput = {
+  children?: InputMaybe<NodeFilterListInput>;
+  css?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  internal?: InputMaybe<InternalFilterInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+};
+
+export type GrvscStylesheetGroupConnection = {
+  __typename?: 'GRVSCStylesheetGroupConnection';
+  distinct: Array<Scalars['String']>;
+  edges: Array<GrvscStylesheetEdge>;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+  group: Array<GrvscStylesheetGroupConnection>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  nodes: Array<GrvscStylesheet>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars['Float']>;
+  totalCount: Scalars['Int'];
+};
+
+
+export type GrvscStylesheetGroupConnectionDistinctArgs = {
+  field: GrvscStylesheetFieldsEnum;
+};
+
+
+export type GrvscStylesheetGroupConnectionGroupArgs = {
+  field: GrvscStylesheetFieldsEnum;
+  limit?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GrvscStylesheetGroupConnectionMaxArgs = {
+  field: GrvscStylesheetFieldsEnum;
+};
+
+
+export type GrvscStylesheetGroupConnectionMinArgs = {
+  field: GrvscStylesheetFieldsEnum;
+};
+
+
+export type GrvscStylesheetGroupConnectionSumArgs = {
+  field: GrvscStylesheetFieldsEnum;
+};
+
+export type GrvscStylesheetSortInput = {
+  fields?: InputMaybe<Array<InputMaybe<GrvscStylesheetFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
+};
+
+export type GrvscTheme = {
+  __typename?: 'GRVSCTheme';
+  conditions: Array<GrvscThemeCondition>;
+  identifier: Scalars['String'];
+  path: Scalars['String'];
+};
+
+export type GrvscThemeArgument = {
+  conditions: Array<Scalars['String']>;
+  identifier: Scalars['String'];
+};
+
+export type GrvscThemeCondition = {
+  __typename?: 'GRVSCThemeCondition';
+  condition: GrvscThemeConditionKind;
+  value?: Maybe<Scalars['String']>;
+};
+
+export type GrvscThemeConditionFilterInput = {
+  condition?: InputMaybe<GrvscThemeConditionKindQueryOperatorInput>;
+  value?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type GrvscThemeConditionFilterListInput = {
+  elemMatch?: InputMaybe<GrvscThemeConditionFilterInput>;
+};
+
+export enum GrvscThemeConditionKind {
+  Default = 'default',
+  MatchMedia = 'matchMedia',
+  ParentSelector = 'parentSelector'
+}
+
+export type GrvscThemeConditionKindQueryOperatorInput = {
+  eq?: InputMaybe<GrvscThemeConditionKind>;
+  in?: InputMaybe<Array<InputMaybe<GrvscThemeConditionKind>>>;
+  ne?: InputMaybe<GrvscThemeConditionKind>;
+  nin?: InputMaybe<Array<InputMaybe<GrvscThemeConditionKind>>>;
+};
+
+export type GrvscThemeFilterInput = {
+  conditions?: InputMaybe<GrvscThemeConditionFilterListInput>;
+  identifier?: InputMaybe<StringQueryOperatorInput>;
+  path?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type GrvscThemeFilterListInput = {
+  elemMatch?: InputMaybe<GrvscThemeFilterInput>;
+};
+
+export type GrvscThemeTokenData = {
+  __typename?: 'GRVSCThemeTokenData';
+  bold: Scalars['Boolean'];
+  className: Scalars['String'];
+  color: Scalars['String'];
+  italic: Scalars['Boolean'];
+  meta: Scalars['Int'];
+  themeIdentifier: Scalars['String'];
+  underline: Scalars['Boolean'];
+};
+
+export type GrvscThemeTokenDataFilterInput = {
+  bold?: InputMaybe<BooleanQueryOperatorInput>;
+  className?: InputMaybe<StringQueryOperatorInput>;
+  color?: InputMaybe<StringQueryOperatorInput>;
+  italic?: InputMaybe<BooleanQueryOperatorInput>;
+  meta?: InputMaybe<IntQueryOperatorInput>;
+  themeIdentifier?: InputMaybe<StringQueryOperatorInput>;
+  underline?: InputMaybe<BooleanQueryOperatorInput>;
+};
+
+export type GrvscThemeTokenDataFilterListInput = {
+  elemMatch?: InputMaybe<GrvscThemeTokenDataFilterInput>;
+};
+
+export type GrvscToken = {
+  __typename?: 'GRVSCToken';
+  additionalThemeTokenData: Array<GrvscThemeTokenData>;
+  className: Scalars['String'];
+  defaultThemeTokenData: GrvscThemeTokenData;
+  endIndex: Scalars['Int'];
+  html: Scalars['String'];
+  scopes: Array<Scalars['String']>;
+  startIndex: Scalars['Int'];
+  text: Scalars['String'];
+};
+
+export type GrvscTokenFilterInput = {
+  additionalThemeTokenData?: InputMaybe<GrvscThemeTokenDataFilterListInput>;
+  className?: InputMaybe<StringQueryOperatorInput>;
+  defaultThemeTokenData?: InputMaybe<GrvscThemeTokenDataFilterInput>;
+  endIndex?: InputMaybe<IntQueryOperatorInput>;
+  html?: InputMaybe<StringQueryOperatorInput>;
+  scopes?: InputMaybe<StringQueryOperatorInput>;
+  startIndex?: InputMaybe<IntQueryOperatorInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type GrvscTokenFilterListInput = {
+  elemMatch?: InputMaybe<GrvscTokenFilterInput>;
+};
+
+export type GrvscTokenizedLine = {
+  __typename?: 'GRVSCTokenizedLine';
+  attrs: Scalars['JSON'];
+  className: Scalars['String'];
+  data: Scalars['JSON'];
+  diff?: Maybe<GrvscDiff>;
+  gutterCells?: Maybe<Array<Maybe<GrvscGutterCell>>>;
+  html: Scalars['String'];
+  isHighlighted?: Maybe<Scalars['Boolean']>;
+  lineNumber?: Maybe<Scalars['Int']>;
+  text: Scalars['String'];
+  tokens: Array<GrvscToken>;
+};
+
+export type GrvscTokenizedLineFilterInput = {
+  attrs?: InputMaybe<JsonQueryOperatorInput>;
+  className?: InputMaybe<StringQueryOperatorInput>;
+  data?: InputMaybe<JsonQueryOperatorInput>;
+  diff?: InputMaybe<GrvscDiffQueryOperatorInput>;
+  gutterCells?: InputMaybe<GrvscGutterCellFilterListInput>;
+  html?: InputMaybe<StringQueryOperatorInput>;
+  isHighlighted?: InputMaybe<BooleanQueryOperatorInput>;
+  lineNumber?: InputMaybe<IntQueryOperatorInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+  tokens?: InputMaybe<GrvscTokenFilterListInput>;
+};
+
+export type GrvscTokenizedLineFilterListInput = {
+  elemMatch?: InputMaybe<GrvscTokenizedLineFilterInput>;
 };
 
 export enum GatsbyImageFormat {
@@ -1695,12 +2740,18 @@ export enum MarkdownHeadingLevels {
 
 export type MarkdownRemark = Node & {
   __typename?: 'MarkdownRemark';
+  /** Returns the first child node of type GRVSCCodeBlock or null if there are no children of given type on this node */
+  childGrvscCodeBlock?: Maybe<GrvscCodeBlock>;
   children: Array<Node>;
+  /** Returns all children nodes filtered by type GRVSCCodeBlock */
+  childrenGrvscCodeBlock?: Maybe<Array<Maybe<GrvscCodeBlock>>>;
   excerpt?: Maybe<Scalars['String']>;
   excerptAst?: Maybe<Scalars['JSON']>;
   fields?: Maybe<MarkdownRemarkFields>;
   fileAbsolutePath?: Maybe<Scalars['String']>;
   frontmatter?: Maybe<MarkdownRemarkFrontmatter>;
+  grvscCodeBlocks?: Maybe<Array<Maybe<GrvscCodeBlock>>>;
+  grvscCodeSpans?: Maybe<Array<Maybe<GrvscCodeSpan>>>;
   headings?: Maybe<Array<Maybe<MarkdownHeading>>>;
   html?: Maybe<Scalars['String']>;
   htmlAst?: Maybe<Scalars['JSON']>;
@@ -1792,7 +2843,160 @@ export type MarkdownRemarkFields = {
 };
 
 export enum MarkdownRemarkFieldsEnum {
+  ChildGrvscCodeBlockAdditionalThemes = 'childGrvscCodeBlock___additionalThemes',
+  ChildGrvscCodeBlockAdditionalThemesConditions = 'childGrvscCodeBlock___additionalThemes___conditions',
+  ChildGrvscCodeBlockAdditionalThemesConditionsCondition = 'childGrvscCodeBlock___additionalThemes___conditions___condition',
+  ChildGrvscCodeBlockAdditionalThemesConditionsValue = 'childGrvscCodeBlock___additionalThemes___conditions___value',
+  ChildGrvscCodeBlockAdditionalThemesIdentifier = 'childGrvscCodeBlock___additionalThemes___identifier',
+  ChildGrvscCodeBlockAdditionalThemesPath = 'childGrvscCodeBlock___additionalThemes___path',
+  ChildGrvscCodeBlockChildren = 'childGrvscCodeBlock___children',
+  ChildGrvscCodeBlockChildrenChildren = 'childGrvscCodeBlock___children___children',
+  ChildGrvscCodeBlockChildrenChildrenChildren = 'childGrvscCodeBlock___children___children___children',
+  ChildGrvscCodeBlockChildrenChildrenId = 'childGrvscCodeBlock___children___children___id',
+  ChildGrvscCodeBlockChildrenId = 'childGrvscCodeBlock___children___id',
+  ChildGrvscCodeBlockChildrenInternalContent = 'childGrvscCodeBlock___children___internal___content',
+  ChildGrvscCodeBlockChildrenInternalContentDigest = 'childGrvscCodeBlock___children___internal___contentDigest',
+  ChildGrvscCodeBlockChildrenInternalDescription = 'childGrvscCodeBlock___children___internal___description',
+  ChildGrvscCodeBlockChildrenInternalFieldOwners = 'childGrvscCodeBlock___children___internal___fieldOwners',
+  ChildGrvscCodeBlockChildrenInternalIgnoreType = 'childGrvscCodeBlock___children___internal___ignoreType',
+  ChildGrvscCodeBlockChildrenInternalMediaType = 'childGrvscCodeBlock___children___internal___mediaType',
+  ChildGrvscCodeBlockChildrenInternalOwner = 'childGrvscCodeBlock___children___internal___owner',
+  ChildGrvscCodeBlockChildrenInternalType = 'childGrvscCodeBlock___children___internal___type',
+  ChildGrvscCodeBlockChildrenParentChildren = 'childGrvscCodeBlock___children___parent___children',
+  ChildGrvscCodeBlockChildrenParentId = 'childGrvscCodeBlock___children___parent___id',
+  ChildGrvscCodeBlockCodeClassName = 'childGrvscCodeBlock___codeClassName',
+  ChildGrvscCodeBlockDefaultThemeConditions = 'childGrvscCodeBlock___defaultTheme___conditions',
+  ChildGrvscCodeBlockDefaultThemeConditionsCondition = 'childGrvscCodeBlock___defaultTheme___conditions___condition',
+  ChildGrvscCodeBlockDefaultThemeConditionsValue = 'childGrvscCodeBlock___defaultTheme___conditions___value',
+  ChildGrvscCodeBlockDefaultThemeIdentifier = 'childGrvscCodeBlock___defaultTheme___identifier',
+  ChildGrvscCodeBlockDefaultThemePath = 'childGrvscCodeBlock___defaultTheme___path',
+  ChildGrvscCodeBlockHtml = 'childGrvscCodeBlock___html',
+  ChildGrvscCodeBlockId = 'childGrvscCodeBlock___id',
+  ChildGrvscCodeBlockIndex = 'childGrvscCodeBlock___index',
+  ChildGrvscCodeBlockInternalContent = 'childGrvscCodeBlock___internal___content',
+  ChildGrvscCodeBlockInternalContentDigest = 'childGrvscCodeBlock___internal___contentDigest',
+  ChildGrvscCodeBlockInternalDescription = 'childGrvscCodeBlock___internal___description',
+  ChildGrvscCodeBlockInternalFieldOwners = 'childGrvscCodeBlock___internal___fieldOwners',
+  ChildGrvscCodeBlockInternalIgnoreType = 'childGrvscCodeBlock___internal___ignoreType',
+  ChildGrvscCodeBlockInternalMediaType = 'childGrvscCodeBlock___internal___mediaType',
+  ChildGrvscCodeBlockInternalOwner = 'childGrvscCodeBlock___internal___owner',
+  ChildGrvscCodeBlockInternalType = 'childGrvscCodeBlock___internal___type',
+  ChildGrvscCodeBlockLanguage = 'childGrvscCodeBlock___language',
+  ChildGrvscCodeBlockMeta = 'childGrvscCodeBlock___meta',
+  ChildGrvscCodeBlockParentChildren = 'childGrvscCodeBlock___parent___children',
+  ChildGrvscCodeBlockParentChildrenChildren = 'childGrvscCodeBlock___parent___children___children',
+  ChildGrvscCodeBlockParentChildrenId = 'childGrvscCodeBlock___parent___children___id',
+  ChildGrvscCodeBlockParentId = 'childGrvscCodeBlock___parent___id',
+  ChildGrvscCodeBlockParentInternalContent = 'childGrvscCodeBlock___parent___internal___content',
+  ChildGrvscCodeBlockParentInternalContentDigest = 'childGrvscCodeBlock___parent___internal___contentDigest',
+  ChildGrvscCodeBlockParentInternalDescription = 'childGrvscCodeBlock___parent___internal___description',
+  ChildGrvscCodeBlockParentInternalFieldOwners = 'childGrvscCodeBlock___parent___internal___fieldOwners',
+  ChildGrvscCodeBlockParentInternalIgnoreType = 'childGrvscCodeBlock___parent___internal___ignoreType',
+  ChildGrvscCodeBlockParentInternalMediaType = 'childGrvscCodeBlock___parent___internal___mediaType',
+  ChildGrvscCodeBlockParentInternalOwner = 'childGrvscCodeBlock___parent___internal___owner',
+  ChildGrvscCodeBlockParentInternalType = 'childGrvscCodeBlock___parent___internal___type',
+  ChildGrvscCodeBlockParentParentChildren = 'childGrvscCodeBlock___parent___parent___children',
+  ChildGrvscCodeBlockParentParentId = 'childGrvscCodeBlock___parent___parent___id',
+  ChildGrvscCodeBlockPreClassName = 'childGrvscCodeBlock___preClassName',
+  ChildGrvscCodeBlockText = 'childGrvscCodeBlock___text',
+  ChildGrvscCodeBlockTokenizedLines = 'childGrvscCodeBlock___tokenizedLines',
+  ChildGrvscCodeBlockTokenizedLinesAttrs = 'childGrvscCodeBlock___tokenizedLines___attrs',
+  ChildGrvscCodeBlockTokenizedLinesClassName = 'childGrvscCodeBlock___tokenizedLines___className',
+  ChildGrvscCodeBlockTokenizedLinesData = 'childGrvscCodeBlock___tokenizedLines___data',
+  ChildGrvscCodeBlockTokenizedLinesDiff = 'childGrvscCodeBlock___tokenizedLines___diff',
+  ChildGrvscCodeBlockTokenizedLinesGutterCells = 'childGrvscCodeBlock___tokenizedLines___gutterCells',
+  ChildGrvscCodeBlockTokenizedLinesGutterCellsClassName = 'childGrvscCodeBlock___tokenizedLines___gutterCells___className',
+  ChildGrvscCodeBlockTokenizedLinesGutterCellsText = 'childGrvscCodeBlock___tokenizedLines___gutterCells___text',
+  ChildGrvscCodeBlockTokenizedLinesHtml = 'childGrvscCodeBlock___tokenizedLines___html',
+  ChildGrvscCodeBlockTokenizedLinesIsHighlighted = 'childGrvscCodeBlock___tokenizedLines___isHighlighted',
+  ChildGrvscCodeBlockTokenizedLinesLineNumber = 'childGrvscCodeBlock___tokenizedLines___lineNumber',
+  ChildGrvscCodeBlockTokenizedLinesText = 'childGrvscCodeBlock___tokenizedLines___text',
+  ChildGrvscCodeBlockTokenizedLinesTokens = 'childGrvscCodeBlock___tokenizedLines___tokens',
+  ChildGrvscCodeBlockTokenizedLinesTokensAdditionalThemeTokenData = 'childGrvscCodeBlock___tokenizedLines___tokens___additionalThemeTokenData',
+  ChildGrvscCodeBlockTokenizedLinesTokensClassName = 'childGrvscCodeBlock___tokenizedLines___tokens___className',
+  ChildGrvscCodeBlockTokenizedLinesTokensEndIndex = 'childGrvscCodeBlock___tokenizedLines___tokens___endIndex',
+  ChildGrvscCodeBlockTokenizedLinesTokensHtml = 'childGrvscCodeBlock___tokenizedLines___tokens___html',
+  ChildGrvscCodeBlockTokenizedLinesTokensScopes = 'childGrvscCodeBlock___tokenizedLines___tokens___scopes',
+  ChildGrvscCodeBlockTokenizedLinesTokensStartIndex = 'childGrvscCodeBlock___tokenizedLines___tokens___startIndex',
+  ChildGrvscCodeBlockTokenizedLinesTokensText = 'childGrvscCodeBlock___tokenizedLines___tokens___text',
   Children = 'children',
+  ChildrenGrvscCodeBlock = 'childrenGrvscCodeBlock',
+  ChildrenGrvscCodeBlockAdditionalThemes = 'childrenGrvscCodeBlock___additionalThemes',
+  ChildrenGrvscCodeBlockAdditionalThemesConditions = 'childrenGrvscCodeBlock___additionalThemes___conditions',
+  ChildrenGrvscCodeBlockAdditionalThemesConditionsCondition = 'childrenGrvscCodeBlock___additionalThemes___conditions___condition',
+  ChildrenGrvscCodeBlockAdditionalThemesConditionsValue = 'childrenGrvscCodeBlock___additionalThemes___conditions___value',
+  ChildrenGrvscCodeBlockAdditionalThemesIdentifier = 'childrenGrvscCodeBlock___additionalThemes___identifier',
+  ChildrenGrvscCodeBlockAdditionalThemesPath = 'childrenGrvscCodeBlock___additionalThemes___path',
+  ChildrenGrvscCodeBlockChildren = 'childrenGrvscCodeBlock___children',
+  ChildrenGrvscCodeBlockChildrenChildren = 'childrenGrvscCodeBlock___children___children',
+  ChildrenGrvscCodeBlockChildrenChildrenChildren = 'childrenGrvscCodeBlock___children___children___children',
+  ChildrenGrvscCodeBlockChildrenChildrenId = 'childrenGrvscCodeBlock___children___children___id',
+  ChildrenGrvscCodeBlockChildrenId = 'childrenGrvscCodeBlock___children___id',
+  ChildrenGrvscCodeBlockChildrenInternalContent = 'childrenGrvscCodeBlock___children___internal___content',
+  ChildrenGrvscCodeBlockChildrenInternalContentDigest = 'childrenGrvscCodeBlock___children___internal___contentDigest',
+  ChildrenGrvscCodeBlockChildrenInternalDescription = 'childrenGrvscCodeBlock___children___internal___description',
+  ChildrenGrvscCodeBlockChildrenInternalFieldOwners = 'childrenGrvscCodeBlock___children___internal___fieldOwners',
+  ChildrenGrvscCodeBlockChildrenInternalIgnoreType = 'childrenGrvscCodeBlock___children___internal___ignoreType',
+  ChildrenGrvscCodeBlockChildrenInternalMediaType = 'childrenGrvscCodeBlock___children___internal___mediaType',
+  ChildrenGrvscCodeBlockChildrenInternalOwner = 'childrenGrvscCodeBlock___children___internal___owner',
+  ChildrenGrvscCodeBlockChildrenInternalType = 'childrenGrvscCodeBlock___children___internal___type',
+  ChildrenGrvscCodeBlockChildrenParentChildren = 'childrenGrvscCodeBlock___children___parent___children',
+  ChildrenGrvscCodeBlockChildrenParentId = 'childrenGrvscCodeBlock___children___parent___id',
+  ChildrenGrvscCodeBlockCodeClassName = 'childrenGrvscCodeBlock___codeClassName',
+  ChildrenGrvscCodeBlockDefaultThemeConditions = 'childrenGrvscCodeBlock___defaultTheme___conditions',
+  ChildrenGrvscCodeBlockDefaultThemeConditionsCondition = 'childrenGrvscCodeBlock___defaultTheme___conditions___condition',
+  ChildrenGrvscCodeBlockDefaultThemeConditionsValue = 'childrenGrvscCodeBlock___defaultTheme___conditions___value',
+  ChildrenGrvscCodeBlockDefaultThemeIdentifier = 'childrenGrvscCodeBlock___defaultTheme___identifier',
+  ChildrenGrvscCodeBlockDefaultThemePath = 'childrenGrvscCodeBlock___defaultTheme___path',
+  ChildrenGrvscCodeBlockHtml = 'childrenGrvscCodeBlock___html',
+  ChildrenGrvscCodeBlockId = 'childrenGrvscCodeBlock___id',
+  ChildrenGrvscCodeBlockIndex = 'childrenGrvscCodeBlock___index',
+  ChildrenGrvscCodeBlockInternalContent = 'childrenGrvscCodeBlock___internal___content',
+  ChildrenGrvscCodeBlockInternalContentDigest = 'childrenGrvscCodeBlock___internal___contentDigest',
+  ChildrenGrvscCodeBlockInternalDescription = 'childrenGrvscCodeBlock___internal___description',
+  ChildrenGrvscCodeBlockInternalFieldOwners = 'childrenGrvscCodeBlock___internal___fieldOwners',
+  ChildrenGrvscCodeBlockInternalIgnoreType = 'childrenGrvscCodeBlock___internal___ignoreType',
+  ChildrenGrvscCodeBlockInternalMediaType = 'childrenGrvscCodeBlock___internal___mediaType',
+  ChildrenGrvscCodeBlockInternalOwner = 'childrenGrvscCodeBlock___internal___owner',
+  ChildrenGrvscCodeBlockInternalType = 'childrenGrvscCodeBlock___internal___type',
+  ChildrenGrvscCodeBlockLanguage = 'childrenGrvscCodeBlock___language',
+  ChildrenGrvscCodeBlockMeta = 'childrenGrvscCodeBlock___meta',
+  ChildrenGrvscCodeBlockParentChildren = 'childrenGrvscCodeBlock___parent___children',
+  ChildrenGrvscCodeBlockParentChildrenChildren = 'childrenGrvscCodeBlock___parent___children___children',
+  ChildrenGrvscCodeBlockParentChildrenId = 'childrenGrvscCodeBlock___parent___children___id',
+  ChildrenGrvscCodeBlockParentId = 'childrenGrvscCodeBlock___parent___id',
+  ChildrenGrvscCodeBlockParentInternalContent = 'childrenGrvscCodeBlock___parent___internal___content',
+  ChildrenGrvscCodeBlockParentInternalContentDigest = 'childrenGrvscCodeBlock___parent___internal___contentDigest',
+  ChildrenGrvscCodeBlockParentInternalDescription = 'childrenGrvscCodeBlock___parent___internal___description',
+  ChildrenGrvscCodeBlockParentInternalFieldOwners = 'childrenGrvscCodeBlock___parent___internal___fieldOwners',
+  ChildrenGrvscCodeBlockParentInternalIgnoreType = 'childrenGrvscCodeBlock___parent___internal___ignoreType',
+  ChildrenGrvscCodeBlockParentInternalMediaType = 'childrenGrvscCodeBlock___parent___internal___mediaType',
+  ChildrenGrvscCodeBlockParentInternalOwner = 'childrenGrvscCodeBlock___parent___internal___owner',
+  ChildrenGrvscCodeBlockParentInternalType = 'childrenGrvscCodeBlock___parent___internal___type',
+  ChildrenGrvscCodeBlockParentParentChildren = 'childrenGrvscCodeBlock___parent___parent___children',
+  ChildrenGrvscCodeBlockParentParentId = 'childrenGrvscCodeBlock___parent___parent___id',
+  ChildrenGrvscCodeBlockPreClassName = 'childrenGrvscCodeBlock___preClassName',
+  ChildrenGrvscCodeBlockText = 'childrenGrvscCodeBlock___text',
+  ChildrenGrvscCodeBlockTokenizedLines = 'childrenGrvscCodeBlock___tokenizedLines',
+  ChildrenGrvscCodeBlockTokenizedLinesAttrs = 'childrenGrvscCodeBlock___tokenizedLines___attrs',
+  ChildrenGrvscCodeBlockTokenizedLinesClassName = 'childrenGrvscCodeBlock___tokenizedLines___className',
+  ChildrenGrvscCodeBlockTokenizedLinesData = 'childrenGrvscCodeBlock___tokenizedLines___data',
+  ChildrenGrvscCodeBlockTokenizedLinesDiff = 'childrenGrvscCodeBlock___tokenizedLines___diff',
+  ChildrenGrvscCodeBlockTokenizedLinesGutterCells = 'childrenGrvscCodeBlock___tokenizedLines___gutterCells',
+  ChildrenGrvscCodeBlockTokenizedLinesGutterCellsClassName = 'childrenGrvscCodeBlock___tokenizedLines___gutterCells___className',
+  ChildrenGrvscCodeBlockTokenizedLinesGutterCellsText = 'childrenGrvscCodeBlock___tokenizedLines___gutterCells___text',
+  ChildrenGrvscCodeBlockTokenizedLinesHtml = 'childrenGrvscCodeBlock___tokenizedLines___html',
+  ChildrenGrvscCodeBlockTokenizedLinesIsHighlighted = 'childrenGrvscCodeBlock___tokenizedLines___isHighlighted',
+  ChildrenGrvscCodeBlockTokenizedLinesLineNumber = 'childrenGrvscCodeBlock___tokenizedLines___lineNumber',
+  ChildrenGrvscCodeBlockTokenizedLinesText = 'childrenGrvscCodeBlock___tokenizedLines___text',
+  ChildrenGrvscCodeBlockTokenizedLinesTokens = 'childrenGrvscCodeBlock___tokenizedLines___tokens',
+  ChildrenGrvscCodeBlockTokenizedLinesTokensAdditionalThemeTokenData = 'childrenGrvscCodeBlock___tokenizedLines___tokens___additionalThemeTokenData',
+  ChildrenGrvscCodeBlockTokenizedLinesTokensClassName = 'childrenGrvscCodeBlock___tokenizedLines___tokens___className',
+  ChildrenGrvscCodeBlockTokenizedLinesTokensEndIndex = 'childrenGrvscCodeBlock___tokenizedLines___tokens___endIndex',
+  ChildrenGrvscCodeBlockTokenizedLinesTokensHtml = 'childrenGrvscCodeBlock___tokenizedLines___tokens___html',
+  ChildrenGrvscCodeBlockTokenizedLinesTokensScopes = 'childrenGrvscCodeBlock___tokenizedLines___tokens___scopes',
+  ChildrenGrvscCodeBlockTokenizedLinesTokensStartIndex = 'childrenGrvscCodeBlock___tokenizedLines___tokens___startIndex',
+  ChildrenGrvscCodeBlockTokenizedLinesTokensText = 'childrenGrvscCodeBlock___tokenizedLines___tokens___text',
   ChildrenChildren = 'children___children',
   ChildrenChildrenChildren = 'children___children___children',
   ChildrenChildrenChildrenChildren = 'children___children___children___children',
@@ -1854,6 +3058,7 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterThumbnailChildImageSharpGatsbyImageData = 'frontmatter___thumbnail___childImageSharp___gatsbyImageData',
   FrontmatterThumbnailChildImageSharpId = 'frontmatter___thumbnail___childImageSharp___id',
   FrontmatterThumbnailChildMarkdownRemarkChildren = 'frontmatter___thumbnail___childMarkdownRemark___children',
+  FrontmatterThumbnailChildMarkdownRemarkChildrenGrvscCodeBlock = 'frontmatter___thumbnail___childMarkdownRemark___childrenGrvscCodeBlock',
   FrontmatterThumbnailChildMarkdownRemarkExcerpt = 'frontmatter___thumbnail___childMarkdownRemark___excerpt',
   FrontmatterThumbnailChildMarkdownRemarkExcerptAst = 'frontmatter___thumbnail___childMarkdownRemark___excerptAst',
   FrontmatterThumbnailChildMarkdownRemarkFileAbsolutePath = 'frontmatter___thumbnail___childMarkdownRemark___fileAbsolutePath',
@@ -1871,6 +3076,7 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterThumbnailChildrenImageSharpId = 'frontmatter___thumbnail___childrenImageSharp___id',
   FrontmatterThumbnailChildrenMarkdownRemark = 'frontmatter___thumbnail___childrenMarkdownRemark',
   FrontmatterThumbnailChildrenMarkdownRemarkChildren = 'frontmatter___thumbnail___childrenMarkdownRemark___children',
+  FrontmatterThumbnailChildrenMarkdownRemarkChildrenGrvscCodeBlock = 'frontmatter___thumbnail___childrenMarkdownRemark___childrenGrvscCodeBlock',
   FrontmatterThumbnailChildrenMarkdownRemarkExcerpt = 'frontmatter___thumbnail___childrenMarkdownRemark___excerpt',
   FrontmatterThumbnailChildrenMarkdownRemarkExcerptAst = 'frontmatter___thumbnail___childrenMarkdownRemark___excerptAst',
   FrontmatterThumbnailChildrenMarkdownRemarkFileAbsolutePath = 'frontmatter___thumbnail___childrenMarkdownRemark___fileAbsolutePath',
@@ -1984,7 +3190,9 @@ export type MarkdownRemarkFieldsFilterInput = {
 };
 
 export type MarkdownRemarkFilterInput = {
+  childGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
+  childrenGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFilterListInput>;
   excerpt?: InputMaybe<StringQueryOperatorInput>;
   excerptAst?: InputMaybe<JsonQueryOperatorInput>;
   fields?: InputMaybe<MarkdownRemarkFieldsFilterInput>;
@@ -2153,6 +3361,9 @@ export type Query = {
   __typename?: 'Query';
   allDirectory: DirectoryConnection;
   allFile: FileConnection;
+  allGrvscCodeBlock: GrvscCodeBlockConnection;
+  allGrvscCodeSpan: GrvscCodeSpanConnection;
+  allGrvscStylesheet: GrvscStylesheetConnection;
   allImageSharp: ImageSharpConnection;
   allMarkdownRemark: MarkdownRemarkConnection;
   allSite: SiteConnection;
@@ -2162,6 +3373,10 @@ export type Query = {
   allSitePlugin: SitePluginConnection;
   directory?: Maybe<Directory>;
   file?: Maybe<File>;
+  grvscCodeBlock?: Maybe<GrvscCodeBlock>;
+  grvscCodeSpan?: Maybe<GrvscCodeSpan>;
+  grvscHighlight?: Maybe<GrvscCodeBlock>;
+  grvscStylesheet?: Maybe<GrvscStylesheet>;
   imageSharp?: Maybe<ImageSharp>;
   markdownRemark?: Maybe<MarkdownRemark>;
   site?: Maybe<Site>;
@@ -2185,6 +3400,30 @@ export type QueryAllFileArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<FileSortInput>;
+};
+
+
+export type QueryAllGrvscCodeBlockArgs = {
+  filter?: InputMaybe<GrvscCodeBlockFilterInput>;
+  limit?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<GrvscCodeBlockSortInput>;
+};
+
+
+export type QueryAllGrvscCodeSpanArgs = {
+  filter?: InputMaybe<GrvscCodeSpanFilterInput>;
+  limit?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<GrvscCodeSpanSortInput>;
+};
+
+
+export type QueryAllGrvscStylesheetArgs = {
+  filter?: InputMaybe<GrvscStylesheetFilterInput>;
+  limit?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<GrvscStylesheetSortInput>;
 };
 
 
@@ -2329,6 +3568,56 @@ export type QueryFileArgs = {
 };
 
 
+export type QueryGrvscCodeBlockArgs = {
+  additionalThemes?: InputMaybe<GrvscThemeFilterListInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  codeClassName?: InputMaybe<StringQueryOperatorInput>;
+  defaultTheme?: InputMaybe<GrvscThemeFilterInput>;
+  html?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  index?: InputMaybe<IntQueryOperatorInput>;
+  internal?: InputMaybe<InternalFilterInput>;
+  language?: InputMaybe<StringQueryOperatorInput>;
+  meta?: InputMaybe<JsonQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  preClassName?: InputMaybe<StringQueryOperatorInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+  tokenizedLines?: InputMaybe<GrvscTokenizedLineFilterListInput>;
+};
+
+
+export type QueryGrvscCodeSpanArgs = {
+  additionalThemes?: InputMaybe<GrvscThemeFilterListInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  className?: InputMaybe<StringQueryOperatorInput>;
+  defaultTheme?: InputMaybe<GrvscThemeFilterInput>;
+  html?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  index?: InputMaybe<IntQueryOperatorInput>;
+  internal?: InputMaybe<InternalFilterInput>;
+  language?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+  tokens?: InputMaybe<GrvscTokenFilterListInput>;
+};
+
+
+export type QueryGrvscHighlightArgs = {
+  additionalThemes?: InputMaybe<Array<GrvscThemeArgument>>;
+  defaultTheme?: InputMaybe<Scalars['String']>;
+  language?: InputMaybe<Scalars['String']>;
+  meta?: InputMaybe<Scalars['String']>;
+  source: Scalars['String'];
+};
+
+
+export type QueryGrvscStylesheetArgs = {
+  additionalThemes?: InputMaybe<Array<GrvscThemeArgument>>;
+  defaultTheme?: InputMaybe<Scalars['String']>;
+  injectStyles?: InputMaybe<Scalars['Boolean']>;
+};
+
+
 export type QueryImageSharpArgs = {
   children?: InputMaybe<NodeFilterListInput>;
   fixed?: InputMaybe<ImageSharpFixedFilterInput>;
@@ -2343,7 +3632,9 @@ export type QueryImageSharpArgs = {
 
 
 export type QueryMarkdownRemarkArgs = {
+  childGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
+  childrenGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFilterListInput>;
   excerpt?: InputMaybe<StringQueryOperatorInput>;
   excerptAst?: InputMaybe<JsonQueryOperatorInput>;
   fields?: InputMaybe<MarkdownRemarkFieldsFilterInput>;
@@ -2810,7 +4101,6 @@ export enum SiteFieldsEnum {
   SiteMetadataMenuLinks = 'siteMetadata___menuLinks',
   SiteMetadataMenuLinksLink = 'siteMetadata___menuLinks___link',
   SiteMetadataMenuLinksName = 'siteMetadata___menuLinks___name',
-  SiteMetadataPlugins = 'siteMetadata___plugins',
   SiteMetadataPostTitle = 'siteMetadata___postTitle',
   SiteMetadataSiteUrl = 'siteMetadata___siteUrl',
   SiteMetadataTitle = 'siteMetadata___title',
@@ -3588,7 +4878,6 @@ export type SiteSiteMetadata = {
   description?: Maybe<Scalars['String']>;
   lang?: Maybe<Scalars['String']>;
   menuLinks?: Maybe<Array<Maybe<SiteSiteMetadataMenuLinks>>>;
-  plugins?: Maybe<Array<Maybe<Scalars['String']>>>;
   postTitle?: Maybe<Scalars['String']>;
   siteUrl?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
@@ -3600,7 +4889,6 @@ export type SiteSiteMetadataFilterInput = {
   description?: InputMaybe<StringQueryOperatorInput>;
   lang?: InputMaybe<StringQueryOperatorInput>;
   menuLinks?: InputMaybe<SiteSiteMetadataMenuLinksFilterListInput>;
-  plugins?: InputMaybe<StringQueryOperatorInput>;
   postTitle?: InputMaybe<StringQueryOperatorInput>;
   siteUrl?: InputMaybe<StringQueryOperatorInput>;
   title?: InputMaybe<StringQueryOperatorInput>;
