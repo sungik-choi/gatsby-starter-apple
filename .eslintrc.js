@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["jsx-a11y", "@typescript-eslint", "react"],
