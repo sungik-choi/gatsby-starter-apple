@@ -73,7 +73,6 @@ module.exports = {
       options: {
         plugins: [
           "gatsby-remark-copy-linked-files",
-          `gatsby-remark-copy-linked-files`,
           {
             resolve: "gatsby-remark-vscode",
             options: {
