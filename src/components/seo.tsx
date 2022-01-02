@@ -5,8 +5,6 @@ import useSiteMetadata from "Hooks/useSiteMetadata"
 import type { MarkdownRemarkFrontmatter } from "Types/GraphQL"
 import defaultOpenGraphImage from "../images/og-default.png"
 
-const DEFAULT_LANG = "en"
-
 type Meta = React.DetailedHTMLProps<
   React.MetaHTMLAttributes<HTMLMetaElement>,
   HTMLMetaElement
@@ -25,7 +23,7 @@ const SEO: React.FC<SEOProps> = ({ title, desc = "", image }) => {
 
   return (
     <Helmet
-      htmlAttributes={{ lang: site.lang ?? DEFAULT_LANG }}
+      htmlAttributes={{ lang: site.lang! }}
       title={title ?? ""}
       titleTemplate={`%s | ${site.title}`}
       meta={

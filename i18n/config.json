@@ -1,0 +1,16 @@
+[
+  {
+    "code": "en",
+    "hrefLang": "en-US",
+    "name": "English",
+    "localName": "English",
+    "langDir": "ltr"
+  },
+  {
+    "code": "ko",
+    "hrefLang": "ko-KR",
+    "name": "Korean",
+    "localName": "한국어",
+    "langDir": "ltr"
+  }
+]

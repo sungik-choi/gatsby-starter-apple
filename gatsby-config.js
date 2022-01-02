@@ -11,6 +11,7 @@ module.exports = {
       repo: meta.utterances,
     },
     postTitle: "All",
+    github: meta.links.github,
     menuLinks: [
       {
         link: "/",
@@ -32,6 +33,13 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      resolve: "gatsby-theme-i18n",
+      options: {
+        defaultLang: meta.lang,
+        configPath: require.resolve("./i18n/config.json"),
+      },
+    },
     {
       resolve: "gatsby-plugin-alias-imports",
       options: {

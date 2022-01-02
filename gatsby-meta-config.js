@@ -23,11 +23,11 @@ const metaConfig = {
   siteUrl: "https://gatsby-starter-apple.netlify.app",
   lang: "en",
   utterances: "sungik-choi/gatsby-starter-apple-comment",
+  github: "https://github.com/sungik-choi/gatsby-starter-apple",
   links: {
     github: "https://github.com/sungik-choi/gatsby-starter-apple",
   },
   favicon: "src/images/icon.png",
 }
 
-// eslint-disable-next-line no-undef
 module.exports = metaConfig
