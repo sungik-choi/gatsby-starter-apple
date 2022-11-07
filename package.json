@@ -12,8 +12,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint '**/*.{ts,tsx}'",
-    "semantic-release": "semantic-release",
-    "generate": "graphql-codegen --config codegen.yml"
+    "lint:fix": "npm run lint -- --fix",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "dark-theme-github": "github:remorses/dark-github-theme",
@@ -41,20 +41,17 @@
     "vscode-theme-github-light": "github:chuling/vscode-theme-github-light"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^2.3.1",
-    "@graphql-codegen/introspection": "^2.2.1",
-    "@graphql-codegen/typescript": "^2.8.1",
-    "@graphql-codegen/typescript-operations": "^2.2.2",
-    "@graphql-codegen/typescript-react-apollo": "^3.3.6",
+    "@graphql-eslint/eslint-plugin": "^3.13.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/github": "^8.0.2",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/react-helmet": "^6.1.5",
     "@types/styled-components": "^5.1.19",
     "@types/typography": "^0.16.4",
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
     "disable-scroll": "^0.6.0",
+    "eslint": "^8.27.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-robots-txt": "^1.6.14",
