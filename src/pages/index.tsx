@@ -97,13 +97,13 @@ const PostTitle = styled.h2`
 `
 
 export const query = graphql`
-  query {
+  {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
-      group(field: frontmatter___category) {
+      group(field: { frontmatter: { category: SELECT } }) {
         fieldValue
         totalCount
       }

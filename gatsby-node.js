@@ -24,7 +24,7 @@ exports.createPages = async ({ graphql, actions }) => {
     {
       postsRemark: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         limit: 2000
       ) {
         edges {
@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
       categoriesGroup: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___category) {
+        group(field: { frontmatter: { category: SELECT } }) {
           fieldValue
           totalCount
         }
