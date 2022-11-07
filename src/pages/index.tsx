@@ -3,7 +3,6 @@ import type { PageProps } from "gatsby"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
-import type { Query, MarkdownRemarkFrontmatter } from "Types/GraphQL"
 import type Post from "Types/Post"
 import useSiteMetadata from "Hooks/useSiteMetadata"
 import Layout from "Layouts/layout"
@@ -14,7 +13,7 @@ import CategoryFilter from "Components/catetgoryFilter"
 const Home = ({
   pageContext,
   data,
-}: PageProps<Query, MarkdownRemarkFrontmatter>) => {
+}: PageProps<Queries.Query, Queries.MarkdownRemarkFrontmatter>) => {
   const [posts, setPosts] = useState<Post[]>([])
   const currentCategory = pageContext.category
   const postData = data.allMarkdownRemark.edges
@@ -28,8 +27,8 @@ const Home = ({
 
     filteredPostData.forEach(({ node }) => {
       const { id } = node
-      const { slug } = node?.fields!
-      const { title, desc, date, category, thumbnail, alt } = node?.frontmatter!
+      const { slug } = node.fields!
+      const { title, desc, date, category, thumbnail, alt } = node.frontmatter!
       const { childImageSharp } = thumbnail!
 
       setPosts(prevPost => [
@@ -97,7 +96,7 @@ const PostTitle = styled.h2`
 `
 
 export const query = graphql`
-  {
+  query Home {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
       limit: 2000

@@ -1,8 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, type PageProps } from "gatsby"
 import styled from "styled-components"
 
-import type { Query } from "Types/GraphQL"
 import Layout from "Layouts/layout"
 import SEO from "Components/seo"
 import Comment from "Components/comment"
@@ -11,18 +10,14 @@ import Category from "Styles/category"
 import DateTime from "Styles/dateTime"
 import Markdown from "Styles/markdown"
 
-interface BlogPostProps {
-  data: Query
-}
-
-const BlogPost: React.FC<BlogPostProps> = ({ data }) => {
+const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark!
   const { title, desc, thumbnail, date, category } = frontmatter!
 
   const ogImagePath =
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    thumbnail && thumbnail?.childImageSharp?.gatsbyImageData?.src
+    thumbnail && thumbnail?.childImageSharp?.gatsbyImageData!.images!.fallback!.src
 
   return (
     <Layout>
@@ -35,7 +30,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ data }) => {
                 <header>
                   <Info>
                     <PostCategory>{category}</PostCategory>
-                    <Time dateTime={date}>{date}</Time>
+                    <Time dateTime={date!}>{date}</Time>
                   </Info>
                   <Title>{title}</Title>
                   <Desc>{desc}</Desc>
@@ -136,7 +131,7 @@ const Title = styled.h1`
 `
 
 export const query = graphql`
-  query ($slug: String!) {
+  query BlogPostPage ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

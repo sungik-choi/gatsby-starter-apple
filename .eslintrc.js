@@ -4,7 +4,6 @@ module.exports = {
   ignorePatterns: [
     ".eslintrc.js",
     "**/build/*",
-    "src/types/GraphQL.ts",
     "*.js",
   ],
   overrides: [
@@ -12,15 +11,23 @@ module.exports = {
       files: ["*.ts", "*.tsx"],
       processor: "@graphql-eslint/graphql",
       parser: "@typescript-eslint/parser",
-      plugins: ["jsx-a11y", "@typescript-eslint", "react"],
+      plugins: [
+        "react",
+        "react-hooks",
+        "jsx-a11y", 
+        "@typescript-eslint",
+      ],
       extends: [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
+        
       ],
       env: {
         es6: true,
       },
       rules: {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
         "@typescript-eslint/consistent-type-imports": "error",
         "@typescript-eslint/no-unsafe-assignment": 0,
         "@typescript-eslint/no-non-null-assertion": 0,

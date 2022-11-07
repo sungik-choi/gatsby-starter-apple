@@ -1,11 +1,9 @@
-import type { MarkdownRemarkFields, MarkdownRemarkFrontmatter } from "./GraphQL"
-
 export default interface Post
   extends Pick<
-    MarkdownRemarkFrontmatter,
+    Queries.MarkdownRemarkFrontmatter,
     "title" | "desc" | "date" | "category" | "alt"
   > {
   id: string
-  slug: MarkdownRemarkFields["slug"]
+  slug: Queries.MarkdownRemarkFields["slug"]
   thumbnail?: string
 }

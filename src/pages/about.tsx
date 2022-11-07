@@ -2,15 +2,14 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
-import type { Query } from "Types/GraphQL"
 import Layout from "Layouts/layout"
 import SEO from "Components/seo"
 import Markdown from "Styles/markdown"
 import { rhythm } from "Styles/typography"
 
 const About = () => {
-  const data = useStaticQuery<Query>(graphql`
-    query {
+  const data = useStaticQuery<Queries.Query>(graphql`
+    query About {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
         edges {
           node {

@@ -2,7 +2,6 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 import useSiteMetadata from "Hooks/useSiteMetadata"
-import type { MarkdownRemarkFrontmatter } from "Types/GraphQL"
 import defaultOpenGraphImage from "../images/og-default.png"
 
 const DEFAULT_LANG = "en"
@@ -10,10 +9,11 @@ const DEFAULT_LANG = "en"
 type Meta = React.DetailedHTMLProps<
   React.MetaHTMLAttributes<HTMLMetaElement>,
   HTMLMetaElement
->[]
+  >[]
 
-interface SEOProps extends Pick<MarkdownRemarkFrontmatter, "title" | "desc"> {
-  image?: string
+interface SEOProps extends Pick<Queries.MarkdownRemarkFrontmatter, "title"> {
+  desc?: Queries.Maybe<string>
+  image?: Queries.Maybe<string>
   meta?: Meta
 }
 

@@ -2,7 +2,6 @@ import React from "react"
 import { isNil } from "lodash"
 import { Link } from "gatsby"
 
-import type { SiteSiteMetadataMenuLinks } from "Types/GraphQL"
 import type { UseSiteMetaDataReturnType } from "Hooks/useSiteMetadata"
 import type { UseMenuReturnType } from "./useMenu"
 
@@ -15,7 +14,7 @@ interface LinkListProps extends Pick<UseMenuReturnType, "setToggle"> {
 }
 
 const LinkList: React.FC<LinkListProps> = ({ links, setToggle }) => {
-  const generateLink = (props: SiteSiteMetadataMenuLinks | null) => {
+  const generateLink = (props: Queries.SiteSiteMetadataMenuLinks | null) => {
     if (isNil(props)) {
       return
     }
