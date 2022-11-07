@@ -22,9 +22,10 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ categoryList }) => {
 
   useScrollCenter({ ref: categoryRef, targetId: ACTIVE })
 
-  const sortedCategoryList = useMemo(() => (
-    [...categoryList].sort((a, b) => b.totalCount - a.totalCount)
-  ), [categoryList])
+  const sortedCategoryList = useMemo(
+    () => [...categoryList].sort((a, b) => b.totalCount - a.totalCount),
+    [categoryList]
+  )
 
   return (
     <Nav aria-label="Category Filter">
@@ -34,20 +35,19 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ categoryList }) => {
       </CategoryButton>
       <Divider />
       <CategoryUl ref={categoryRef} className="invisible-scrollbar">
-        {sortedCategoryList
-          .map(category => {
-            const { fieldValue } = category
-            return (
-              <li key={fieldValue}>
-                <CategoryButton
-                  getProps={isActive}
-                  to={`/category/${kebabCase(fieldValue!)}/`}
-                >
-                  {fieldValue}
-                </CategoryButton>
-              </li>
-            )
-          })}
+        {sortedCategoryList.map(category => {
+          const { fieldValue } = category
+          return (
+            <li key={fieldValue}>
+              <CategoryButton
+                getProps={isActive}
+                to={`/category/${kebabCase(fieldValue!)}/`}
+              >
+                {fieldValue}
+              </CategoryButton>
+            </li>
+          )
+        })}
       </CategoryUl>
     </Nav>
   )

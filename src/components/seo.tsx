@@ -9,7 +9,7 @@ const DEFAULT_LANG = "en"
 type Meta = React.DetailedHTMLProps<
   React.MetaHTMLAttributes<HTMLMetaElement>,
   HTMLMetaElement
-  >[]
+>[]
 
 interface SEOProps extends Pick<Queries.MarkdownRemarkFrontmatter, "title"> {
   desc?: Queries.Maybe<string>

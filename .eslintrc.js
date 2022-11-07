@@ -1,27 +1,14 @@
 module.exports = {
   root: true,
   // NOTE: cf. https://stackoverflow.com/questions/63118405/how-to-fix-eslintrc-the-file-does-not-match-your-project-config
-  ignorePatterns: [
-    ".eslintrc.js",
-    "**/build/*",
-    "*.js",
-  ],
+  ignorePatterns: [".eslintrc.js", "**/build/*", "*.js"],
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
       processor: "@graphql-eslint/graphql",
       parser: "@typescript-eslint/parser",
-      plugins: [
-        "react",
-        "react-hooks",
-        "jsx-a11y", 
-        "@typescript-eslint",
-      ],
-      extends: [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
-        
-      ],
+      plugins: ["react", "react-hooks", "jsx-a11y", "@typescript-eslint"],
+      extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
       env: {
         es6: true,
       },

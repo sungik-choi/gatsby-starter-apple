@@ -6,8 +6,7 @@ import type { UseSiteMetaDataReturnType } from "Hooks/useSiteMetadata"
 import type { UseMenuReturnType } from "./useMenu"
 
 const ROOT = "/"
-const EXTENRAL_LINK_EXP =
-  /(https?:\/\/)?[\w\-~]+(\.[\w\-~]+)+(\/[\w\-~@:%]*)*(#[\w-]*)?(\?[^\s]*)?/gi
+const EXTENRAL_LINK_EXP = /(https?:\/\/)?[\w\-~]+(\.[\w\-~]+)+(\/[\w\-~@:%]*)*(#[\w-]*)?(\?[^\s]*)?/gi
 
 interface LinkListProps extends Pick<UseMenuReturnType, "setToggle"> {
   links: UseSiteMetaDataReturnType["menuLinks"]
