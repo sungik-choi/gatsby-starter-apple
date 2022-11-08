@@ -1,27 +1,31 @@
-import React, { useRef } from "react"
+import React, { useRef, useMemo } from "react"
 import { Link } from "gatsby"
 import type { GatsbyLinkProps } from "gatsby"
 import styled from "styled-components"
 import kebabCase from "lodash/kebabCase"
 
-import type { MarkdownRemarkGroupConnection } from "Types/GraphQL"
 import useScrollCenter from "./useScrollCenter"
 
 const ACTIVE = "active"
+const ALL_CATEGORY_NAME = "All"
 
 interface CategoryFilterProps {
-  categoryList: MarkdownRemarkGroupConnection[]
+  categoryList: readonly Queries.MarkdownRemarkGroupConnection[]
 }
 
 type LinkPropsGetter = GatsbyLinkProps<unknown>["getProps"]
 
 const CategoryFilter: React.FC<CategoryFilterProps> = ({ categoryList }) => {
   const categoryRef = useRef<HTMLUListElement>(null)
-  const ALL_CATEGORY_NAME = "All"
   const isActive: LinkPropsGetter = ({ isCurrent }) =>
     isCurrent ? { id: ACTIVE, tabIndex: -1 } : {}
 
   useScrollCenter({ ref: categoryRef, targetId: ACTIVE })
+
+  const sortedCategoryList = useMemo(
+    () => [...categoryList].sort((a, b) => b.totalCount - a.totalCount),
+    [categoryList]
+  )
 
   return (
     <Nav aria-label="Category Filter">
@@ -31,21 +35,19 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ categoryList }) => {
       </CategoryButton>
       <Divider />
       <CategoryUl ref={categoryRef} className="invisible-scrollbar">
-        {categoryList
-          .sort((a, b) => b.totalCount - a.totalCount)
-          .map(category => {
-            const { fieldValue } = category
-            return (
-              <li key={fieldValue}>
-                <CategoryButton
-                  getProps={isActive}
-                  to={`/category/${kebabCase(fieldValue!)}/`}
-                >
-                  {fieldValue}
-                </CategoryButton>
-              </li>
-            )
-          })}
+        {sortedCategoryList.map(category => {
+          const { fieldValue } = category
+          return (
+            <li key={fieldValue}>
+              <CategoryButton
+                getProps={isActive}
+                to={`/category/${kebabCase(fieldValue!)}/`}
+              >
+                {fieldValue}
+              </CategoryButton>
+            </li>
+          )
+        })}
       </CategoryUl>
     </Nav>
   )

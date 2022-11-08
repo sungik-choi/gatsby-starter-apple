@@ -11,7 +11,7 @@ import packageJSON from "../../package.json"
 
 const { name, homepage } = packageJSON
 
-const Layout: React.FC = ({ children }) => {
+const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { theme, themeToggler } = useTheme()
   const { title, author } = useSiteMetadata()
   const copyrightStr = `Copyright © ${author}. Built with `
