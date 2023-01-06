@@ -145,7 +145,7 @@ const searchPlugins = [
           query: `
             {
               allMarkdownRemark(
-                filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
+                filter: { fileAbsolutePath: { regex: "/(posts/blog/*)/" } }
                 sort: { frontmatter: { date: DESC } }
               ) {
                 edges {

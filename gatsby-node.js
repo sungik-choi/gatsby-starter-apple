@@ -23,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
+        filter: { fileAbsolutePath: { regex: "/(posts/blog/*)/" } }
         sort: { frontmatter: { date: DESC } }
         limit: 2000
       ) {
