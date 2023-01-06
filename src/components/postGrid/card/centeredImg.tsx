@@ -40,7 +40,7 @@ const CenteredImg: React.FC<CenteredImgProps> = ({ src, alt }) => {
   return (
     <ThumbnailWrapper>
       <InnerWrapper>
-        <GatsbyImage image={image} loading="eager" alt={alt ?? DEFAULT_ALT} style="width:100%;" />
+        <GatsbyImage image={image} loading="eager" alt={alt ?? DEFAULT_ALT} />
       </InnerWrapper>
     </ThumbnailWrapper>
   )
