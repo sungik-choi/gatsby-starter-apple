@@ -20,8 +20,8 @@ const siteMetadata = {
       name: "About",
     },
     {
-      link: meta.links.github,
-      name: "Github",
+      link: "https://asiaticbow.info/",
+      name: "Asiatic Bow Database",
     },
   ],
 }
