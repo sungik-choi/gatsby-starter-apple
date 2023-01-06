@@ -3,7 +3,7 @@ title: "Minimum Box Dimensions"
 category: "Measurement Design"
 date: "2023-01-05"
 desc: "Explanation of the Minimum Box Dimensions"
-thumbnail: "./box.jpg"
+thumbnail: "./YarhaMeasurements.png"
 alt: "The first of many"
 ---
 
