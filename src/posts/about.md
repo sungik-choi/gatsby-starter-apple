@@ -1,6 +1,7 @@
 # Hello
 
-Welcome to my blog. My name is Ed.<br>
-I'm very interested in the web front-end development.
+Welcome to the Asiatic Bow Cafe.
 
-Visit my [Github repository](https://github.com/sungik-choi/gatsby-starter-apple).
+My name is Fiona, and I am part of the team that is working on [asiaticbow.info](https://asiaticbow.info/).<br>
+
+The aim of this website is to act as a collection of blogposts featuring some of the observations that we've made from our bow measurement shenangians. 
