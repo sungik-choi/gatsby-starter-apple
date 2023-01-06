@@ -20,7 +20,7 @@ const CenteredImg: React.FC<CenteredImgProps> = ({ src, alt }) => {
           node {
             id
             gatsbyImageData(
-              layout: CONSTRAINED
+              layout: FULL_WIDTH
               aspectRatio: 1.77
               placeholder: BLURRED
             )
