@@ -38,7 +38,7 @@
     "styled-components": "^5.3.6",
     "styled-reset": "^4.4.2",
     "typography": "^0.16.21",
-    "vscode-theme-github-light": "github:chuling/vscode-theme-github-light"
+    "vscode-theme-github-light": "github:yunlingz/vscode-theme-github-light"
   },
   "devDependencies": {
     "@graphql-eslint/eslint-plugin": "^3.13.1",
