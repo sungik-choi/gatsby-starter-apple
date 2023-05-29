@@ -1,20 +1,22 @@
-import React, { useRef, useContext } from "react"
-import styled, { ThemeContext } from "styled-components"
-import { Link } from "gatsby"
+import React, { useContext, useRef } from "react"
 
-import type { UseThemeReturnType } from "Hooks/useTheme"
-import useSiteMetadata from "Hooks/useSiteMetadata"
-import Background from "Styles/background"
+import { Link } from "gatsby"
+import styled, { ThemeContext } from "styled-components"
+
+import useSiteMetadata from "~/src/hooks/useSiteMetadata"
+import type { UseThemeReturnType } from "~/src/hooks/useTheme"
+import Background from "~/src/styles/background"
 import {
+  curtainAnimationCSS,
   listAnimationCSS,
   navBackgroundAnimationCSS,
-  curtainAnimationCSS,
-} from "Styles/navBarAnimation"
-import type { UseMenuReturnType } from "./useMenu"
-import useMenu from "./useMenu"
+} from "~/src/styles/navBarAnimation"
+
 import LinkList from "./linkList"
-import ThemeToggleButton from "./themeToggleButton"
 import MenuIcon from "./menuIcon"
+import ThemeToggleButton from "./themeToggleButton"
+import useMenu from "./useMenu"
+import type { UseMenuReturnType } from "./useMenu"
 
 interface NavBarProps {
   title?: string | null

@@ -1,8 +1,8 @@
-import React, { useRef, useContext, useEffect } from "react"
+import React, { useContext, useEffect, useRef } from "react"
 
-import ThemeContext from "Stores/themeContext"
-import useSiteMetadata from "Hooks/useSiteMetadata"
-import { DARK } from "Constants/theme"
+import { DARK } from "~/src/constants/theme"
+import useSiteMetadata from "~/src/hooks/useSiteMetadata"
+import ThemeContext from "~/src/stores/themeContext"
 
 const src = "https://utteranc.es"
 const utterancesSelector = "iframe.utterances-frame"

@@ -11,6 +11,16 @@ node_modules/
 # Optional npm cache directory
 .npm
 
+# Yarn
+# @see https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # Optional eslint cache
 .eslintcache
 

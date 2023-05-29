@@ -1,14 +1,15 @@
-import React, { useState, useLayoutEffect } from "react"
+import React, { useLayoutEffect, useState } from "react"
+
 import type { PageProps } from "gatsby"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
-import type Post from "Types/Post"
-import useSiteMetadata from "Hooks/useSiteMetadata"
-import Layout from "Layouts/layout"
-import SEO from "Components/seo"
-import PostGrid from "Components/postGrid"
-import CategoryFilter from "Components/catetgoryFilter"
+import CategoryFilter from "~/src/components/catetgoryFilter"
+import PostGrid from "~/src/components/postGrid"
+import SEO from "~/src/components/seo"
+import useSiteMetadata from "~/src/hooks/useSiteMetadata"
+import Layout from "~/src/layouts/layout"
+import type Post from "~/src/types/Post"
 
 const Home = ({
   pageContext,

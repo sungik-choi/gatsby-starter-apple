@@ -1,10 +1,12 @@
 import React, { useContext } from "react"
+
 import styled from "styled-components"
 
-import type { UseThemeReturnType } from "Hooks/useTheme"
-import ThemeContext from "Stores/themeContext"
-import Background from "Styles/background"
-import { DARK } from "Constants/theme"
+import { DARK } from "~/src/constants/theme"
+import type { UseThemeReturnType } from "~/src/hooks/useTheme"
+import ThemeContext from "~/src/stores/themeContext"
+import Background from "~/src/styles/background"
+
 import ThemeIcon from "./themeIcon"
 
 interface ThemeToggleButtonProps {

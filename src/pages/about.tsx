@@ -1,11 +1,12 @@
 import React from "react"
+
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
-import Layout from "Layouts/layout"
-import SEO from "Components/seo"
-import Markdown from "Styles/markdown"
-import { rhythm } from "Styles/typography"
+import SEO from "~/src/components/seo"
+import Layout from "~/src/layouts/layout"
+import Markdown from "~/src/styles/markdown"
+import { rhythm } from "~/src/styles/typography"
 
 const About = () => {
   const data = useStaticQuery<Queries.Query>(graphql`

@@ -1,13 +1,14 @@
-import { useState, useRef, useEffect, useCallback } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
+
 import disableScroll from "disable-scroll"
 
-import type styledTheme from "Styles/styledTheme"
+import type styledTheme from "~/src/styles/styledTheme"
 
 interface UseMenuProps {
   navRef: React.RefObject<HTMLElement> | null
   curtainRef: React.RefObject<HTMLDivElement> | null
   listRef: React.RefObject<HTMLUListElement> | null
-  device: typeof styledTheme["device"]
+  device: (typeof styledTheme)["device"]
 }
 
 interface NonNullableRef<Type> extends NonNullable<React.RefObject<Type>> {

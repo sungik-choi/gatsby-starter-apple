@@ -1,10 +1,11 @@
-import React, { useState, useLayoutEffect, useRef } from "react"
+import React, { useLayoutEffect, useRef, useState } from "react"
+
 import styled from "styled-components"
 
-import Layout from "Layouts/layout"
-import SEO from "Components/seo"
-import GlowParticle from "Utils/glowParticle"
-import type { RGB } from "Utils/glowParticle"
+import SEO from "~/src/components/seo"
+import Layout from "~/src/layouts/layout"
+import GlowParticle from "~/src/utils/glowParticle"
+import type { RGB } from "~/src/utils/glowParticle"
 
 const COLORS: RGB[] = [
   { r: 255, g: 149, b: 0 }, // orange

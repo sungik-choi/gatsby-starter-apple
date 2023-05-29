@@ -1,8 +1,9 @@
-import React, { useRef, useMemo } from "react"
+import React, { useMemo, useRef } from "react"
+
 import { Link } from "gatsby"
 import type { GatsbyLinkProps } from "gatsby"
-import styled from "styled-components"
 import kebabCase from "lodash/kebabCase"
+import styled from "styled-components"
 
 import useScrollCenter from "./useScrollCenter"
 

@@ -1,6 +1,6 @@
 import "styled-components"
 
-import type styledTheme from "Styles/styledTheme"
+import type styledTheme from "~/src/styles/styledTheme"
 
 declare module "styled-components" {
   type Theme = typeof styledTheme
