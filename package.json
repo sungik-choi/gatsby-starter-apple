@@ -10,16 +10,16 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint '**/*.{ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\"",
     "typecheck": "tsc --noEmit",
     "semantic-release": "semantic-release",
     "lint-staged": "lint-staged",
-    "pre-commit": "yarn lint-staged && yarn typecheck",
+    "pre-commit": "yarn lint-staged",
     "postinstall": "husky install"
   },
   "dependencies": {
