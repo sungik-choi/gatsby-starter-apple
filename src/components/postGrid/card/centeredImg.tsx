@@ -1,10 +1,11 @@
 import React, { useMemo } from "react"
-import styled from "styled-components"
+
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import type { IGatsbyImageData } from "gatsby-plugin-image"
+import styled from "styled-components"
 
-import type Post from "Types/Post"
+import type Post from "~/src/types/Post"
 
 interface CenteredImgProps extends Pick<Post, "alt"> {
   src: Post["thumbnail"]

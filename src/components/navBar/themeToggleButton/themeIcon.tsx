@@ -1,7 +1,7 @@
 import React from "react"
 
-import type { UseThemeReturnType } from "Hooks/useTheme"
-import { DARK } from "Constants/theme"
+import { DARK } from "~/src/constants/theme"
+import type { UseThemeReturnType } from "~/src/hooks/useTheme"
 
 interface ThemeIconProps {
   theme: UseThemeReturnType["theme"]

@@ -1,14 +1,15 @@
 import React from "react"
-import { graphql, type PageProps } from "gatsby"
+
+import { type PageProps, graphql } from "gatsby"
 import styled from "styled-components"
 
-import Layout from "Layouts/layout"
-import SEO from "Components/seo"
-import Comment from "Components/comment"
-import { rhythm } from "Styles/typography"
-import Category from "Styles/category"
-import DateTime from "Styles/dateTime"
-import Markdown from "Styles/markdown"
+import Comment from "~/src/components/comment"
+import SEO from "~/src/components/seo"
+import Layout from "~/src/layouts/layout"
+import Category from "~/src/styles/category"
+import DateTime from "~/src/styles/dateTime"
+import Markdown from "~/src/styles/markdown"
+import { rhythm } from "~/src/styles/typography"
 
 const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
@@ -17,7 +18,8 @@ const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
 
   const ogImagePath =
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    thumbnail && thumbnail?.childImageSharp?.gatsbyImageData!.images!.fallback!.src
+    thumbnail &&
+    thumbnail?.childImageSharp?.gatsbyImageData!.images!.fallback!.src
 
   return (
     <Layout>
@@ -131,7 +133,7 @@ const Title = styled.h1`
 `
 
 export const query = graphql`
-  query BlogPostPage ($slug: String!) {
+  query BlogPostPage($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

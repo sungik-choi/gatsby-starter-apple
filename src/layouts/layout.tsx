@@ -1,12 +1,14 @@
 import React from "react"
+
 import styled, { ThemeProvider } from "styled-components"
 
-import ThemeContext from "Stores/themeContext"
-import useTheme from "Hooks/useTheme"
-import useSiteMetadata from "Hooks/useSiteMetadata"
-import NavBar from "Components/navBar/navBar"
-import styledTheme from "Styles/styledTheme"
-import GlobalStyle from "Styles/globalStyle"
+import NavBar from "~/src/components/navBar/navBar"
+import useSiteMetadata from "~/src/hooks/useSiteMetadata"
+import useTheme from "~/src/hooks/useTheme"
+import ThemeContext from "~/src/stores/themeContext"
+import GlobalStyle from "~/src/styles/globalStyle"
+import styledTheme from "~/src/styles/styledTheme"
+
 import packageJSON from "../../package.json"
 
 const { name, homepage } = packageJSON

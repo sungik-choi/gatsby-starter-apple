@@ -1,9 +1,11 @@
 import React from "react"
+
 import styled from "styled-components"
 
-import type Post from "Types/Post"
-import Category from "Styles/category"
-import DateTime from "Styles/dateTime"
+import Category from "~/src/styles/category"
+import DateTime from "~/src/styles/dateTime"
+import type Post from "~/src/types/Post"
+
 import CenteredImg from "./centeredImg"
 
 type CardProps = Pick<
@@ -28,7 +30,7 @@ const Card: React.FC<CardProps> = ({
           <Title>{title}</Title>
           <Desc>{desc}</Desc>
         </div>
-        <DateTime dateTime={date}>{date}</DateTime>
+        <DateTime dateTime={date!}>{date}</DateTime>
       </Text>
     </Wrapper>
   )

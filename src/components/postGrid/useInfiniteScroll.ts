@@ -1,6 +1,6 @@
-import { useState, useEffect, useLayoutEffect, useRef } from "react"
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 
-import type Post from "Types/Post"
+import type Post from "~/src/types/Post"
 
 interface UseInfiniteScrollProps {
   posts: Post[]

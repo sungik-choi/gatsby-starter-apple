@@ -1,11 +1,13 @@
 import React, { useRef } from "react"
+
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import type Post from "Types/Post"
+import type Post from "~/src/types/Post"
+
 import Card from "./card"
-import useInfiniteScroll from "./useInfiniteScroll"
 import { ThumbnailWrapper } from "./card/centeredImg"
+import useInfiniteScroll from "./useInfiniteScroll"
 
 interface PostGridProps {
   posts: Post[]

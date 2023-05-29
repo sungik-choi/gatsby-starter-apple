@@ -7806,6 +7806,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-config-prettier@npm:^8.8.0":
+  version: 8.8.0
+  resolution: "eslint-config-prettier@npm:8.8.0"
+  peerDependencies:
+    eslint: ">=7.0.0"
+  bin:
+    eslint-config-prettier: bin/cli.js
+  checksum: 1e94c3882c4d5e41e1dcfa2c368dbccbfe3134f6ac7d40101644d3bfbe3eb2f2ffac757f3145910b5eacf20c0e85e02b91293d3126d770cbf3dc390b3564681c
+  languageName: node
+  linkType: hard
+
 "eslint-config-react-app@npm:^6.0.0":
   version: 6.0.0
   resolution: "eslint-config-react-app@npm:6.0.0"
@@ -9471,7 +9482,10 @@ __metadata:
     dark-github-theme: "https://github.com/remorses/dark-github-theme"
     disable-scroll: ^0.6.0
     eslint: ^8.41.0
+    eslint-config-prettier: ^8.8.0
+    eslint-plugin-import: ^2.27.5
     eslint-plugin-jsx-a11y: ^6.7.1
+    eslint-plugin-react: ^7.32.2
     eslint-plugin-react-hooks: ^4.6.0
     gatsby: ^5.10.0
     gatsby-plugin-alias-imports: ^1.0.5
