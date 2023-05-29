@@ -19,7 +19,7 @@
     "typecheck": "tsc --noEmit",
     "semantic-release": "semantic-release",
     "lint-staged": "lint-staged",
-    "pre-commit": "yarn lint-staged",
+    "pre-commit": "yarn lint-staged && yarn typecheck",
     "postinstall": "husky install"
   },
   "dependencies": {

@@ -130,7 +130,7 @@ const Divider = styled.div`
 const CategoryUl = styled.ul`
   display: flex;
   list-style: none;
-  overflow-x: scroll;
+  overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 
