@@ -4,6 +4,9 @@
   "description": "Gatsby blog starter kit with beautiful and responsive design",
   "main": "index.js",
   "private": true,
+  "engines": {
+    "node": ">=18.16.0"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
