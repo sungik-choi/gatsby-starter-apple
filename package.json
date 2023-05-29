@@ -14,7 +14,10 @@
     "lint": "eslint '**/*.{ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "typecheck": "tsc --noEmit",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "lint-staged": "lint-staged",
+    "pre-commit": "yarn lint-staged && yarn typecheck",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "dark-github-theme": "https://github.com/remorses/dark-github-theme",
@@ -42,6 +45,8 @@
     "vscode-theme-github-light": "https://github.com/yunlingz/vscode-theme-github-light"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@graphql-eslint/eslint-plugin": "^3.19.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/github": "^8.1.0",
@@ -62,6 +67,8 @@
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-typescript": "^5.10.0",
     "graphql": "^16.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "lodash": "^4.17.21",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
