@@ -69,7 +69,7 @@
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-typescript": "^5.10.0",
-    "graphql": "^16.6.0",
+    "graphql": "^16.8.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "lodash": "^4.17.21",
