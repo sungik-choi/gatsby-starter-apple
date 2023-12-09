@@ -165,6 +165,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-annotate-as-pure@npm:^7.22.5":
+  version: 7.22.5
+  resolution: "@babel/helper-annotate-as-pure@npm:7.22.5"
+  dependencies:
+    "@babel/types": "npm:^7.22.5"
+  checksum: 53da330f1835c46f26b7bf4da31f7a496dee9fd8696cca12366b94ba19d97421ce519a74a837f687749318f94d1a37f8d1abcbf35e8ed22c32d16373b2f6198d
+  languageName: node
+  linkType: hard
+
 "@babel/helper-builder-binary-assignment-operator-visitor@npm:^7.18.6":
   version: 7.22.3
   resolution: "@babel/helper-builder-binary-assignment-operator-visitor@npm:7.22.3"
@@ -307,6 +316,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-module-imports@npm:^7.22.5":
+  version: 7.22.15
+  resolution: "@babel/helper-module-imports@npm:7.22.15"
+  dependencies:
+    "@babel/types": "npm:^7.22.15"
+  checksum: 5ecf9345a73b80c28677cfbe674b9f567bb0d079e37dcba9055e36cb337db24ae71992a58e1affa9d14a60d3c69907d30fe1f80aea105184501750a58d15c81c
+  languageName: node
+  linkType: hard
+
 "@babel/helper-module-transforms@npm:^7.18.6, @babel/helper-module-transforms@npm:^7.20.11, @babel/helper-module-transforms@npm:^7.21.5, @babel/helper-module-transforms@npm:^7.22.1":
   version: 7.22.1
   resolution: "@babel/helper-module-transforms@npm:7.22.1"
@@ -336,6 +354,13 @@ __metadata:
   version: 7.21.5
   resolution: "@babel/helper-plugin-utils@npm:7.21.5"
   checksum: e84986c6e17451f3868ad6a94176f40e96fde77ab89e266ab6f5d3e776544d2d5cbe003767dfef15c6de461f0dc0688000a52c1c6dae4ee9157ed8acfc46bf0e
+  languageName: node
+  linkType: hard
+
+"@babel/helper-plugin-utils@npm:^7.22.5":
+  version: 7.22.5
+  resolution: "@babel/helper-plugin-utils@npm:7.22.5"
+  checksum: ab220db218089a2aadd0582f5833fd17fa300245999f5f8784b10f5a75267c4e808592284a29438a0da365e702f05acb369f99e1c915c02f9f9210ec60eab8ea
   languageName: node
   linkType: hard
 
@@ -733,6 +758,17 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: bb7309402a1d4e155f32aa0cf216e1fa8324d6c4cfd248b03280028a015a10e46b6efd6565f515f8913918a3602b39255999c06046f7d4b8a5106be2165d724a
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-syntax-jsx@npm:^7.22.5":
+  version: 7.23.3
+  resolution: "@babel/plugin-syntax-jsx@npm:7.23.3"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.22.5"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 89037694314a74e7f0e7a9c8d3793af5bf6b23d80950c29b360db1c66859d67f60711ea437e70ad6b5b4b29affe17eababda841b6c01107c2b638e0493bafb4e
   languageName: node
   linkType: hard
 
@@ -3776,7 +3812,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:^11.0.0":
+"@semantic-release/npm@npm:^11.0.0, @semantic-release/npm@npm:^11.0.2":
   version: 11.0.2
   resolution: "@semantic-release/npm@npm:11.0.2"
   dependencies:
@@ -5784,6 +5820,21 @@ __metadata:
     "@babel/core": ^7.0.0
     gatsby: ^5.0.0-next
   checksum: 5e90818953ee5acef6e625ac3dfa8b307cd12c16d9d00342810d6cc55bfc4097ea173372fff873d77c006a3e5eb450731a570873d376c72595b3097724b3c001
+  languageName: node
+  linkType: hard
+
+"babel-plugin-styled-components@npm:^2.1.4":
+  version: 2.1.4
+  resolution: "babel-plugin-styled-components@npm:2.1.4"
+  dependencies:
+    "@babel/helper-annotate-as-pure": "npm:^7.22.5"
+    "@babel/helper-module-imports": "npm:^7.22.5"
+    "@babel/plugin-syntax-jsx": "npm:^7.22.5"
+    lodash: "npm:^4.17.21"
+    picomatch: "npm:^2.3.1"
+  peerDependencies:
+    styled-components: ">= 2"
+  checksum: 34f10dd4d44cf1c8605097dd4796e2d1443266ebc686f10a9f56b5d1492b5c3de9c13d7e30b075756610adf592ed807cc8145189d00b4454f6af9879a19a5e0b
   languageName: node
   linkType: hard
 
@@ -10576,12 +10627,14 @@ __metadata:
     "@graphql-eslint/eslint-plugin": "npm:^3.20.1"
     "@semantic-release/commit-analyzer": "npm:^11.1.0"
     "@semantic-release/github": "npm:^9.2.5"
+    "@semantic-release/npm": "npm:^11.0.2"
     "@semantic-release/release-notes-generator": "npm:^12.1.0"
     "@types/react-helmet": "npm:^6.1.11"
     "@types/styled-components": "npm:^5.1.34"
     "@types/typography": "npm:^0.16.7"
     "@typescript-eslint/eslint-plugin": "npm:^6.13.2"
     "@typescript-eslint/parser": "npm:^6.13.2"
+    babel-plugin-styled-components: "npm:^2.1.4"
     dark-github-theme: "https://github.com/remorses/dark-github-theme.git#commit=3dde125a391f5557fcc42e0d95899750df4370bf"
     disable-scroll: "npm:^0.6.0"
     eslint: "npm:^8.55.0"
