@@ -13,7 +13,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint '**/*.{ts,tsx}'",
+    "lint": "eslint '**/*.{js, jsx, ts, tsx}'",
     "lint:fix": "yarn lint --fix",
     "format": "prettier --write --ignore-unknown",
     "typecheck": "tsc --noEmit",
