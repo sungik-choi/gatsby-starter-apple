@@ -11,7 +11,7 @@ import { rhythm } from "~/src/styles/typography"
 const About = () => {
   const data = useStaticQuery<Queries.Query>(graphql`
     query About {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/.*\/about.md$/" } }) {
         edges {
           node {
             html
