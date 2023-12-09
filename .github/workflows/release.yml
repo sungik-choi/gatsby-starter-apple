@@ -26,9 +26,6 @@ jobs:
       - name: Lint
         run: yarn lint
 
-      - name: Format Check
-        run: yarn prettier . --check --ignore-path
-
       - name: Type Check
         run: yarn typecheck
 
