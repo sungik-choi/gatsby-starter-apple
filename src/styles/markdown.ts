@@ -137,7 +137,12 @@ const Markdown = styled.article<{ rhythm: (typeof typography)["rhythm"] }>`
 
   pre,
   code {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    font-family:
+      SFMono-Regular,
+      Consolas,
+      Liberation Mono,
+      Menlo,
+      monospace;
     background-color: var(--color-code-block);
   }
 

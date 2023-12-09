@@ -20,20 +20,20 @@ const useScrollCenter = ({ ref, targetId }: UseScrollCenterProperties) => {
       return
     }
 
-    const activeCategoryElement = categoryWrapElement.querySelector<HTMLUListElement>(
-      `#${targetId}`
-    )
+    const activeCategoryElement =
+      categoryWrapElement.querySelector<HTMLUListElement>(`#${targetId}`)
 
     if (!activeCategoryElement) {
       return
     }
 
-    const offsetX = activeCategoryElement.offsetLeft - categoryWrapElement.offsetLeft
+    const offsetX =
+      activeCategoryElement.offsetLeft - categoryWrapElement.offsetLeft
     categoryWrapElement.scrollTo(
       offsetX -
         categoryWrapElement.offsetWidth / 2 +
         activeCategoryElement.offsetWidth / 2,
-      0
+      0,
     )
   }, [ref, targetId])
 }

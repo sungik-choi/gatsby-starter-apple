@@ -1,7 +1,7 @@
 import React, { useMemo } from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage ,type  IGatsbyImageData } from "gatsby-plugin-image"
+import { GatsbyImage, type IGatsbyImageData } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import type Post from "~/src/types/Post"
@@ -32,7 +32,7 @@ const CenteredImg: React.FC<CenteredImgProperties> = ({ src, alt }) => {
 
   const image = useMemo(() => {
     const imageSharp = data.allImageSharp.edges.find(
-      edge => edge.node.id === src
+      edge => edge.node.id === src,
     )
     return imageSharp?.node.gatsbyImageData as IGatsbyImageData
   }, [src, data.allImageSharp.edges])

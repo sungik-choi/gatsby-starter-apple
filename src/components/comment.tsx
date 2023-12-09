@@ -22,7 +22,9 @@ const Comment = () => {
     if (!repo) return
     let themeMode: ThemeMode
 
-    if (isUtterancesCreated.current) {themeMode = theme === DARK ? DARK_THEME : LIGHT_THEME} else {
+    if (isUtterancesCreated.current) {
+      themeMode = theme === DARK ? DARK_THEME : LIGHT_THEME
+    } else {
       themeMode =
         document.body.dataset.theme === DARK ? DARK_THEME : LIGHT_THEME
     }
@@ -46,7 +48,7 @@ const Comment = () => {
     }
 
     const utterancesElement = containerReference.current?.querySelector(
-      utterancesSelector
+      utterancesSelector,
     ) as HTMLIFrameElement
 
     const postThemeMessage = () => {

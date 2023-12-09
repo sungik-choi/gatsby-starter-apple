@@ -11,12 +11,13 @@ interface UseMenuProperties {
   device: (typeof styledTheme)["device"]
 }
 
-interface NonNullableReference<Type> extends NonNullable<React.RefObject<Type>> {
+interface NonNullableReference<Type>
+  extends NonNullable<React.RefObject<Type>> {
   current: Type
 }
 
 const isNonNullableReference = <Type>(
-  reference: React.RefObject<Type> | null
+  reference: React.RefObject<Type> | null,
 ): reference is NonNullableReference<Type> => !!(reference && reference.current)
 
 const FOCUSABLE_TABINDEX = 0
@@ -25,7 +26,12 @@ const NON_FOCUSABLE_TABINDEX = -1
 const ESC_CODE = "Escape"
 const TAB_CODE = "Tab"
 
-const useMenu = ({ navRef, curtainRef, listRef, device }: UseMenuProperties) => {
+const useMenu = ({
+  navRef,
+  curtainRef,
+  listRef,
+  device,
+}: UseMenuProperties) => {
   const [toggle, setToggle] = useState(false)
   const mql = useRef<MediaQueryList>()
 
@@ -40,17 +46,21 @@ const useMenu = ({ navRef, curtainRef, listRef, device }: UseMenuProperties) => 
 
   const toggleKeyboardFocus = useCallback(() => {
     const focusableElements = listRef?.current?.querySelectorAll(
-      focusableElementsString
+      focusableElementsString,
     )
 
     if (!mql.current?.matches) {
-      if (focusableElements) for (const e of focusableElements) e.setAttribute("tabindex", `${FOCUSABLE_TABINDEX}`)
-      
+      if (focusableElements)
+        for (const e of focusableElements)
+          e.setAttribute("tabindex", `${FOCUSABLE_TABINDEX}`)
+
       return
     }
 
     const tabIndex = toggle ? FOCUSABLE_TABINDEX : NON_FOCUSABLE_TABINDEX
-    if (focusableElements) for (const e of focusableElements) e.setAttribute("tabindex", `${tabIndex}`)
+    if (focusableElements)
+      for (const e of focusableElements)
+        e.setAttribute("tabindex", `${tabIndex}`)
   }, [focusableElementsString, listRef, toggle])
 
   useEffect(() => {
@@ -64,7 +74,7 @@ const useMenu = ({ navRef, curtainRef, listRef, device }: UseMenuProperties) => 
 
   useEffect(() => {
     const focusableElements = navRef?.current?.querySelectorAll(
-      focusableElementsString
+      focusableElementsString,
     )
     const firstTabStop = focusableElements?.[0] as HTMLInputElement
     const lastTabStop = focusableElements?.[
@@ -102,12 +112,18 @@ const useMenu = ({ navRef, curtainRef, listRef, device }: UseMenuProperties) => 
     const TIMER = 500
 
     const hideAnimation = () => {
-      if (isNonNullableReference(curtainRef) && isNonNullableReference(listRef)) {
+      if (
+        isNonNullableReference(curtainRef) &&
+        isNonNullableReference(listRef)
+      ) {
         curtainRef.current.style.display = "none"
         listRef.current.style.display = "none"
       }
       setTimeout(() => {
-        if (isNonNullableReference(curtainRef) && isNonNullableReference(listRef)) {
+        if (
+          isNonNullableReference(curtainRef) &&
+          isNonNullableReference(listRef)
+        ) {
           curtainRef.current.style.display = "block"
           listRef.current.style.display = "flex"
         }

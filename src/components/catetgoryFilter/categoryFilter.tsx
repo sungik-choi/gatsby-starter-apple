@@ -1,6 +1,6 @@
 import React, { useMemo, useRef } from "react"
 
-import { type  GatsbyLinkProps ,Link } from "gatsby"
+import { type GatsbyLinkProps, Link } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
 
@@ -15,7 +15,9 @@ interface CategoryFilterProperties {
 
 type LinkPropertiesGetter = GatsbyLinkProps<unknown>["getProps"]
 
-const CategoryFilter: React.FC<CategoryFilterProperties> = ({ categoryList }) => {
+const CategoryFilter: React.FC<CategoryFilterProperties> = ({
+  categoryList,
+}) => {
   const categoryReference = useRef<HTMLUListElement>(null)
   const isActive: LinkPropertiesGetter = ({ isCurrent }) =>
     isCurrent ? { id: ACTIVE, tabIndex: -1 } : {}
@@ -24,7 +26,7 @@ const CategoryFilter: React.FC<CategoryFilterProperties> = ({ categoryList }) =>
 
   const sortedCategoryList = useMemo(
     () => [...categoryList].sort((a, b) => b.totalCount - a.totalCount),
-    [categoryList]
+    [categoryList],
   )
 
   return (

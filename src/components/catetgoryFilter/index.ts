@@ -1,5 +1,1 @@
-
-
-
-
-export {default} from "./categoryFilter"
+export { default } from "./categoryFilter"

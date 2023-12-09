@@ -1,5 +1,1 @@
-
-
-
-
-export {default} from "./layout"
+export { default } from "./layout"

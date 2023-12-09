@@ -76,7 +76,9 @@ const List = styled.li`
   }
 
   & .gatsby-image-wrapper {
-    transition: opacity 1s ease-out, transform 0.5s ease;
+    transition:
+      opacity 1s ease-out,
+      transform 0.5s ease;
   }
 
   a:hover,

@@ -33,7 +33,7 @@ class GlowParticle {
   animate(
     context: CanvasRenderingContext2D,
     stageWidth: number,
-    stageHeight: number
+    stageHeight: number,
   ) {
     this.sinValue += 0.01
     this.radius += Math.sin(this.sinValue)
@@ -64,7 +64,7 @@ class GlowParticle {
       this.radius * 0.01,
       this.x,
       this.y,
-      this.radius
+      this.radius,
     )
 
     g.addColorStop(0, `rgba(${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b}, 1)`)

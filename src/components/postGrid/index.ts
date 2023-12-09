@@ -1,5 +1,1 @@
-
-
-
-
-export {default} from "./postGrid"
+export { default } from "./postGrid"

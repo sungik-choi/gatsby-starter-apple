@@ -48,7 +48,8 @@ const MenuIconButton = styled.button<Pick<UseMenuReturnType, "toggle">>`
       height: 1px;
       right: var(--padding-sm);
       opacity: 0.8;
-      transition: opacity 0.3s ease,
+      transition:
+        opacity 0.3s ease,
         transform
           ${({ toggle }) => (toggle === true ? "0.1s ease" : "0.2s ease 0.1s")};
     }

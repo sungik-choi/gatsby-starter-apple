@@ -1,3 +1,4 @@
 {
-  "**/*.(js|ts)?(x)": ["yarn lint:fix", "yarn format"]
+  "**/*.(js|ts)?(x)": "yarn lint:fix",
+  "**/*": "yarn format"
 }

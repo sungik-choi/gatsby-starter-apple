@@ -1,5 +1,1 @@
-
-
-
-
-export {default} from "./themeToggleButton"
+export { default } from "./themeToggleButton"

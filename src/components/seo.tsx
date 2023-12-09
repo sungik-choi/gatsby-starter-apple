@@ -13,7 +13,8 @@ type Meta = React.DetailedHTMLProps<
   HTMLMetaElement
 >[]
 
-interface SEOProperties extends Pick<Queries.MarkdownRemarkFrontmatter, "title"> {
+interface SEOProperties
+  extends Pick<Queries.MarkdownRemarkFrontmatter, "title"> {
   desc?: Queries.Maybe<string>
   image?: Queries.Maybe<string>
   meta?: Meta

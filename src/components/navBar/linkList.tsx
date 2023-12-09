@@ -16,7 +16,9 @@ interface LinkListProperties extends Pick<UseMenuReturnType, "setToggle"> {
 }
 
 const LinkList: React.FC<LinkListProperties> = ({ links, setToggle }) => {
-  const generateLink = (properties: Queries.SiteSiteMetadataMenuLinks | null) => {
+  const generateLink = (
+    properties: Queries.SiteSiteMetadataMenuLinks | null,
+  ) => {
     if (isNil(properties)) {
       return
     }
