@@ -2,7 +2,6 @@
   "name": "gatsby-starter-apple",
   "version": "3.1.1",
   "description": "Gatsby blog starter kit with beautiful and responsive design",
-  "main": "index.js",
   "private": true,
   "engines": {
     "node": ">=20"
@@ -87,7 +86,13 @@
     "url": "https://github.com/sungik-choi/gatsby-starter-apple.git"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "gatsby-starter",
+    "gatsby-starter-blog",
+    "gatsby-blog",
+    "blog",
+    "template",
+    "starter"
   ],
   "author": "Sungik Choi <sungik.dev@gmail.com> (http://sungikchoi.com/)",
   "license": "MIT",
