@@ -20,11 +20,11 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Build
-        run: yarn build
-
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
 
       - name: Lint
         run: yarn lint
