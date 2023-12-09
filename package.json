@@ -15,7 +15,7 @@
     "clean": "gatsby clean",
     "lint": "eslint '**/*.{js, jsx, ts, tsx}'",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier --write --ignore-unknown",
+    "format": "prettier . --write --ignore-unknown",
     "typecheck": "tsc --noEmit",
     "semantic-release": "semantic-release",
     "lint-staged": "lint-staged",

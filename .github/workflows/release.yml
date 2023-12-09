@@ -6,8 +6,6 @@ on:
   pull_request:
     branches: [main]
 
-  workflow_dispatch:
-
 jobs:
   build:
     name: Build
@@ -15,10 +13,30 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Lint
+        run: yarn Lint
+
+      - name: Format Check
+        run: yarn prettier . --check --ignore-path
+
+      - name: Type Check
+        run: yarn typecheck
+
+      - name: Build
+        run: yarn build
 
       - name: Release
-        uses: cycjimmy/semantic-release-action@v3
+        uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

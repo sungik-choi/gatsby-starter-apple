@@ -19,17 +19,18 @@ We actively welcome your pull requests:
 1. Fork the repo and create your branch from `main`.
 2. Make sure your code lints.
 3. (Recommended) Commit with [commitizen(cz-cli)](https://github.com/commitizen/cz-cli).
-    1. Install commitizen globally.
 
-        ```bash
-        yarn dlx commitizen
-        ```
+   1. Install commitizen globally.
 
-    2. Commit with commitizen.
+      ```bash
+      yarn dlx commitizen
+      ```
 
-        ```bash
-        git cz
-        ```
+   2. Commit with commitizen.
+
+      ```bash
+      git cz
+      ```
 
 4. Push to your forked repository.
 5. Issue that pull request (from forked repository to origin).
