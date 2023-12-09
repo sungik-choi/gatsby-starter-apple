@@ -9,15 +9,15 @@ import Card from "./card"
 import { ThumbnailWrapper } from "./card/centeredImg"
 import useInfiniteScroll from "./useInfiniteScroll"
 
-interface PostGridProps {
+interface PostGridProperties {
   posts: Post[]
 }
 
-const PostGrid: React.FC<PostGridProps> = ({ posts }) => {
-  const scrollEdgeRef = useRef<HTMLDivElement>(null)
+const PostGrid: React.FC<PostGridProperties> = ({ posts }) => {
+  const scrollEdgeReference = useRef<HTMLDivElement>(null)
   const currentList = useInfiniteScroll({
     posts,
-    scrollEdgeRef,
+    scrollEdgeRef: scrollEdgeReference,
     maxPostNum: 10,
     offsetY: 200,
   })
@@ -42,7 +42,7 @@ const PostGrid: React.FC<PostGridProps> = ({ posts }) => {
           </List>
         )
       })}
-      <div ref={scrollEdgeRef} />
+      <div ref={scrollEdgeReference} />
     </Grid>
   )
 }

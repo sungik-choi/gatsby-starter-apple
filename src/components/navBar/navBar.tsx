@@ -15,40 +15,39 @@ import {
 import LinkList from "./linkList"
 import MenuIcon from "./menuIcon"
 import ThemeToggleButton from "./themeToggleButton"
-import useMenu from "./useMenu"
-import type { UseMenuReturnType } from "./useMenu"
+import useMenu, {type  UseMenuReturnType } from "./useMenu"
 
-interface NavBarProps {
+interface NavBarProperties {
   title?: string | null
   themeToggler: UseThemeReturnType["themeToggler"]
 }
 
-const NavBar: React.FC<NavBarProps> = ({ title, themeToggler }) => {
+const NavBar: React.FC<NavBarProperties> = ({ title, themeToggler }) => {
   const { menuLinks } = useSiteMetadata()
   const { device } = useContext(ThemeContext)!
-  const navRef = useRef<HTMLElement>(null)
-  const curtainRef = useRef<HTMLDivElement>(null)
-  const listRef = useRef<HTMLUListElement>(null)
+  const navReference = useRef<HTMLElement>(null)
+  const curtainReference = useRef<HTMLDivElement>(null)
+  const listReference = useRef<HTMLUListElement>(null)
 
   const { toggle, setToggle, handleClick } = useMenu({
-    navRef,
-    curtainRef,
-    listRef,
+    navRef: navReference,
+    curtainRef: curtainReference,
+    listRef: listReference,
     device,
   })
 
   return (
-    <Nav ref={navRef} aria-label="Global Navigation">
+    <Nav ref={navReference} aria-label="Global Navigation">
       <NavBackground toggle={toggle} />
       <Content>
         <Title onClick={() => setToggle(false)}>
           <Link to="/">{title}</Link>
         </Title>
         <LinkWrap>
-          <Curtain ref={curtainRef} toggle={toggle} />
+          <Curtain ref={curtainReference} toggle={toggle} />
           <LinkContent>
             <MenuIcon toggle={toggle} handleClick={handleClick} />
-            <LinkUl ref={listRef} toggle={toggle}>
+            <LinkUl ref={listReference} toggle={toggle}>
               <LinkList links={menuLinks} setToggle={setToggle} />
               <li>
                 <ThemeToggleButton themeToggler={themeToggler} />

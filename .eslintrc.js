@@ -3,6 +3,8 @@ module.exports = {
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: "./tsconfig.json",
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
   // NOTE: cf. https://stackoverflow.com/questions/63118405/how-to-fix-eslintrc-the-file-does-not-match-your-project-config
   ignorePatterns: [".eslintrc.js", "**/build/*", "*.js"],
@@ -12,6 +14,7 @@ module.exports = {
       processor: "@graphql-eslint/graphql",
       parser: "@typescript-eslint/parser",
       plugins: [
+        "unicorn",
         "import",
         "react",
         "react-hooks",
@@ -19,15 +22,17 @@ module.exports = {
         "@typescript-eslint",
       ],
       extends: [
-        "eslint:recommended",
+        "plugin:unicorn/recommended",
         "plugin:@typescript-eslint/recommended",
         "prettier",
       ],
       env: {
-        es6: true,
+        es2024: true,
       },
       rules: {
-        "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 1, maxBOF: 0 }],
+        "unicorn/filename-case": 0,
+        "unicorn/prevent-abbreviations": 0,
+        "unicorn/no-abusive-eslint-disable": 0,
         "import/no-duplicates": ["error", { "prefer-inline": true }],
         "@typescript-eslint/consistent-type-imports": [
           "error",

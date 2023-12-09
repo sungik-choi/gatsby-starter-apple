@@ -1,3 +1,5 @@
-import ThemeToggleButton from "./themeToggleButton"
 
-export default ThemeToggleButton
+
+
+
+export {default} from "./themeToggleButton"

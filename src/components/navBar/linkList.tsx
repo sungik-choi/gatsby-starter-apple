@@ -9,19 +9,19 @@ import type { UseMenuReturnType } from "./useMenu"
 
 const ROOT = "/"
 const EXTERNAL_LINK_EXP =
-  /(https?:\/\/)?[\w\-~]+(\.[\w\-~]+)+(\/[\w\-~@:%]*)*(#[\w-]*)?(\?[^\s]*)?/gi
+  /(https?:\/\/)?[\w~\-]+(\.[\w~\-]+)+(\/[\w%:@~\-]*)*(#[\w-]*)?(\?\S*)?/gi
 
-interface LinkListProps extends Pick<UseMenuReturnType, "setToggle"> {
+interface LinkListProperties extends Pick<UseMenuReturnType, "setToggle"> {
   links: UseSiteMetaDataReturnType["menuLinks"]
 }
 
-const LinkList: React.FC<LinkListProps> = ({ links, setToggle }) => {
-  const generateLink = (props: Queries.SiteSiteMetadataMenuLinks | null) => {
-    if (isNil(props)) {
+const LinkList: React.FC<LinkListProperties> = ({ links, setToggle }) => {
+  const generateLink = (properties: Queries.SiteSiteMetadataMenuLinks | null) => {
+    if (isNil(properties)) {
       return
     }
 
-    const { link, name } = props
+    const { link, name } = properties
     const safeLink = isNil(link) ? "" : link
     const isExternalLink = EXTERNAL_LINK_EXP.test(safeLink)
     if (safeLink === ROOT) {
