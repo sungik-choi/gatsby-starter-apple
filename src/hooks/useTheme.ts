@@ -12,7 +12,7 @@ declare global {
 }
 
 const useTheme = () => {
-  const [theme, setTheme] = useState<string | null>(null)
+  const [theme, setTheme] = useState<string>()
 
   const themeToggler = useCallback(() => {
     const nextTheme = theme === LIGHT ? DARK : LIGHT

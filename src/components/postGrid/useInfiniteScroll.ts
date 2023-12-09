@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react"
 
 import type Post from "~/src/types/Post"
 
-interface UseInfiniteScrollProps {
+interface UseInfiniteScrollProperties {
   posts: Post[]
   scrollEdgeRef: React.RefObject<HTMLDivElement>
   maxPostNum: number
@@ -12,9 +12,9 @@ interface UseInfiniteScrollProps {
 const useInfiniteScroll = ({
   posts,
   scrollEdgeRef,
-  maxPostNum = 10,
+  maxPostNum: maxPostNumber = 10,
   offsetY = 400,
-}: UseInfiniteScrollProps) => {
+}: UseInfiniteScrollProperties) => {
   const [hasMore, setHasMore] = useState(false)
   const [currentList, setCurrentList] = useState<Post[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -23,24 +23,24 @@ const useInfiniteScroll = ({
   const observer = useRef<IntersectionObserver>()
 
   useLayoutEffect(() => {
-    if (!posts.length || isLoading) return
-    setHasMore(posts.length > maxPostNum)
-    setCurrentList([...posts.slice(0, maxPostNum)])
+    if (posts.length === 0 || isLoading) return
+    setHasMore(posts.length > maxPostNumber)
+    setCurrentList(posts.slice(0, maxPostNumber))
     setIsLoading(true)
-  }, [isLoading, posts, maxPostNum])
+  }, [isLoading, posts, maxPostNumber])
 
   useEffect(() => {
     const loadEdges = () => {
       const currentLength = currentList.length
       const more = currentLength < posts.length
       const nextEdges = more
-        ? posts.slice(currentLength, currentLength + maxPostNum)
+        ? posts.slice(currentLength, currentLength + maxPostNumber)
         : []
       setHasMore(more)
       setCurrentList([...currentList, ...nextEdges])
     }
 
-    const scrollEdgeElem = scrollEdgeRef.current
+    const scrollEdgeElement = scrollEdgeRef.current
 
     const option = {
       rootMargin: `0px 0px ${offsetY}px 0px`,
@@ -49,16 +49,16 @@ const useInfiniteScroll = ({
 
     observer.current = new IntersectionObserver(entries => {
       if (!hasMore) return
-      entries.forEach(entry => {
+      for (const entry of entries) {
         if (!observerLoading) {
           setObserverLoading(true)
-          return
+          continue
         }
         if (entry.isIntersecting) loadEdges()
-      })
+      }
     }, option)
 
-    observer.current.observe(scrollEdgeElem!)
+    observer.current.observe(scrollEdgeElement!)
 
     return () => observer.current && observer.current.disconnect()
   })

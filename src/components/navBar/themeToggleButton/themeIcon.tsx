@@ -3,11 +3,11 @@ import React from "react"
 import { DARK } from "~/src/constants/theme"
 import type { UseThemeReturnType } from "~/src/hooks/useTheme"
 
-interface ThemeIconProps {
+interface ThemeIconProperties {
   theme: UseThemeReturnType["theme"]
 }
 
-const ThemeIcon: React.FC<ThemeIconProps> = ({ theme }) => {
+const ThemeIcon: React.FC<ThemeIconProperties> = ({ theme }) => {
   return (
     <>
       {theme === DARK ? (

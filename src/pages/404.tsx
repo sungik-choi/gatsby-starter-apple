@@ -4,8 +4,7 @@ import styled from "styled-components"
 
 import SEO from "~/src/components/seo"
 import Layout from "~/src/layouts/layout"
-import GlowParticle from "~/src/utils/glowParticle"
-import type { RGB } from "~/src/utils/glowParticle"
+import GlowParticle, { type RGB } from "~/src/utils/glowParticle"
 
 const COLORS: RGB[] = [
   { r: 255, g: 149, b: 0 }, // orange
@@ -16,14 +15,14 @@ const COLORS: RGB[] = [
 ]
 
 const NotFound = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const canvasReference = useRef<HTMLCanvasElement>(null)
   const [particles, setParticles] = useState<GlowParticle[]>([])
   const isCreated = useRef(false)
-  const requestRef = useRef<number>()
+  const requestReference = useRef<number>()
 
   useLayoutEffect(() => {
-    const canvasObj = canvasRef.current
-    const ctx = canvasObj?.getContext("2d")
+    const canvasObject = canvasReference.current
+    const context = canvasObject?.getContext("2d")
     let stageWidth = document.body.clientWidth
     let stageHeight = document.body.clientHeight
     const pixelRatio = window.devicePixelRatio > 1 ? 2 : 1
@@ -36,7 +35,7 @@ const NotFound = () => {
       let colorIndex = 0
       setParticles([])
 
-      for (let i = 0; i < totalParticles; i++) {
+      for (let index = 0; index < totalParticles; index++) {
         const newParticle = new GlowParticle({
           x: Math.random() * stageWidth,
           y: Math.random() * stageHeight,
@@ -46,38 +45,41 @@ const NotFound = () => {
 
         if (++colorIndex >= COLORS.length) colorIndex = 0
 
-        setParticles(prevParticles => [...prevParticles, newParticle])
+        setParticles(previousParticles => [...previousParticles, newParticle])
       }
     }
 
     const render = () => {
-      ctx?.clearRect(0, 0, stageWidth, stageHeight)
-      for (let i = 0; i < totalParticles; i++) {
-        const item = particles[i]
-        if (!item || !ctx) return
-        item.animate(ctx, stageWidth, stageHeight)
+      context?.clearRect(0, 0, stageWidth, stageHeight)
+      for (let index = 0; index < totalParticles; index++) {
+        const item = particles[index]
+        if (!item || !context) return
+        item.animate(context, stageWidth, stageHeight)
       }
-      requestRef.current = requestAnimationFrame(render)
+      requestReference.current = requestAnimationFrame(render)
     }
 
     const resize = () => {
       stageWidth = document.body.clientWidth
       stageHeight = document.body.clientHeight
-      if (!canvasObj) return
-      canvasObj.width = stageWidth * pixelRatio
-      canvasObj.height = stageHeight * pixelRatio
-      if (!ctx) return
-      ctx.scale(pixelRatio, pixelRatio)
-      ctx.globalCompositeOperation = "saturation"
-      ctx.clearRect(0, 0, stageWidth, stageHeight)
+      if (!canvasObject) return
+      canvasObject.width = stageWidth * pixelRatio
+      canvasObject.height = stageHeight * pixelRatio
+      if (!context) return
+      context.scale(pixelRatio, pixelRatio)
+      context.globalCompositeOperation = "saturation"
+      context.clearRect(0, 0, stageWidth, stageHeight)
 
       isCreated.current = true
       createParticles()
     }
 
     const init = () => {
-      if (!isCreated.current) resize()
-      else render()
+      if (isCreated.current) {
+        render()
+      } else {
+        resize()
+      }
     }
 
     init()
@@ -85,8 +87,8 @@ const NotFound = () => {
 
     return () => {
       window.removeEventListener("resize", resize)
-      if (!requestRef.current) return
-      window.cancelAnimationFrame(requestRef.current)
+      if (!requestReference.current) return
+      window.cancelAnimationFrame(requestReference.current)
     }
   })
 
@@ -99,7 +101,7 @@ const NotFound = () => {
           <Divider />
           <Desc>Page not found</Desc>
         </TitleWrap>
-        <Canvas ref={canvasRef} />
+        <Canvas ref={canvasReference} />
       </Container>
     </Layout>
   )

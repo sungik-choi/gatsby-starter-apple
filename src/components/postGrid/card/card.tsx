@@ -8,12 +8,12 @@ import type Post from "~/src/types/Post"
 
 import CenteredImg from "./centeredImg"
 
-type CardProps = Pick<
+type CardProperties = Pick<
   Post,
   "thumbnail" | "alt" | "category" | "title" | "desc" | "date"
 >
 
-const Card: React.FC<CardProps> = ({
+const Card: React.FC<CardProperties> = ({
   thumbnail,
   alt,
   category,

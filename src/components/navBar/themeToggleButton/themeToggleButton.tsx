@@ -9,11 +9,11 @@ import Background from "~/src/styles/background"
 
 import ThemeIcon from "./themeIcon"
 
-interface ThemeToggleButtonProps {
+interface ThemeToggleButtonProperties {
   themeToggler: UseThemeReturnType["themeToggler"]
 }
 
-const ThemeToggleButton: React.FC<ThemeToggleButtonProps> = ({
+const ThemeToggleButton: React.FC<ThemeToggleButtonProperties> = ({
   themeToggler,
 }) => {
   const theme = useContext(ThemeContext)

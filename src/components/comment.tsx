@@ -4,7 +4,7 @@ import { DARK } from "~/src/constants/theme"
 import useSiteMetadata from "~/src/hooks/useSiteMetadata"
 import ThemeContext from "~/src/stores/themeContext"
 
-const src = "https://utteranc.es"
+const source = "https://utteranc.es"
 const utterancesSelector = "iframe.utterances-frame"
 const LIGHT_THEME = "github-light"
 const DARK_THEME = "github-dark"
@@ -15,22 +15,24 @@ const Comment = () => {
   const site = useSiteMetadata()
   const { repo } = site.utterances ?? { repo: undefined }
   const theme = useContext(ThemeContext)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerReference = useRef<HTMLDivElement>(null)
   const isUtterancesCreated = useRef(false)
 
   useEffect(() => {
     if (!repo) return
     let themeMode: ThemeMode
 
-    if (!isUtterancesCreated.current) {
+    if (isUtterancesCreated.current) {
+      themeMode = theme === DARK ? DARK_THEME : LIGHT_THEME
+    } else {
       themeMode =
         document.body.dataset.theme === DARK ? DARK_THEME : LIGHT_THEME
-    } else themeMode = theme === DARK ? DARK_THEME : LIGHT_THEME
+    }
 
-    const createUtterancesEl = () => {
+    const createUtterancesElement = () => {
       const comment = document.createElement("script")
       const attributes = {
-        src: `${src}/client.js`,
+        src: `${source}/client.js`,
         repo,
         "issue-term": "title",
         label: "comment",
@@ -38,30 +40,30 @@ const Comment = () => {
         crossOrigin: "anonymous",
         async: "true",
       }
-      Object.entries(attributes).forEach(([key, value]) => {
+      for (const [key, value] of Object.entries(attributes)) {
         comment.setAttribute(key, value)
-      })
-      containerRef.current?.appendChild(comment)
+      }
+      containerReference.current?.append(comment)
       isUtterancesCreated.current = true
     }
 
-    const utterancesEl = containerRef.current?.querySelector(
-      utterancesSelector
+    const utterancesElement = containerReference.current?.querySelector(
+      utterancesSelector,
     ) as HTMLIFrameElement
 
     const postThemeMessage = () => {
-      if (!utterancesEl) return
+      if (!utterancesElement) return
       const message = {
         type: "set-theme",
         theme: themeMode,
       }
-      utterancesEl?.contentWindow?.postMessage(message, src)
+      utterancesElement?.contentWindow?.postMessage(message, source)
     }
 
-    isUtterancesCreated.current ? postThemeMessage() : createUtterancesEl()
+    isUtterancesCreated.current ? postThemeMessage() : createUtterancesElement()
   }, [repo, theme])
 
-  return <div ref={containerRef} />
+  return <div ref={containerReference} />
 }
 
 Comment.displayName = "comment"

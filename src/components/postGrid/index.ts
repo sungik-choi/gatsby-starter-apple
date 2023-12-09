@@ -1,3 +1,1 @@
-import PostGrid from "./postGrid"
-
-export default PostGrid
+export { default } from "./postGrid"

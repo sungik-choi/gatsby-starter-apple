@@ -10,7 +10,7 @@ Gatsby blog starter kit with beautiful responsive design
 
 ## 🍎 Demo
 
-👉 **View [Demo Page](https://apple.gatsbyjs.io/)**
+👉 **View [Demo Page](https://gatsby-starter-apple.netlify.app)**
 
 ## ✨ Features
 

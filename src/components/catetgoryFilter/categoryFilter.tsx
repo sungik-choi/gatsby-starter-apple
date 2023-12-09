@@ -1,7 +1,6 @@
 import React, { useMemo, useRef } from "react"
 
-import { Link } from "gatsby"
-import type { GatsbyLinkProps } from "gatsby"
+import { type GatsbyLinkProps, Link } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
 
@@ -10,22 +9,24 @@ import useScrollCenter from "./useScrollCenter"
 const ACTIVE = "active"
 const ALL_CATEGORY_NAME = "All"
 
-interface CategoryFilterProps {
+interface CategoryFilterProperties {
   categoryList: readonly Queries.MarkdownRemarkGroupConnection[]
 }
 
-type LinkPropsGetter = GatsbyLinkProps<unknown>["getProps"]
+type LinkPropertiesGetter = GatsbyLinkProps<unknown>["getProps"]
 
-const CategoryFilter: React.FC<CategoryFilterProps> = ({ categoryList }) => {
-  const categoryRef = useRef<HTMLUListElement>(null)
-  const isActive: LinkPropsGetter = ({ isCurrent }) =>
+const CategoryFilter: React.FC<CategoryFilterProperties> = ({
+  categoryList,
+}) => {
+  const categoryReference = useRef<HTMLUListElement>(null)
+  const isActive: LinkPropertiesGetter = ({ isCurrent }) =>
     isCurrent ? { id: ACTIVE, tabIndex: -1 } : {}
 
-  useScrollCenter({ ref: categoryRef, targetId: ACTIVE })
+  useScrollCenter({ ref: categoryReference, targetId: ACTIVE })
 
   const sortedCategoryList = useMemo(
     () => [...categoryList].sort((a, b) => b.totalCount - a.totalCount),
-    [categoryList]
+    [categoryList],
   )
 
   return (
@@ -35,7 +36,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ categoryList }) => {
         {ALL_CATEGORY_NAME}
       </CategoryButton>
       <Divider />
-      <CategoryUl ref={categoryRef} className="invisible-scrollbar">
+      <CategoryUl ref={categoryReference} className="invisible-scrollbar">
         {sortedCategoryList.map(category => {
           const { fieldValue } = category
           return (

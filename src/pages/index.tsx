@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useState } from "react"
 
-import type { PageProps } from "gatsby"
-import { graphql } from "gatsby"
+import { type PageProps, graphql } from "gatsby"
 import styled from "styled-components"
 
 import CategoryFilter from "~/src/components/catetgoryFilter"
@@ -22,18 +21,18 @@ const Home = ({
   useLayoutEffect(() => {
     const filteredPostData = currentCategory
       ? postData.filter(
-          ({ node }) => node?.frontmatter?.category === currentCategory
+          ({ node }) => node?.frontmatter?.category === currentCategory,
         )
       : postData
 
-    filteredPostData.forEach(({ node }) => {
-      const { id } = node
-      const { slug } = node.fields!
-      const { title, desc, date, category, thumbnail, alt } = node.frontmatter!
+    for (const { node } of filteredPostData) {
+      const { id, fields, frontmatter } = node
+      const { slug } = fields!
+      const { title, desc, date, category, thumbnail, alt } = frontmatter!
       const { childImageSharp } = thumbnail!
 
-      setPosts(prevPost => [
-        ...prevPost,
+      setPosts(previousPost => [
+        ...previousPost,
         {
           id,
           slug,
@@ -45,7 +44,7 @@ const Home = ({
           alt,
         },
       ])
-    })
+    }
   }, [currentCategory, postData])
 
   const site = useSiteMetadata()

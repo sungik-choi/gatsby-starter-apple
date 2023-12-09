@@ -1,39 +1,39 @@
 import { useLayoutEffect } from "react"
 
-interface UseScrollCenterProps {
+interface UseScrollCenterProperties {
   ref: React.RefObject<HTMLUListElement>
   targetId: string
 }
 
-const useScrollCenter = ({ ref, targetId }: UseScrollCenterProps) => {
+const useScrollCenter = ({ ref, targetId }: UseScrollCenterProperties) => {
   useLayoutEffect(() => {
-    const categoryWrapEl = ref.current
+    const categoryWrapElement = ref.current
 
-    if (!categoryWrapEl) {
+    if (!categoryWrapElement) {
       return
     }
 
     const isScrollActivated =
-      categoryWrapEl.scrollWidth >= categoryWrapEl.offsetWidth
+      categoryWrapElement.scrollWidth >= categoryWrapElement.offsetWidth
 
     if (!isScrollActivated) {
       return
     }
 
-    const activeCategoryEl = categoryWrapEl.querySelector<HTMLUListElement>(
-      `#${targetId}`
-    )
+    const activeCategoryElement =
+      categoryWrapElement.querySelector<HTMLUListElement>(`#${targetId}`)
 
-    if (!activeCategoryEl) {
+    if (!activeCategoryElement) {
       return
     }
 
-    const offsetX = activeCategoryEl.offsetLeft - categoryWrapEl.offsetLeft
-    categoryWrapEl.scrollTo(
+    const offsetX =
+      activeCategoryElement.offsetLeft - categoryWrapElement.offsetLeft
+    categoryWrapElement.scrollTo(
       offsetX -
-        categoryWrapEl.offsetWidth / 2 +
-        activeCategoryEl.offsetWidth / 2,
-      0
+        categoryWrapElement.offsetWidth / 2 +
+        activeCategoryElement.offsetWidth / 2,
+      0,
     )
   }, [ref, targetId])
 }

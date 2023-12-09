@@ -15,15 +15,15 @@ export const listAnimationCSS = (toggle: boolean) => {
     : "ease-in"
   const OPACITY_TIMING_FUNC = "ease-out"
 
-  const calcDelaySec = (i: number) =>
-    toggle ? OPEN_BASE + i * OFFSET : CLOSE_BASE - i * OFFSET
+  const calcDelaySec = (index: number) =>
+    toggle ? OPEN_BASE + index * OFFSET : CLOSE_BASE - index * OFFSET
 
-  for (let i = 0; i < MAX_NUM; i += 1) {
+  for (let index = 0; index < MAX_NUM; index += 1) {
     styles += `
-    li:nth-child(${i}) {
+    li:nth-child(${index}) {
         transition-property: transform, opacity;
         transition-duration: ${TRANSFORM_DURING}s, ${OPACITY_DURING}s;
-        transition-delay: ${calcDelaySec(i)}s;
+        transition-delay: ${calcDelaySec(index)}s;
         transition-timing-function: ${TRANSFORM_TIMING_FUNC}, ${OPACITY_TIMING_FUNC};
     }
     `

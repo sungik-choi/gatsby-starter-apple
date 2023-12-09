@@ -1,3 +1,1 @@
-import CategoryFilter from "./categoryFilter"
-
-export default CategoryFilter
+export { default } from "./categoryFilter"

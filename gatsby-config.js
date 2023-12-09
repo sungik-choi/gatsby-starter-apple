@@ -32,6 +32,7 @@ const corePlugins = [
     options: {
       name: "src",
       path: `${__dirname}/src`,
+      ignore: [`**/*.d.ts`],
     },
   },
   {

@@ -2,7 +2,7 @@ const PI2 = Math.PI * 2
 
 export type RGB = { r: number; g: number; b: number }
 
-interface GlowParticleProps {
+interface GlowParticleProperties {
   x: number
   y: number
   radius: number
@@ -18,7 +18,7 @@ class GlowParticle {
   rgb: RGB
   sinValue: number
 
-  constructor({ x, y, radius, rgb }: GlowParticleProps) {
+  constructor({ x, y, radius, rgb }: GlowParticleProperties) {
     this.x = x
     this.y = y
     this.radius = radius
@@ -31,9 +31,9 @@ class GlowParticle {
   }
 
   animate(
-    ctx: CanvasRenderingContext2D,
+    context: CanvasRenderingContext2D,
     stageWidth: number,
-    stageHeight: number
+    stageHeight: number,
   ) {
     this.sinValue += 0.01
     this.radius += Math.sin(this.sinValue)
@@ -56,23 +56,23 @@ class GlowParticle {
       this.y -= 10
     }
 
-    ctx.beginPath()
+    context.beginPath()
 
-    const g = ctx.createRadialGradient(
+    const g = context.createRadialGradient(
       this.x,
       this.y,
       this.radius * 0.01,
       this.x,
       this.y,
-      this.radius
+      this.radius,
     )
 
     g.addColorStop(0, `rgba(${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b}, 1)`)
     g.addColorStop(1, `rgba(${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b}, 0)`)
 
-    ctx.fillStyle = g
-    ctx.arc(this.x, this.y, this.radius, 0, PI2, false)
-    ctx.fill()
+    context.fillStyle = g
+    context.arc(this.x, this.y, this.radius, 0, PI2, false)
+    context.fill()
   }
 }
 

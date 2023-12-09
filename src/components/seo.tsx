@@ -13,13 +13,14 @@ type Meta = React.DetailedHTMLProps<
   HTMLMetaElement
 >[]
 
-interface SEOProps extends Pick<Queries.MarkdownRemarkFrontmatter, "title"> {
+interface SEOProperties
+  extends Pick<Queries.MarkdownRemarkFrontmatter, "title"> {
   desc?: Queries.Maybe<string>
   image?: Queries.Maybe<string>
   meta?: Meta
 }
 
-const SEO: React.FC<SEOProps> = ({ title, desc = "", image }) => {
+const SEO: React.FC<SEOProperties> = ({ title, desc = "", image }) => {
   const site = useSiteMetadata()
   const description = desc || site.description
   const ogImageUrl =
