@@ -25,7 +25,7 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ({ title, themeToggler }) => {
   const { menuLinks } = useSiteMetadata()
-  const { device } = useContext(ThemeContext)
+  const { device } = useContext(ThemeContext)!
   const navRef = useRef<HTMLElement>(null)
   const curtainRef = useRef<HTMLDivElement>(null)
   const listRef = useRef<HTMLUListElement>(null)
