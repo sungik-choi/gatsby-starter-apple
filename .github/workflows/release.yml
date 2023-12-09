@@ -24,7 +24,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Lint
-        run: yarn Lint
+        run: yarn lint
 
       - name: Format Check
         run: yarn prettier . --check --ignore-path
