@@ -12,9 +12,16 @@ const Markdown = styled.article<{ rhythm: (typeof typography)["rhythm"] }>`
     font-weight: var(--font-weight-bold);
   }
 
+  table {
+    margin-bottom: var(--sizing-base);
+  }
   td,
   th {
-    border-bottom: 1px solid var(--color-gray-3);
+    padding: var(--padding-xs);
+    border: 1px solid var(--color-gray-3);
+  }
+  th {
+    font-weight: var(--font-weight-semi-bold);
   }
 
   strong {
