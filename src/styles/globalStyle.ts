@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     --grid-gap-lg: 24px;
     --grid-gap-xl: 36px;
 
+    --padding-xs: 10px;
     --padding-sm: 16px;
     --padding-lg: 22px;
 
@@ -36,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
     --text-base: 1rem;
     --text-md: 1.125rem;
     --text-title: 1.25rem;
-    --text-lg: 1.5rem; 
+    --text-lg: 1.5rem;
     --text-xl: 3rem;
 
     --device-xs-max-width: 419px;

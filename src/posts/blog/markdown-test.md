@@ -287,3 +287,12 @@ Unlike a pre-formatted code block, a code span indicates code within a
 normal paragraph. For example:
 
 Use the `printf()` function.
+
+### Table
+
+| name          | desc                    |
+| ------------- | ----------------------- |
+| :set number   | show line number        |
+| :set nonumber | do not show line number |
+
+number can be short as "nu"

@@ -12,9 +12,16 @@ const Markdown = styled.article<{ rhythm: (typeof typography)["rhythm"] }>`
     font-weight: var(--font-weight-bold);
   }
 
+  table {
+    margin-bottom: var(--sizing-base);
+  }
   td,
   th {
-    border-bottom: 1px solid var(--color-gray-3);
+    padding: var(--padding-xs);
+    border: 1px solid var(--color-gray-3);
+  }
+  th {
+    font-weight: var(--font-weight-semi-bold);
   }
 
   strong {
@@ -86,6 +93,13 @@ const Markdown = styled.article<{ rhythm: (typeof typography)["rhythm"] }>`
     margin-left: ${({ rhythm }) => rhythm(1.25)};
   }
 
+  ol {
+    list-style: auto;
+  }
+  ul {
+    list-style: disc;
+  }
+
   li > ul,
   li > ol {
     margin-top: 0;
@@ -103,6 +117,10 @@ const Markdown = styled.article<{ rhythm: (typeof typography)["rhythm"] }>`
 
   li {
     margin-bottom: ${({ rhythm }) => rhythm(0.3)};
+  }
+
+  li {
+    line-height: 1.68;
   }
 
   p,
