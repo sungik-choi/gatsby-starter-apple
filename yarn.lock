@@ -10176,9 +10176,9 @@ __metadata:
   linkType: hard
 
 "flatted@npm:^3.1.0":
-  version: 3.2.7
-  resolution: "flatted@npm:3.2.7"
-  checksum: 427633049d55bdb80201c68f7eb1cbd533e03eac541f97d3aecab8c5526f12a20ccecaeede08b57503e772c769e7f8680b37e8d482d1e5f8d7e2194687f9ea35
+  version: 3.4.1
+  resolution: "flatted@npm:3.4.1"
+  checksum: 39a308e2ef82d2d8c80ebc74b67d4ff3f668be168137b649440b6735eb9c115d1e0c13ab0d9958b3d2ea9c85087ab7e14c14aa6f625a22b2916d89bbd91bc4a0
   languageName: node
   linkType: hard
 
